@@ -1,0 +1,4 @@
+# Authentication Documentation
+
+* EduGain
+* SAML
