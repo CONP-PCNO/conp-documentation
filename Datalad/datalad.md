@@ -1,7 +1,0 @@
-# Datalad Documentation
-
-### Crawlers
-
-### Extractors
-
-
