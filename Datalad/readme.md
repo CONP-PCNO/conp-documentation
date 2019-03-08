@@ -11,16 +11,16 @@ For each subdirectories in `assembly` do the following:
 ```bash
 	datalad create -f -d . <subdir>/
   	cd <subdir>/
-	git config -f .datalad/config --add datalad.metadata.nativetype <nifti1 or minc>
-	datalad save -r -d . --message "first commit" --all-updated
-	datalad aggregate-metadata --force-extraction -d . -r --update-mode all
-	datalad -f json_pp metadata --recursive --reporton datasets
-	cd ..
+		git config -f .datalad/config --add datalad.metadata.nativetype <nifti1 or minc>
+		datalad aggregate-metadata --force-extraction -d . -r --update-mode all
+		datalad -f json_pp metadata --recursive --reporton datasets
+		datalad save -r -d . --message "first commit" --all-updated
 ```
 
 Update superset `assembly`
 
 ```bash
+cd .. // On assembly
 datalad save -r -d . --message "update superset" --all-updated
 ```
 
@@ -64,7 +64,7 @@ datalad -l 1 create-sibling -r --name CONP --ui true --existing reconfigure --ta
 
 git remote set-url CONP ssh://datalad@datalad.conp.io:/var/www/html/.git
 
-datalad publish -r --to CONP 
+datalad -l 1 publish -r --to CONP 
 ```
 
 You can verify that metadata is being published on the datalad VM by doing
