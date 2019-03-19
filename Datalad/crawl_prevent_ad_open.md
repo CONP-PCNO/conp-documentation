@@ -120,7 +120,13 @@ curl -x POST https://preventad-open-dev.loris.ca/api/v0.0.3-dev/projects/loris/i
 
 Returned a permission denied response. The problem got fixed by allowing conp-dev.loris.ca to access prevent-ad-open.loris.ca 
 
+3) If you are having a problem with lzma such as
 
+```bash
+fatal error: lzma.h: No such file or directory
+```
+
+You can solve this by installing `apt-get install -y liblzma-dev` 
 
 ### Credits
 
