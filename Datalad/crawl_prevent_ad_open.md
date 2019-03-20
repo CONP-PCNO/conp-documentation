@@ -115,7 +115,7 @@ rm -r /home/lorisadmin/.local/share/python_keyring/
 2) Another problem we have encountered was a firewall issue. Basically the command
 
 ```bash
-curl -x POST https://preventad-open-dev.loris.ca/api/v0.0.3-dev/projects/loris/images
+curl -X POST https://preventad-open-dev.loris.ca/api/v0.0.3-dev/projects/loris/images
 ```
 
 Returned a permission denied response. The problem got fixed by allowing conp-dev.loris.ca to access prevent-ad-open.loris.ca 
