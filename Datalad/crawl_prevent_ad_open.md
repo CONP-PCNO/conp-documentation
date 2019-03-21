@@ -37,13 +37,13 @@ Put the following into `~/conp-dataset/prevent-ad-open/.datalad/providers/loris.
 
 ```bash
 [provider:loris-prevent-ad]
-url_re = https:\/\/[preventad-open-dev.loris.ca](http://preventad-open-dev.loris.ca/)\/.*
+url_re = https:\/\/[preventad-open-dev.loris.ca]\/.*
 credential = loris-prevent-ad
 authentication_type = loris-token
 loris-token_failure_re = "User not authenticated"}$
 
 [credential:loris-prevent-ad]
-url = <https://preventad-open-dev.loris.ca/api/v0.0.3-dev/login>
+url = https://preventad-open-dev.loris.ca/api/v0.0.3-dev/login
 type = loris-token
 ```
 
