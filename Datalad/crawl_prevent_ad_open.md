@@ -82,7 +82,7 @@ cd ~/conp-dataset/prevent-ad-open
 datalad crawl-init -t loris apibase=https://preventad-open-dev.loris.ca/api/v0.0.3-dev url=https://preventad-open-dev.loris.ca/api/v0.0.3-dev/projects/loris/images
 ```
 
-You might need to git commit the `.datalad` directory, since otherwise datalad complains about a dirty working directory when trying to crawl.
+You might need to git commit the `.datalad` directory with `datalad add .datalad/crawl`, since otherwise datalad complains about a dirty working directory when trying to crawl.
 
 Crawl the data with  
 
