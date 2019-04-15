@@ -2,17 +2,17 @@
 
 ### Install dependencies
 
-Create a **Python 2.7** virtual environenment:
+Create a **Python 3** virtual environenment:
 
 ```bash
-virtualenv venv --python=python2.7
+python3 -m venv venv
 source venv/bin/activate
 ```
 
 First, install datalad:
 
 ```bash
-pip install datalad
+pip3 install datalad
 ```
 
 Second, install git-annex. See documentation [here](https://github.com/CONP-PCNO/conp-documentation/blob/master/Datalad/upgrade_git_annex.md) on how to install and/or upgrade git-annex (from Neurodebian)
@@ -71,7 +71,7 @@ cd datalad-crawler
 
 git checkout enh-loriscrawler
 
-pip install .
+pip3 install .
  ```
 
 Initialize the crawler config:
