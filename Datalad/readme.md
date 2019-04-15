@@ -14,14 +14,14 @@ For each subdirectories in `assembly` do the following:
 		git config -f .datalad/config --add datalad.metadata.nativetype <nifti1 or minc>
 		datalad aggregate-metadata --force-extraction -d . -r --update-mode all
 		datalad -f json_pp metadata --recursive --reporton datasets
-		datalad save -r -d . --message "first commit" --all-updated
+		datalad rev-save -r -d . --message "first commit"
 ```
 
 Update superset `assembly`
 
 ```bash
 cd .. // On assembly
-datalad save -r -d . --message "update superset" --all-updated
+datalad rev-save -r -d . --message "update superset"
 ```
 
 ### 2) On Datalad Server (datalad.conp.io)
