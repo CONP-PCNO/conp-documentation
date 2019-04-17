@@ -26,7 +26,7 @@ datalad rev-save -r -d . --message "update superset"
 
 ### 2) On Datalad Server (datalad.conp.io)
 
-Go to `html` dirtory
+Go to `html` directory
 
 ```bash
 cd /var/www/html
