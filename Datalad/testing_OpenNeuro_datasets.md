@@ -53,5 +53,11 @@ whereis sub-01_T1w.nii.gz (4 copies)
   s3-PUBLIC: http://openneuro.org.s3.amazonaws.com/ds001634/sub-01/anat/sub-01_T1w.nii.gz?versionId=3tBK9WlrojB9h_6CMILUvp3BX7Sa_aSr
 ```
 
-The `s3-PUBLIC` remote is pointing to the exactl location on the amazon bucket with its version
+The `s3-PUBLIC` remote is pointing to the exact location on the amazon bucket with its version
+
+4) Access to dataset sibling `s3-PRIVATE` not auto-enabled, enable with:
+
+```bash
+datalad siblings -d "conp-dataset/projects/auditory-brainstorm" enable -s s3-PRIVATE
+```
 
