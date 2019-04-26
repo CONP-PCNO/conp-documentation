@@ -18,6 +18,7 @@ Update the `conp-dataset` superdataset git submodules:
 
 ```bash
 cd conp-dataset
+datalad install -r .
 git submodule foreach git pull origin master
 git add .
 git commit -m 'update git submodules'
