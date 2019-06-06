@@ -13,7 +13,7 @@ git clone git@github.com:<your_username>/conp-dataset.git
  Add the your datalad dataset:
 
 ```bash
-cd conp/dataset/projects
+cd conp-dataset/projects
 datalad install <your_datalad_url> // URL of the datalad dataset
 cd ..
 git submodule add <your_datalad_url> // Adds the new git submodule
