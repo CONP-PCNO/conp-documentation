@@ -3,6 +3,8 @@
 This is an example from SIMON-dataset (<http://fcon_1000.projects.nitrc.org/indi/retro/SIMON.html>)
 
 ```bash
+ssh conp-dev.loris.ca
+
 cd /data/conp
 
 datalad create --text-no-annex SIMON-dataset
