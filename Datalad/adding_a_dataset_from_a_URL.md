@@ -18,7 +18,7 @@ datalad download-url --archive https://fcp-indi.s3.amazonaws.com/data/Projects/I
 # Some JSONs are not added to git-annex, could be bug
 # Add JSON files with: git annex unannex file ; git add file ; git commit -m 'forcing the json file to the annex' 
 
-datalad -l 1 create-sibling-github -r --github-login paiva --github-organization conpdatasets --existing reconfigure SIMON-dataset
+datalad -l 1 create-sibling-github -r --github-login <your github username> --github-organization conpdatasets --existing reconfigure SIMON-dataset
 
 datalad -l 1 publish -r --to github
 ```
