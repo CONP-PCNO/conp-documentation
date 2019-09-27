@@ -1,10 +1,33 @@
-// Updating a dataset procedure consists in multiple steps
 
-// Describe steps in details
 
-// Give schematics for clarification
+## Dataset as git submodules
 
-// give commands for updating the dataset as git submodule
+Any existing dataset can be added to CONP-PCNO repository as a git submodule 
+By doing so you will be able to add the original dataset repository as a subdirectory of CONP-PCNO and to manage it independently. 
+Therefore, by definition of submodules, CONP-PCNO will only hold a reference to the actual dataset which will continue to live in its original space.
+The current list of submodules in CONP-PCNO can be found under [CONP-datasets/project](https://github.com/CONP-PCNO/conp-dataset/tree/master/projects) folder.
+
+
+### Updating a dataset on origin
+
+Often a dataset will need to be updated with recent additions. Here we describe the full dataset and git submodule update
+procedural steps summarised in the schematic below:
+
+1 - Given the nature of a submodule reference, the user accessing a dataset is accessed in CONP-PCNO will be redirected 
+to the original dataset location, or origin. Therefore the origin is the very first place where a dataset update process would start.
+In the schematic below the reference between a dataset in CONP-dataset and the dataset origin is represented by the long arrow and the
+original dataset repository is the [conpdataset repository](https://github.com/conpdatasets) as an example.
+As a first step it is required to clone the original repository to develop changes. 
+
+2 - Dataset changes must be approved and merged to master so that the corresponding referencing dataset git submodule 
+will be able to update its reference to the latest commit at the origin
+
+3 - The third step involves updating the git submodule on the CONP-PCNO repository side to finally reflect recent changes in the dataset
+A list of commands to accomplish this step is given in the next section on Updating a Git submodule
+
+The following schematic helps to visualize the three points just described
+
+![](/home/giuly/Documents/NeuroHub/Documentation/conpdataset-CONP interaction submodules update.png)
 
 
 ### Updating a Git submodule to the latest commit on origin
