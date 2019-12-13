@@ -61,17 +61,18 @@ datalad create -d . projects/<newprojectname>
 
 ```datalad create-sibling-github -d projects/<newprojectname> <newprojectname>```
 
-(The first "newprojectname" is local, the second is the name of the github repository.  These do not need to be identical for the procedure to work, but it is recommended that they should be to avoid confusion.  Creating a github repository for CONP data by other means, e.g. directly on github, is not recommended.)
+The first "newprojectname" is local, the second is the name of the github repository that will be created in your personal github space.  
+
+These do not need to be identical for the procedure to work, but it is recommended that they should be to avoid confusion.  Creating a github repository for CONP data by other means, e.g. directly on github, is not recommended.)
 
 To inspect existing siblings: 
   
  ```datalad siblings```
 
-As an alternative, you can run the following command to add the sibling to the conpdataset organization repository rather than to your local space. This is recommended 
+As an alternative, you can run the following command to add the sibling to the conpdataset organization repository rather than to your personal github space. This is recommended to decouple ownership
 
 ```
- datalad -l 1 create-sibling-github -r --github-login [your_username]  --github-passwd [your_password] --github-organization conpdatasets 
-	--existing reconfigure -d projects/<newprojectname> <newprojectname>
+ datalad -l 1 create-sibling-github -r --github-login [your_username]  --github-passwd [your_password] --github-organization conpdatasets --existing reconfigure -d projects/<newprojectname> <newprojectname>
 ```
 
 5 Manually edit the ```.gitmodules``` file in your local conp-dataset directory:
@@ -86,14 +87,15 @@ The last three lines of this file will contain an entry for your new project, bu
 
 Previous entries in the ```.gitmodules``` file can be used as a guide.
 
-6 Manually edit the ```.gitattribute``` file in your project/<newprojectname> folder and set the ```**/.git* annex.largefiles=(largerthan=[size])```, which for example would be (largerthan=100kb)
+6 Manually edit the ```.gitattribute``` file in your project/<newprojectname> folder and set the option ```**/.git* annex.largefiles=(largerthan=[size])```, which for example would be (largerthan=100kb)
 
 This is going to make sure that only files larger than the specified size in your project will be annexed
 
 
+
 At this point there are different options to populate the new project directory. Based on the nature of the dataset to be added to CONP, a different special remote can be used.
 
-Run the following commands from the your root dataset directory
+All commands presented in the following sections have to run from the your root dataset directory, unless specified differently
 
 
 ## 1 - Using the [web](https://git-annex.branchable.com/special_remotes/web/) as a special remote
@@ -153,11 +155,12 @@ Once you have confirmed that your dataset downloads correctly and has a ```READM
 
 ## 2 - Using another special remote
 
+This option is feasible if your dataset comprises of files available on your machine rather than on the web. It is also choice of the programmer to choose option 1 or 2 based on special remote needs.
 A list of available special remotes can be found [here](http://git-annex.branchable.com/special_remotes/)
 
-Note that this is necessary as github is not able to hold the content of annex blobs due to size limitations. Therefore, when users go and install the datalad dataset they need, annexed files in git will only hold a symbolic link to actual files. In order to have access to annexed files content, git annex will have to ask for it to some other 'special' remote location.
+Note that communication between annex and the special remote is necessary as github is not able to hold the content of annex blobs due to size limitations. Therefore, when users go and install the datalad dataset they need, annexed files in github will only hold a symbolic link to actual files. In order to have access to annexed files content, git annex will have to ask for it to some other 'special' remote location.
 
-For this reason, with this option a special remote is initialized as an available location (which is not the web, torrent or your local machine) 
+For this reason, this option enables initialization and use of a special remote (which is not the web, torrent or your local machine) 
 from where to download annexed files and thus access their content. More information on the role of special remotes can be found [here]
 
 2.1 First go ahead and add files via ```datalad```
@@ -168,9 +171,11 @@ from where to download annexed files and thus access their content. More informa
   
 This command will save files less or equal than the size specified in step 6 as git files, while larger files will be annexed
   
-2.2 Follow steps through 1.3 to 1.4
+2.2 Based on the special remote in use, a different initialization procedure will be required. Add the ```config.sh``` at the dataset root to handle automatic special remote initialization. In this way, future dataset users will easily be able to locally download dataset files
 
-2.3 Based on the special remote in use, a different initialization procedure will be required. If not otherwise specified by the documentation for the dataset to be added to CONP, files can be downloaded with
+2.3 Follow steps through 1.3 to 1.4
+
+2.4 If not otherwise specified by the documentation for the dataset to be added to CONP, files can be downloaded with
 
 ```
 git annex get <path/to/file>
