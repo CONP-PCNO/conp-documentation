@@ -1,0 +1,27 @@
+
+
+<h1>Uploading data for CONP</h1>
+
+<h2>1. Metadata</h2>
+
+We use the DATS.json file format to store metadata about CONP datasets. DATS.json is a flexible machine-readable structure allowing for sophisticated representation of a wide range of different types of datasets, from neuroimaging to genomics.  A DATS.json file must be prepared for each dataset.
+
+The CONP DATS.json schema includes:
+
+- Dataset title and description
+- Creators of the dataset
+- DOI or other unique identifier
+- License under which the dataset is distributed
+- Keywords and specification of data type
+
+
+Full details of the schema can be found <a href="../DATS_fields.xlsx">here</a>.  The example DATS.json file for the 1000 Genomes Project <a href="https://github.com/emmetaobrien/1000GenomesProject/blob/master/DATS.json">here</a> can be used as a template.  An interface allowing users to fill in required fields online is under development <a href="https://dats-creator.herokuapp.com/">here</a>.
+
+<h2>2. Data files</h2>
+
+CONP stores some datsets locally and provides access to others hosted at external resources.  We use the DataLad and GitAnnex software tools to manage data storage and access to external data.  This system allows users to construct links to datasets at locations of their choice, and for users to download only the files of particular interest to them from any given dataset.
+
+A technical description of the installation and use of DataLad/GitAnnex to upload and download data can be found <a href="../datalad_dataset_addition_procedure.md">here</a>.
+
+
+
