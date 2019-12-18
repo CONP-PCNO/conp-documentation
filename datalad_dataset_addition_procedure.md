@@ -1,6 +1,6 @@
-# Datalad dataset preparation procedure
+## Datalad dataset preparation procedure
 
-This procedure is intended for developers, and is not designed with general users in mind.
+This procedure is intended for developers.
 
 ## Setup - Installing required software (assumes working on a Linux machine):
 
@@ -17,7 +17,7 @@ git config --global user.name "yourusername"
 git config --global user.email "your.name@your.institution.ca"
 ```
 
-2. git-annex
+2. git-annex:
 
 First install the neurodebian package repository:
 
@@ -27,14 +27,14 @@ Then install the version of git-annex included in this repository:
 
 ```sudo apt-get install git-annex-standalone```
 
-As of August 14 2019, this command installs git annex v 7.20190730, which works with CONP datasets. Earlier versions of git-annex, includingthe default version of git-annex available with Ubuntu 18.04, may not, because some CONP datasets are hosted on ftp servers and git-annex did not support ftp for some time in 2018/2019.
+As of August 14 2019, this command installs git annex v 7.20190730, which works with CONP datasets. Earlier versions of git-annex, including the default version of git-annex available with Ubuntu 18.04, may not, because some CONP datasets are hosted on ftp servers and git-annex did not support ftp for some time in 2018/2019.
 
 The version of git-annex installed can be verified with:
 
 ```git annex version```
 
 
-3. DataLad:
+3. datalad:
 
 ```sudo apt-get install datalad```
 
@@ -57,11 +57,23 @@ cd conp-dataset
 datalad create -d . projects/<newprojectname>
 ```
 
-4. Create a sibling for this project on github:
+4. Create a sibling for this project on github. The command below will generate a sibling in your local space
 
 ```datalad create-sibling-github -d projects/<newprojectname> <newprojectname>```
 
-(The first "newprojectname" is local, the second is the name of the github repository.  These do not need to be identical for the procedure to work, but it is recommended that they should be to avoid confusion.  Creating a github repository for CONP data by other means, e.g. directly on github, is not recommended.)
+The first "newprojectname" is local, the second is the name of the github repository that will be created in your personal github space.
+
+These do not need to be identical for the procedure to work, but it is recommended that they should be to avoid confusion.
+
+To inspect existing siblings: 
+  
+ ```datalad siblings```
+
+<!--As an alternative, if you have access you can run the following command to add the sibling to the conpdataset organization repository rather than to your personal github space.
+
+```
+ datalad -l 1 create-sibling-github -r --github-login [your_username]  --github-passwd [your_password] --github-organization conpdatasets --existing reconfigure -d projects/<newprojectname> <newprojectname>
+```-->
 
 5. Manually edit the ```.gitmodules``` file in your local conp-dataset directory:
 
@@ -75,23 +87,45 @@ The last three lines of this file will contain an entry for your new project, bu
 
 Previous entries in the ```.gitmodules``` file can be used as a guide.
 
-6. Populate your newproject directory (all commands in this section need to be run in that directory)
+6. Manually edit the ```.gitattribute``` file in your project/<newprojectname> folder and set the option ```**/.git* annex.largefiles=(largerthan=[size])```, where [size] is the desired maximum size limit for storing files directly in git.
 
-a. Create a ```README.md``` file with the editor of your choice and then add it to the repository
+This ensures that only files larger than the specified size in your project will be annexed.
 
-```datalad add --to-git ./README.md```
+All commands presented in the following sections should be run from ```projects/<newprojectname>``` unless specified otherwise.
 
-(The same command must be used to add any other small files directly to the repository, e.g. ```DATS.json```.  There is currently no general automated process for generating ```DATS.json``` files, as the content of datasets varies widely; it is recommended to copy one from a similar dataset and manually edit it as appropriate.  Do not forget to validate! )
+7. Add small files such as ```README.md``` to your git repository. These will not be annexed:
 
-b. add links to large data files 
+  ```
+  datalad add --to-git ./README.md
+  ```
 
-```git annex addurl <URL_of_resource> --file <linkname>```
+(The same command must be used to add any other small files directly to the repository, e.g. ```DATS.json```.  There is currently no general automated process for generating DATS.json files, as the content of datasets varies widely; it is recommended to copy one from a similar dataset and manually edit it as appropriate.  Do not forget to validate! )
 
-The ```--file``` switch is optional, but recommended, because without it the default name for a link is built from the full URL of the resource and is usually unwieldy and often uninformative.
+
+8. 
+
+At this point there are different options for populating the project directory.  Datalad supports multiple different special remotes to handle datasets stored on different media.  Note that communication between annex and the special remote is necessary as github does not store the content of annex blobs, due to size limitations. Therefore annexed files in github hold only a symbolic link. To have access to annexed files content, git annex requests it from some other 'special' remote location.
+
+
+## Examples
+
+a) For large datafiles on ftp or http servers, use the web remote
+
+  ```
+  git annex addurl <URL_of_resource> --file <linkname>
+  ```
+
+The ```--file``` switch is optional, but recommended, because without it the default name for a link is built from the full URL of the resource and tends to be unwieldy or uninformative.
 
 NB: Generating the link requires enough space on your local machine to store the large data file. 
-  
-7. Publish your data to github:
+
+b) For datasets on your machine, other special remotes are available.
+
+A list of available special remotes can be found [here](http://git-annex.branchable.com/special_remotes/). More information on the role of special remotes can be found [here]. 
+
+A different initialization procedure will be required for each special remote.  Add ```config.sh``` in ```projects/<newproject>``` to handle automatic special remote initialization.
+
+9. Publish your data to github:
 
 From your new project directory:
 
@@ -108,18 +142,20 @@ Both of the save and publish steps are necessary, and must be done from the appr
 When adding new data to an existing project, the ```publish --to github``` is replaced by another ```publish --to origin``` command.
 
 
-8. You should now have a git repository containing your new dataset correctly linked as a submodule of ```<yourusername>/conp-dataset```.  Test this by downloading (I usually do this to a different VM):
+10. You should now have a git repository containing your new dataset correctly linked as a submodule of ```<yourusername>/conp-dataset```.  Test this by downloading.
 
 ```
 datalad install -r http://github.com/<yourusername>/conp-dataset
 cd conp-dataset/projects/<newprojectname>
 ```
 
-The -r is a recursive install, so all subdirectories should be present, and links to large files. Test that these links download correctly with:
+The -r is a recursive install, so all subdirectories and small should be present, and links to annexed files.
+
+11.  Test that these links download correctly with:
 
 ```datalad get <linkname>```
 
-9) Once you have confirmed that your dataset downloads correctly and has a ```README.md``` and a valid ```DATS.json```, submit a pull request to merge it with ```CONP-PCNO/conp-dataset```.
+12.  Once you have confirmed that your dataset downloads correctly and has a ```README.md``` and a valid ```DATS.json```, submit a pull request to merge it with ```CONP-PCNO/conp-dataset```.
 
 
 
