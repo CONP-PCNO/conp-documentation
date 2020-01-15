@@ -23,7 +23,7 @@ The information will be used to create your resource landing page on the CONP po
 |identifier|**RECOMMENDED**. Primary identifier for the dataset. Provide a *Document Object Identifier (DOI)* if you have one.|
 |extraProperties - contact|**RECOMMENDED**. Provide contact information (name, email, telephone) of the person responsible for the dataset.|
 |extraProperties - logo|**RECOMMENDED**. Link to or provide a logo to display on your resource landing page.|
-|dates|**OPTIONAL**.  Relevant dates for the dataset. If you provide a date, it must come with a description of the date>|<!--will later choose from a pulldown list--> 
+|dates|**OPTIONAL**.  Relevant dates for the dataset. If you provide a date, it must come with a description of the date.|<!--will later choose from a pulldown list--> 
 |citations|**OPTIONAL**.  Publication(s) citing this dataset.|
 |citationCount|**OPTIONAL**. The number of publications that cite this dataset (enumerated in the citations property).|
 |producedBy|**OPTIONAL**. Process which generated a given dataset.|
