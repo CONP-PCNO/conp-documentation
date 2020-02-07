@@ -87,7 +87,7 @@ The last three lines of this file will contain an entry for your new project, bu
 Previous entries in the ```.gitmodules``` file can be used as a guide.
 
 
-## Populate your new dataset
+## Populate a new dataset
 
 Choice of how to populate the new dataset space may vary based on the special remote that is going to provide access to your dataset data. 
 
@@ -98,7 +98,7 @@ In this manual, we will distinguish between the possibility to work with the [we
 
 
 
-#### Using a Web special remote
+#### 1) Using a Web special remote
 
 For large datafiles on ftp or http servers, use the web remote  
         
@@ -108,45 +108,38 @@ git annex addurl <URL_of_resource> --file <linkname>
 
 The ```--file``` switch is optional, but recommended, because without it the default name for a link is built from the full URL of the resource and tends to be unwieldy or uninformative.  
 
-NB: Generating the link requires enough space on your local machine to store the large data file. 
+NB: Generating the link requires enough space on your local machine to store the large data file.
 
+              
+For small files such as ```README.md```, add them to your git repository. These will not be annexed:
 
-6. Manually edit the ```.gitattribute``` file in your project/<newprojectname> folder and set the option ```**/.git* annex.largefiles=(largerthan=[size])```, where [size] is the desired maximum size limit for storing files directly in git.
+```
+datalad add --to-git ./README.md
+```
+              
+#### 2) Using a Globus special remote  
+
+This option assumes the whole dataset was transferred to your local space via the Globus Transfer system functionality and you are manually populating your datalad dataset with it. 
+The procedure for downloading data and transfer a dataset residing in Globus to your local space is available here (to be added)
+
+1 - Manually edit the ```.gitattribute``` file in your project/<newprojectname> folder and set the option ```**/.git* annex.largefiles=(largerthan=[size])```, where [size] is the desired maximum size limit for storing files directly in git.
 
 This ensures that only files larger than the specified size in your project will be annexed.
 
 All commands presented in the following sections should be run from ```projects/<newprojectname>``` unless specified otherwise.
 
-7. Add small files such as ```README.md``` to your git repository and annex files larger than the size specified above. This command would do given the configuration option specified
+2 -  Add small files such as ```README.md``` to your git repository and annex files larger than the specified size. This command will sort dataset files given the configuration option for large files:
 
   ```
   datalad add *
   ```
-
-8. 
-
-At this point there are different options for populating the project directory.  Datalad supports multiple different special remotes to handle datasets stored on different media.  Note that communication between annex and the special remote is necessary as github does not store the content of annex blobs, due to size limitations. Therefore annexed files in github hold only a symbolic link. To have access to annexed files content, git annex requests it from some other 'special' remote location.
+  
+3 - After publishing your dataset, follow the **Initialize the Globus special remote** procedure 
 
 
-## Examples
+## Publish a new dataset 
 
-a) For large datafiles on ftp or http servers, use the web remote
-
-  ```
-  git annex addurl <URL_of_resource> --file <linkname>
-  ```
-
-The ```--file``` switch is optional, but recommended, because without it the default name for a link is built from the full URL of the resource and tends to be unwieldy or uninformative.
-
-NB: Generating the link requires enough space on your local machine to store the large data file. 
-
-b) For datasets on your machine, other special remotes are available.
-
-A list of available special remotes can be found [here](http://git-annex.branchable.com/special_remotes/). More information on the role of special remotes can be found [here]. 
-
-A different initialization procedure will be required for each special remote.  Add ```config.sh``` in ```projects/<newproject>``` to handle automatic special remote initialization.
-
-9. Publish your data to github:
+1 - Publish your data to github:
 
 From your new project directory:
 
@@ -163,7 +156,7 @@ Both of the save and publish steps are necessary, and must be done from the appr
 When adding new data to an existing project, the ```publish --to github``` is replaced by another ```publish --to origin``` command.
 
 
-10. You should now have a git repository containing your new dataset correctly linked as a submodule of ```<yourusername>/conp-dataset```.  Test this by downloading.
+2 - You should now have a git repository containing your new dataset correctly linked as a submodule of ```<yourusername>/conp-dataset```.  Test this by downloading.
 
 ```
 datalad install -r http://github.com/<yourusername>/conp-dataset
@@ -172,11 +165,35 @@ cd conp-dataset/projects/<newprojectname>
 
 The -r is a recursive install, so all subdirectories and small should be present, and links to annexed files.
 
-11.  Test that these links download correctly with:
+
+### Initialize Globus special remote                      
+
+1 - To initialize the globus special remote it is required to clone the following repository providing admin tools:
+
+```
+git clone globus_admin_tool
+```
+
+2 - Then execute and launch the configuration script that will automatically initialize your globus with your dataset
+```
+chmod a+x globus_config.sh
+```
+
+```
+./globus_config.sh [dataset_root]
+```
+
+Note: ```dataset_root``` can be omitted if the command is launched from the dataset root directory. Default is the current directory ```.```
+
+
+## Test a new dataset
+
+
+1 -  Test that these links download correctly with:
 
 ```datalad get <linkname>```
 
-12.  Once you have confirmed that your dataset downloads correctly and has a ```README.md``` and a valid ```DATS.json```, submit a pull request to merge it with ```CONP-PCNO/conp-dataset```.
+2 -  Once you have confirmed that your dataset downloads correctly and has a ```README.md``` and a valid ```DATS.json```, submit a pull request to merge it with ```CONP-PCNO/conp-dataset```.
 
 
 
