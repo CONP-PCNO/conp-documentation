@@ -171,7 +171,7 @@ The -r is a recursive install, so all subdirectories and small should be present
 1 - To initialize the globus special remote it is required to clone the following repository providing admin tools:
 
 ```
-git clone globus_admin_tool
+git clone globus_tools
 ```
 
 2 - Then execute and launch the configuration script that will automatically initialize your globus with your dataset
@@ -180,7 +180,7 @@ chmod a+x globus_config.sh
 ```
 
 ```
-./globus_config.sh [dataset_root]
+./globus_config.sh -d dataset_root --endpoint endpoint_name --prefix files_prefix
 ```
 
 Note: ```dataset_root``` can be omitted if the command is launched from the dataset root directory. Default is the current directory ```.```
