@@ -186,6 +186,9 @@ chmod a+x globus_config.sh
 Note: ```dataset_root``` can be omitted if the command is launched from the dataset root directory. Default is the current directory ```.```
 
 
+3 - Commit and push to the git-annex branch to publish 
+
+
 ## Test a new dataset
 
 
