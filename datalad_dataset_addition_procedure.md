@@ -93,8 +93,8 @@ Choice of how to populate the new dataset space may vary based on the special re
 
 More information on the role of special remotes and a list of available special remotes can be found [here](http://git-annex.branchable.com/special_remotes/)
 
-In this manual, we will distinguish between the possibility to work with the [web](https://git-annex.branchable.com/tips/using_the_web_as_a_special_remote/), 
-[globus](https://github.com/CONP-PCNO/git-annex-remote-globus) and [googledrive](https://github.com/Lykos153/git-annex-remote-googledrive) special remotes.
+In this manual, we will distinguish between the possibility to work with the [web](https://git-annex.branchable.com/tips/using_the_web_as_a_special_remote/) and 
+[globus](https://github.com/CONP-PCNO/git-annex-remote-globus) (to be added: [googledrive](https://github.com/Lykos153/git-annex-remote-googledrive)) special remotes.
 
 
 
@@ -134,7 +134,7 @@ All commands presented in the following sections should be run from ```projects/
   datalad add *
   ```
   
-3 - After publishing your dataset, follow the **Initialize the Globus special remote** procedure 
+3 - After publishing your dataset as explained below, follow the **Initialize the Globus special remote** procedure 
 
 
 ## Publish a new dataset 
@@ -189,9 +189,9 @@ Note: ```dataset_root``` can be omitted if the command is launched from the data
 ## Test a new dataset
 
 
-1 -  Test that these links download correctly with:
+1 -  Test that dataset files download correctly, being either urls (Web remote case) or files (Globus remote case):
 
-```datalad get <linkname>```
+```datalad get [<url_name> | path/to/file]```
 
 2 -  Once you have confirmed that your dataset downloads correctly and has a ```README.md``` and a valid ```DATS.json```, submit a pull request to merge it with ```CONP-PCNO/conp-dataset```.
 
