@@ -166,7 +166,9 @@ cd conp-dataset/projects/<newprojectname>
 The -r is a recursive install, so all subdirectories and small should be present, and links to annexed files.
 
 
-### Initialize Globus special remote                      
+### Initialize Globus special remote
+
+Note: this section is intended for the Globus special remote use case only.                      
 
 1 - To initialize the globus special remote it is required to clone the following repository providing admin tools:
 
