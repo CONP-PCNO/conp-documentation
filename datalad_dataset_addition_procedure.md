@@ -1,4 +1,4 @@
-## Datalad dataset preparation procedure
+# Datalad dataset addition procedure
 
 This procedure is intended for developers.
 
