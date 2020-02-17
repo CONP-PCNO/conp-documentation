@@ -166,7 +166,7 @@ This -r is a recursive install, so all subdirectories and small files should be 
 
 12. **(OPTIONAL)** Initialize Globus special remote for the first time
 
-In the Globus special remote use case **only**:
+In the Globus special remote use case (9.2c) **only**:
 
 12a) Clone the following repository providing admin tools:
 
