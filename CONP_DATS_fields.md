@@ -1,4 +1,4 @@
-**Every dataset must be described following those guidelines.**
+**Every dataset must be described following these guidelines.**
 
 The information will be used to create your resource landing page on the CONP portal and will help other users to find your dataset. 
 
@@ -15,7 +15,8 @@ The information will be used to create your resource landing page on the CONP po
 |distributions - format|**REQUIRED**. Primary data files format (*example*: csv, nifti, txt, fasta).|
 |distributions - size|**REQUIRED**. Total size of the dataset.|
 |distributions - unit|**REQUIRED**. Unit in which the size is measured.(*example*: GB)|
-|distributions - access|**REQUIRED**. Web address where the original dataset can be found.|
+|distributions - access - landingPage|**REQUIRED**. Web address where the original dataset can be found.|
+|distributions - access - annotation|Value must be one of "public", "registered" or "private". When this field is absent the value will be treated as "public".|
 |extraProperties - files|**REQUIRED**. Total number of files in the dataset.|
 |extraProperties - subjects|**REQUIRED**. Total number of subjects constituting the dataset.|
 |primaryPublications|**RECOMMENDED**. The primary publication(s) associated with the dataset, usually describing how the dataset was produced.|
