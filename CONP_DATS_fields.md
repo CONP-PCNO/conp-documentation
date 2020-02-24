@@ -16,7 +16,7 @@ The information will be used to create your resource landing page on the CONP po
 |distributions - size|**REQUIRED**. Total size of the dataset.|
 |distributions - unit|**REQUIRED**. Unit in which the size is measured.(*example*: GB)|
 |distributions - access - landingPage|**REQUIRED**. Web address where the original dataset can be found.|
-|distributions - access - authorizations|Value must be one of "public", "registered" or "private". When this field is absent the value will be treated as "public".|
+|distributions - access - authorizations|Contains an array with a single entry for "value". This must be one of "public", "registered" or "private". When this field is absent the value will be treated as "public".|
 |extraProperties - files|**REQUIRED**. Total number of files in the dataset.|
 |extraProperties - subjects|**REQUIRED**. Total number of subjects constituting the dataset.|
 |primaryPublications|**RECOMMENDED**. The primary publication(s) associated with the dataset, usually describing how the dataset was produced.|
