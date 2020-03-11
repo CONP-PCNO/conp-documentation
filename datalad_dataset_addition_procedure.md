@@ -1,6 +1,22 @@
-# Datalad dataset addition procedure
+# Datalad dataset addition procedures
 
-This procedure is intended for developers.
+This documentation is intended for developers.
+
+# Requirements
+
+All datasets must include a `README.md` in the root directory.
+Adding meta-data about your dataset is required. 
+
+All datasets must include a `DATS.json` metadata file in the root directory as described in [the main documentation page](https://github.com/CONP-PCNO/conp-documentation/blob/master/CONP_main_data_documentation.htm).
+
+
+# Upload using Zenodo
+
+1. Upload your dataset to https://zenodo.org with the specific keyword `canadian-open-neuroscience-platform`.  If your dataset is larger than 50GB you will need to contact [Zenodo](https://zenodo.org/support) with a request category of `File upload quota increase` in order to be able to upload it
+    
+2. If you set your dataset as **restricted**, create a personal token via *Applications > Personal access tokens > New Token > Check all scopes > Create* and send the token via email to CONP Technical Steering Committee member Tristan Glatard (tglatard@encs.concordia.ca).
+
+# Manual upload using datalad
 
 ## Setup - Installing required software (assumes working on a Linux machine):
 
@@ -140,13 +156,29 @@ cd conp-dataset/projects/<newprojectname>
 
 This -r is a recursive install, so all subdirectories and small files should be present, and links to annexed files.
 
-13.  Test that dataset files download correctly, either urls (Web remot) or files (Globus remote):
+13.  Test that dataset files download correctly, either urls (Web remote) or files (Globus remote):
 
 ```datalad get [<url_name> | path/to/file]```
 
-14.  Submit a pull request to merge your dataset with ```CONP-PCNO/conp-dataset```.  Travis-CI will automatically test your dataset to confirm whether files download correctly, validate the format of your DATS.json file &c.
+
+## Obtaining a Digital Object Identifier for your dataset
+
+Datasets in CONP are required to have a Digital Object Identifier (DOI). A DOI is a unique and permanent identifier associated with a research object to make it citeable and retrievable. To get a DOI for your dataset, follow the following steps:
+
+14. Log in to [Zenodo](https://zenodo.org), preferably using your GitHub account.
+
+15. [Select](https://zenodo.org/account/settings/github) of your GitHub repository at Zenodo.
+
+16. Release your dataset on GitHub (see instructions [here](https://help.github.com/en/articles/creating-releases)), which creates a DOI and archives your dataset on Zenodo. 
+
+17. Get the DOI badge from [here](https://zenodo.org/account/settings/github/) and add it to the `README.md` file of your dataset, and add its value to the *identifier* field of your `DATS.json` file. This links to the DOI associated with the latest release of your dataset. 
+
+18.  Submit a pull request to merge your dataset with ```CONP-PCNO/conp-dataset```.  Travis-CI will automatically test your dataset to confirm whether files download correctly, validate the format of your DATS.json file &c.
 
 ## Longer-term use and storage
 
-15.  We recommend that datasets be forked into https://github.com/conpdatasets to mitigate the risk of becoming inaccessible as the projects that generated the data conclude, depending on the circumstances of individual datasources.
+19.  We recommend that datasets be forked into https://github.com/conpdatasets to mitigate the risk of becoming inaccessible as the projects that generated the data conclude, depending on the circumstances of individual datasources.
+
+If you need help at any stage, please [open an issue](https://github.com/CONP-PCNO/conp-dataset/issues/new/choose) in
+the CONP-PCNO/conp-dataset repository and we will do our best to help you.
 
