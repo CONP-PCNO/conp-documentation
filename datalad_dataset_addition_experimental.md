@@ -13,7 +13,7 @@ a) Manually edit the ```.gitattribute``` file in your project/<newprojectname> f
 
 This ensures that only files larger than the specified size in your project will be annexed.
 
-b) Copy all downloaded dataset files to project/<newprojectname>/
+b) Copy all downloaded dataset files to ``projects/<newprojectname>``
 
 c) Add small files such as ```README.md``` to your git repository and annex files larger than the specified size. With the above configuration option, the following command automatically sorts files for annexing or direct storage.
 
