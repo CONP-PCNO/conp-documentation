@@ -1,22 +1,12 @@
 # Datalad dataset addition procedures
 
-This documentation is intended for developers.
-
-# Requirements
-
-All datasets must include a `README.md` in the root directory.
-Adding meta-data about your dataset is required. 
-
-All datasets must include a `DATS.json` metadata file in the root directory as described in [the main documentation page](https://github.com/CONP-PCNO/conp-documentation/blob/master/CONP_main_data_documentation.htm).
-
-
 # Upload using Zenodo
 
 1. Upload your dataset to https://zenodo.org with the specific keyword `canadian-open-neuroscience-platform`.  If your dataset is larger than 50GB you will need to contact [Zenodo](https://zenodo.org/support) with a request category of `File upload quota increase` in order to be able to upload it
     
 2. If you set your dataset as **restricted**, create a personal token via *Applications > Personal access tokens > New Token > Check all scopes > Create* and send the token via email to CONP Technical Steering Committee member Tristan Glatard (tglatard@encs.concordia.ca).
 
-# Manual upload using datalad
+# Upload using DataLad
 
 ## Setup - Installing required software (assumes working on a Linux machine):
 
@@ -63,7 +53,6 @@ Alternatively, for people working with Python, run the following in your virtual
 
 ## Creating a new dataset
 
-
 4. On github, fork a new copy of ```https://github.com/CONP-PCNO/conp-dataset``` into your userspace.
 
 5. Install that copy locally:
@@ -106,10 +95,16 @@ Previous entries in the ```.gitmodules``` file can be used as a guide.
 
 Choice of how to populate a new dataset will vary based on the special remote providing access to the data. The following procedure covers working with the [web](https://git-annex.branchable.com/tips/using_the_web_as_a_special_remote/) special remote. Alternative, more experimental options using other special remotes are documented [here] (https://github.com/CONP-PCNO/conp-documentation/datalad_dataset_addition_experimental.md)/.
 
-
 All commands presented in the following sections should be run from ```projects/<newprojectname>``` unless specified otherwise.
 
-Every dataset should include a valid DATS.json file compatible with the [CONP DATS format](https://github.com/CONP-PCNO/conp-documentation/CONP_DATS_field.md).
+### Requirements
+
+All datasets must include a `README.md` in the root directory.
+Adding meta-data about your dataset is required. 
+
+All datasets must include a `DATS.json` metadata file in the root directory as described in [the main documentation page](https://github.com/CONP-PCNO/conp-documentation/blob/master/CONP_main_data_documentation.htm).
+
+(It is not necessary to manually create these files when using Zenodo as the CONP Zenodo crawler automatically generates them.)
 
 9. For large datafiles on ftp or http servers, use the web remote:
         
