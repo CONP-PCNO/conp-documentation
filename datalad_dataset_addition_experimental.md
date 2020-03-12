@@ -13,13 +13,15 @@ a) Manually edit the ```.gitattribute``` file in your project/<newprojectname> f
 
 This ensures that only files larger than the specified size in your project will be annexed.
 
-b) Add small files such as ```README.md``` to your git repository and annex files larger than the specified size. With the above configuration option, the following command automatically sorts files for annexing or direct storage.
+b) Copy all downloaded dataset files to project/<newprojectname>/
+
+c) Add small files such as ```README.md``` to your git repository and annex files larger than the specified size. With the above configuration option, the following command automatically sorts files for annexing or direct storage.
 
   ```
   datalad add *
   ```
   
-c) Publish your dataset as explained in step 11 of the [standard procedure](https://github.com/CONP-PCNO/conp-documentation/datalad_dataset_addition_experimental.md).
+d) Publish your dataset as explained in step 11 of the [standard procedure](https://github.com/CONP-PCNO/conp-documentation/datalad_dataset_addition_experimental.md).
 
 
 ## Initialising the Globus special remote for the first time 
