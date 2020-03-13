@@ -4,6 +4,8 @@ This procedure is intended for developers.
 
 ## Setup - Installing required software (assumes working on a Linux machine):
 
+### Install on a Linux machine
+
 Installation in this order is strongly recommended.
 
 1. git:
@@ -43,6 +45,34 @@ The version of git-annex installed can be verified with:
 Alternatively, for people working with Python, run the following in your virtual environment:
 
 ```pip3 install datalad```
+
+### Install using CONDA (assumes working on a Linux machine)
+
+Installation in this order is strongly recommended.
+
+1. conda:
+
+```
+wget https://repo.anaconda.com/miniconda/Miniconda3-4.7.12.1-Linux-x86_64.sh
+sh Miniconda3-4.7.12.1-Linux-x86_64.sh
+```
+
+
+2. git-annex:
+
+```conda install -c conda-forge git-annex```
+
+As of March 11 2020, this command installs git annex v 8.20200309, which works with CONP datasets. Versions early than 7.20190730 of git-annex, including the default version available with Ubuntu 18.04, may not, because some CONP datasets are hosted on ftp servers and git-annex did not support ftp for some time in 2018/2019.
+
+The version of git-annex installed can be verified with:
+
+```git annex version```
+
+
+3. datalad:
+
+```pip install datalad```
+
 
 
 ## Creating a new dataset
