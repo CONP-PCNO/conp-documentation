@@ -54,33 +54,9 @@ Alternatively, for people working with Python, run the following in your virtual
 
 For more information on how to install DataLad on a Linux system, please visit [Install DataLad section of the DataLad's handbook](http://handbook.datalad.org/en/latest/intro/installation.html#linux-neuro-debian-ubuntu-and-similar-systems).
 
-### Install on a Linux machine with no root access
+### Install on a Linux machines with no root access (e.g. HPC systems)
 
-
-Installation in this order is strongly recommended.
-
-1. conda:
-
-```
-wget https://repo.anaconda.com/miniconda/Miniconda3-4.7.12.1-Linux-x86_64.sh
-sh Miniconda3-4.7.12.1-Linux-x86_64.sh
-```
-
-
-2. git-annex:
-
-```conda install -c conda-forge git-annex```
-
-The version of git-annex installed can be verified with:
-
-```git annex version```
-
-
-3. datalad:
-
-```pip install datalad```
-
-For more information on how to install DataLad on a Linux system, please visit [Install DataLad section of the DataLad's handbook](http://handbook.datalad.org/en/latest/intro/installation.html#linux-machines-with-no-root-access-e-g-hpc-systems).
+Please visit the Install DataLad section of the [DataLad's handbook](http://handbook.datalad.org/en/latest/index.html) and follow the instruction to [Install DataLad on linux-machines with no root access](http://handbook.datalad.org/en/latest/intro/installation.html#linux-machines-with-no-root-access-e-g-hpc-systems).
 
 ### Install on Mac OS X
 
