@@ -52,7 +52,10 @@ Alternatively, for people working with Python, run the following in your virtual
 
 ```pip3 install datalad```
 
-### Install using CONDA (assumes working on a Linux machine)
+For more information on how to install DataLad on a Linux system, please visit [Install DataLad section of the DataLad's handbook](http://handbook.datalad.org/en/latest/intro/installation.html#linux-neuro-debian-ubuntu-and-similar-systems).
+
+### Install on a Linux machine with no root access
+
 
 Installation in this order is strongly recommended.
 
@@ -79,7 +82,11 @@ The version of git-annex installed can be verified with:
 
 ```pip install datalad```
 
+For more information on how to install DataLad on a Linux system, please visit [Install DataLad section of the DataLad's handbook](http://handbook.datalad.org/en/latest/intro/installation.html#linux-machines-with-no-root-access-e-g-hpc-systems).
 
+### Install on Mac OS X
+
+Please visit the Install DataLad section of the [DataLad's handbook](http://handbook.datalad.org/en/latest/index.html) and follow the instruction for [Mac OS X install](http://handbook.datalad.org/en/latest/intro/installation.html#macos-osx).
 
 ## Creating a new dataset
 
