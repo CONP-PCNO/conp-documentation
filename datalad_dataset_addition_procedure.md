@@ -166,7 +166,7 @@ Datasets in CONP are required to have a Digital Object Identifier (DOI). A DOI i
 
 16. Release your dataset on GitHub (see instructions [here](https://help.github.com/en/articles/creating-releases)), which creates a DOI and archives your dataset on Zenodo. 
 
-17. Get the DOI badge from [here](https://zenodo.org/account/settings/github/) and add it to the `README.md` file of your dataset, and add its value to the *identifier* field of your `DATS.json` file. This links to the DOI associated with the latest release of your dataset. 
+17. Get the DOI badge from [here](https://zenodo.org/account/settings/github/), add it to the `README.md` file of your dataset and add its value to the *identifier* field of your `DATS.json` file. This links to the DOI associated with the latest release of your dataset. 
 
 18.  Submit a pull request to merge your dataset with ```CONP-PCNO/conp-dataset```.  Travis-CI will automatically test your dataset to confirm whether files download correctly, validate the format of your DATS.json file &c.
 
