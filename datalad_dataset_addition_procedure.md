@@ -162,7 +162,7 @@ Datasets in CONP are required to have a Digital Object Identifier (DOI). A DOI i
 
 14. Log in to [Zenodo](https://zenodo.org), preferably using your GitHub account.
 
-15. [Select](https://zenodo.org/account/settings/github) of your GitHub repository at Zenodo.
+15. [Select](https://zenodo.org/account/settings/github) your GitHub repository at Zenodo.
 
 16. Release your dataset on GitHub (see instructions [here](https://help.github.com/en/articles/creating-releases)), which creates a DOI and archives your dataset on Zenodo. 
 
