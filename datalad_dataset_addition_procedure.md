@@ -151,7 +151,7 @@ cd conp-dataset/projects/<newprojectname>
 
 This -r is a recursive install, so all subdirectories and small files should be present, and links to annexed files.
 
-13.  Test that dataset files download correctly, either urls (Web remote) or files (Globus remote):
+13.  Test that dataset files download correctly, either URLs (Web remote) or files (Globus remote):
 
 ```datalad get [<url_name> | path/to/file]```
 
