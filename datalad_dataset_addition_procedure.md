@@ -10,7 +10,9 @@
 
 ## Setup - Installing required software (assumes working on a Linux machine):
 
-### Install on a Linux machine
+Note: as of August 14 2019, this command installs git annex v 7.20190730, which works with CONP datasets. Earlier versions of git-annex, including the default version available with Ubuntu 18.04, may not, because some CONP datasets are hosted on ftp servers and git-annex did not support ftp for some time in 2018/2019.
+
+### Install on a Linux machine with root access
 
 Installation in this order is strongly recommended.
 
@@ -36,8 +38,6 @@ First install the neurodebian package repository:
 Then install the version of git-annex included in this repository:
 
 ```sudo apt-get install git-annex-standalone```
-
-As of August 14 2019, this command installs git annex v 7.20190730, which works with CONP datasets. Earlier versions of git-annex, including the default version available with Ubuntu 18.04, may not, because some CONP datasets are hosted on ftp servers and git-annex did not support ftp for some time in 2018/2019.
 
 The version of git-annex installed can be verified with:
 
@@ -70,8 +70,6 @@ sh Miniconda3-4.7.12.1-Linux-x86_64.sh
 2. git-annex:
 
 ```conda install -c conda-forge git-annex```
-
-As of March 11 2020, this command installs git annex v 8.20200309, which works with CONP datasets. Versions early than 7.20190730 of git-annex, including the default version available with Ubuntu 18.04, may not, because some CONP datasets are hosted on ftp servers and git-annex did not support ftp for some time in 2018/2019.
 
 The version of git-annex installed can be verified with:
 
