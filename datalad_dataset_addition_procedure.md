@@ -100,7 +100,7 @@ All commands presented in the following sections should be run from ```projects/
 ### Requirements
 
 All datasets must include a `README.md` in the root directory.
-Adding meta-data about your dataset is required. 
+Adding metadata about your dataset is required. 
 
 All datasets must include a `DATS.json` metadata file in the root directory as described in [the main documentation page](https://github.com/CONP-PCNO/conp-documentation/blob/master/CONP_main_data_documentation.htm).
 
