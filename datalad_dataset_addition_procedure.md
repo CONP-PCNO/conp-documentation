@@ -2,7 +2,7 @@
 
 # Upload using Zenodo
 
-1. Upload your dataset to https://zenodo.org with the specific keyword `canadian-open-neuroscience-platform`.  If your dataset is larger than 50GB you will need to contact [Zenodo](https://zenodo.org/support) with a request category of `File upload quota increase` in order to be able to upload it
+1. Upload your dataset to https://zenodo.org with the specific keyword `canadian-open-neuroscience-platform`.  If your dataset is larger than 50GB you will need to contact [Zenodo](https://zenodo.org/support) with a request category of `File upload quota increase` in order to be able to upload it.
     
 2. If you set your dataset as **restricted**, create a personal token via *Applications > Personal access tokens > New Token > Check all scopes > Create* and send the token via email to CONP Technical Steering Committee member Tristan Glatard (tglatard@encs.concordia.ca).
 
@@ -176,4 +176,3 @@ Datasets in CONP are required to have a Digital Object Identifier (DOI). A DOI i
 
 If you need help at any stage, please [open an issue](https://github.com/CONP-PCNO/conp-dataset/issues/new/choose) in
 the CONP-PCNO/conp-dataset repository and we will do our best to help you.
-
