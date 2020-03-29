@@ -26,4 +26,4 @@ Uploading to CONP will increase its visibility and accessibility to other neuros
 
 7. **How do I upload data to CONP?**
 
-Data can be uploaded to CONP either through Zenodo, by tagging your dataset with the keyword 'canadian-open-neuroscience-platform', or manually through DataLad.  [Detailed technical instructions](https://github.com/CONP-PCNO/conp-documentation/blob/master/datalad_dataset_addition_procedure.md) are available for both these options.
+Data can be uploaded to CONP either through [Zenodo](https://zenodo.org) by tagging your dataset with the keyword `canadian-open-neuroscience-platform`, through [OSF](https://osf.io) by tagging your dataset with `canadian-open-neuroscience-platform` and setting the dataset to `Public`, or manually through DataLad.  [Detailed technical instructions](https://github.com/CONP-PCNO/conp-documentation/blob/master/datalad_dataset_addition_procedure.md) are available for all these options.

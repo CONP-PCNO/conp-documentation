@@ -6,6 +6,13 @@
     
 2. If you set your dataset as **restricted**, create a personal token via *Applications > Personal access tokens > New Token > Check all scopes > Create* and send the token via email to CONP Technical Steering Committee member Tristan Glatard (tglatard@encs.concordia.ca).
 
+# Upload using OSF
+
+1. Upload your dataset to https://osf.io/ with the specific tag `canadian-open-neuroscience-platform`.
+    
+2. Ensure the dataset/project is set to `Public`. `Private` datasets will be supported in the near future.
+
+
 # Upload using DataLad
 
 ## Setup - Installing required software (assumes working on a Linux machine):
