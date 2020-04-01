@@ -1,4 +1,4 @@
-# Datalad dataset addition procedures
+# Dataset addition procedures
 
 # Upload using Zenodo
 
