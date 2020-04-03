@@ -46,9 +46,12 @@ Then install the version of git-annex included in this repository:
 
 ```sudo apt-get install git-annex-standalone```
 
-The version of git-annex installed can be verified with:
+It is required that git-annex version is >= 7.20190730. The version of git-annex installed can be verified with:
 
 ```git annex version```
+
+Alternatively, the tarball of most recent git-annex versions is available [here](https://git-annex.branchable.com/install/Linux_standalone/)
+
 
 
 3. datalad:
