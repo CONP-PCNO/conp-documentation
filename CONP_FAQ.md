@@ -59,7 +59,7 @@ CONP pipelines can be easily installed and run on any computer with a container 
 
 First, ensure your have [Boutiques](https://pypi.org/project/boutiques/) installed with [Docker](https://www.docker.com/) or [Singularity](https://singularity.lbl.gov/).
 
-If you have never used Boutiques in the past, you can go through the following [tutorial](https://nbviewer.jupyter.org/github/boutiques/tutorial/blob/master/notebooks/boutiques-tutorial.ipynb#reusing_tools).
+If you have never used Boutiques in the past, we recommend the following [tutorial](https://nbviewer.jupyter.org/github/boutiques/tutorial/blob/master/notebooks/boutiques-tutorial.ipynb#reusing_tools).
 
 Tools/pipelines can be run on Boutiques based on their Zenodo ID as follows:
 
@@ -102,7 +102,7 @@ Exit code
 1
 ```
 
-=> ensure to mount the directory where your data is on the container by using the `-v` option in the bosh command. For example, if your data is in `/data`, then you need to specify `-v /data:/data` in the `bosh` command as follows:`bosh exec launch -s <zenodo_id> <invocation> -v <directory_to_mount>`
+=> confirm your data directory is mounted on the container by using the `-v` option in the bosh command. For example, if your data is in `/data`, then you need to specify `-v /data:/data` in the `bosh` command as follows:`bosh exec launch -s <zenodo_id> <invocation> -v <directory_to_mount>`
 
 #### **How can I upload/share my own tool/pipeline on CONP?**
 
@@ -112,7 +112,7 @@ You can add your own tool/pipeline by following the instructions described in th
 
 #### **To which username/password is DataLad referring to when trying to download via `datalad get` preventad-open or multicenter-phantom datasets?**
 
-In order to have access to those datasets, you will need to request an account on their respective LORIS repository. 
+In order to have access to those datasets, you will need to request an account on their respective LORIS repositories. 
 
 To do so, on the dataset page, click on the link shown under "Source" which will redirect you to the LORIS login page. Below the login button there is a 'Request Account' link that will show a Request Account form that will need to be filled and sent. 
 
