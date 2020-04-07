@@ -57,7 +57,7 @@ CONP pipelines can be easily installed and run on any computer with a container 
 
 #### **How can I run a CONP tool/pipeline?**
 
-First, ensure your have [Boutiques](https://pypi.org/project/boutiques/) installed with [Docker](https://www.docker.com/) or [Singularity](https://singularity.lbl.gov/).
+To run tools/pipelines locally, ensure your have [Boutiques](https://pypi.org/project/boutiques/) installed with [Docker](https://www.docker.com/) or [Singularity](https://singularity.lbl.gov/).
 
 If you have never used Boutiques in the past, we recommend the following [tutorial](https://nbviewer.jupyter.org/github/boutiques/tutorial/blob/master/notebooks/boutiques-tutorial.ipynb#reusing_tools).
 
@@ -73,6 +73,8 @@ Tools/pipelines can be run on Boutiques based on their Zenodo ID as follows:
 ```bash
 bosh exec launch -s <zenodo_id> <invocation>
 ```
+
+Note that in addition to the ability to run the tools/pipelines locally, it is possible to run some tools/pipelines via the CBRAIN platform (for example: the fmriprep BIDS App, Zenodo.3359640). Clicking on the blue icon "Run Pipeline on CBRAIN" will bring you to the CBRAIN page where you can run pipelines on compute canada super computers.
 
 #### **I get the following error when running the tool on bosh**
 
