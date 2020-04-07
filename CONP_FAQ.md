@@ -46,7 +46,7 @@ Data can be uploaded to CONP either through [Zenodo](https://zenodo.org) by tagg
 
 #### **What tools/pipelines are contained in CONP?**
 
-CONP contains a diverse range of XXXXXX tools and pipelines (March 2020).  Many of these tools/pipelines come from neuroscience research institutes, while others link to public resources that may be of interest to neuroscientists. A full list can be found [here](https://portal.conp.ca/pipelines).
+CONP contains a diverse range of 56 tools and pipelines (March 2020).  Many of these tools/pipelines come from neuroscience or genomics research institutes. A full list can be found [here](https://portal.conp.ca/pipelines).
 
 #### **What are the requirements to install and run a tool?**
 
@@ -59,7 +59,7 @@ CONP pipelines can be easily installed and run on any computer with a container 
 
 First, ensure your have [Boutiques](https://pypi.org/project/boutiques/) installed with [Docker](https://www.docker.com/) or [Singularity](https://singularity.lbl.gov/).
 
-If you have never used Boutiques in the past, ensure to go through the following [tutorial](https://nbviewer.jupyter.org/github/boutiques/tutorial/blob/master/notebooks/boutiques-tutorial.ipynb#reusing_tools).
+If you have never used Boutiques in the past, you can go through the following [tutorial](https://nbviewer.jupyter.org/github/boutiques/tutorial/blob/master/notebooks/boutiques-tutorial.ipynb#reusing_tools).
 
 Tools/pipelines can be run on Boutiques based on their Zenodo ID as follows:
 
