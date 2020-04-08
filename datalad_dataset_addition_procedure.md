@@ -21,19 +21,13 @@ It is possible to upload a dataset using one of the following:
 
 ## <a name="datalad"></a> III. Upload using DataLad
 
-### A. Setup - Installing required software (assumes working on a Linux machine):
+### Notes:
 
-Note: as of August 14 2019, this command installs git annex v 7.20190730, which works with CONP datasets. Earlier versions of git-annex, including the default version available with Ubuntu 18.04, may not, because some CONP datasets are hosted on ftp servers and git-annex did not support ftp for some time in 2018/2019.
+DataLad is a software tool for managing digital objects such as datasets, built on git and git-annex.
 
-#### A.1 Install on a Linux machine with root access
+To download CONP data currently (April 2020) requires git-annex version>=8.20200309, and we recommend DataLad version>=0.12.5.
 
-Installation in this order is strongly recommended.
-
-1. git:
-
-```sudo apt-get install git```
-
-It is useful to configure your git credentials to avoid having to enter them repeatedly:
+We recommend setting your ```git``` configuration to store your username and email:
 
 ```
 git config --global user.name "yourusername" 
@@ -41,42 +35,13 @@ git config --global user.email "your.name@your.institution.ca"
 git config credential.helper cache  (keeps login information in memory for 5 mins)
 ```
 
+### A.1 Installation on Linux
 
-2.  git-annex:
+We recommend the Miniconda installation procedure detailed in the [Install DataLad on linux-machines with no root access](http://handbook.datalad.org/en/latest/intro/installation.html#linux-machines-with-no-root-access-e-g-hpc-systems) entry on the [DataLad Handbook](http://handbook.datalad.org/en/latest/index.html), which installs the most up-to-date versions of DataLad, git-annex, and git if needed.
 
-First install the neurodebian package repository:
+### A.2 Installation on Mac OS X
 
-```sudo apt-get install neurodebian```
-
-Then install the version of git-annex included in this repository:
-
-```sudo apt-get install git-annex-standalone```
-
-It is required that git-annex version is >= 7.20190730. The version of git-annex installed can be verified with:
-
-```git annex version```
-
-Alternatively, the tarball of most recent git-annex versions is available [here](https://git-annex.branchable.com/install/Linux_standalone/)
-
-
-
-3. datalad:
-
-```sudo apt-get install datalad```
-
-Alternatively, for people working with Python, run the following in your virtual environment:
-
-```pip3 install datalad```
-
-For more information on how to install DataLad on a Linux system, please visit [Install DataLad section of the DataLad's handbook](http://handbook.datalad.org/en/latest/intro/installation.html#linux-neuro-debian-ubuntu-and-similar-systems).
-
-#### A.2 Install on a Linux machines with no root access (e.g. HPC systems)
-
-Please visit the Install DataLad section of the [DataLad's handbook](http://handbook.datalad.org/en/latest/index.html) and follow the instruction to [Install DataLad on linux-machines with no root access](http://handbook.datalad.org/en/latest/intro/installation.html#linux-machines-with-no-root-access-e-g-hpc-systems).
-
-#### A.3 Install on Mac OS X
-
-Please visit the Install DataLad section of the [DataLad's handbook](http://handbook.datalad.org/en/latest/index.html) and follow the instruction for [Mac OS X install](http://handbook.datalad.org/en/latest/intro/installation.html#macos-osx).
+Please visit the Install DataLad section of the [DataLad Handbook](http://handbook.datalad.org/en/latest/index.html) and follow the instruction for [Mac OS X install](http://handbook.datalad.org/en/latest/intro/installation.html#macos-osx).
 
 ### B. Creating a new dataset with DataLad
 
