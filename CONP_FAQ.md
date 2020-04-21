@@ -6,13 +6,13 @@
 - [Tools & Pipelines](#tools)
 - [DataLad](#datalad) 
 
-## <a name="conp"></a> CONP
+## <a name="conp"></a>I. CONP
 
 #### **What is CONP?**
 
 The Canadian Open Neuroscience Platform is an open science infrastructure for sharing neuroscience data.  More information can be found [here](https://conp.ca).
 
-## <a name="data-download"></a> Data Access and Download
+## <a name="data-download"></a>II. Data Access and Download
 
 #### **What data are contained in CONP?**
 
@@ -32,7 +32,7 @@ Download through the browser will be available shortly.
 
 The download buttons on the list of files downloads metadata for each dataset, in a single `.json` file which contains a detailed description of the data in DATS format.  The data files themselves can be downloaded using DataLad as described on the results page for each individual dataset.
 
-## <a name="data-upload"></a> Data Sharing/Upload
+## <a name="data-upload"></a>III. Data Sharing/Upload
 
 #### **Why should I upload data to CONP?**
 
@@ -42,7 +42,7 @@ Uploading to CONP will increase its visibility and accessibility to other neuros
 
 Data can be uploaded to CONP either through [Zenodo](https://zenodo.org) by tagging your dataset with the keyword `canadian-open-neuroscience-platform`, through [OSF](https://osf.io) by tagging your dataset with `canadian-open-neuroscience-platform` and setting the dataset to `Public`, or manually through DataLad.  [Detailed technical instructions](https://github.com/CONP-PCNO/conp-documentation/blob/master/datalad_dataset_addition_procedure.md) are available for all these options.
 
-## <a name="tools"></a> Tools & Pipelines
+## <a name="tools"></a>IV. Tools & Pipelines
 
 #### **What tools/pipelines are contained in CONP?**
 
@@ -110,7 +110,7 @@ Exit code
 
 You can add your own tool/pipeline by following the instructions described in this [document](https://nbviewer.jupyter.org/github/boutiques/tutorial/blob/master/notebooks/boutiques-tutorial.ipynb#publishing_tools).
 
-## <a name="datalad"></a> DataLad
+## <a name="datalad"></a>V. DataLad
 
 #### **To which username/password is DataLad referring to when trying to download via `datalad get` preventad-open or multicenter-phantom datasets?**
 
