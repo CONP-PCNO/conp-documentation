@@ -2,6 +2,6 @@
 
 ### Sketch Mockups
 
-Derek's mockups can be found in the following Sketch link: [https://sketch.cloud/s/7b5v2] (https://sketch.cloud/s/7b5v2)
+Derek's mockups can be found in the following Sketch link: [https://www.sketch.com/s/mOnl8] (https://www.sketch.com/s/mOnl8)
 
 
