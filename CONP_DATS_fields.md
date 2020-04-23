@@ -1,6 +1,4 @@
-**Every dataset must be described following these guidelines.**
-
-The information will be used to create your resource landing page on the CONP portal and will help other users to find your dataset. 
+We use the `DATS.json` file format to store metadata describing CONP datasets.  `DATS.json` is a flexible machine-readable structrue allowing for sophisticated representation of a wide range of different types of datasets, from neuroimaging to genomics. A `DATS.json` file must be prepared for each dataset.  The information will be used to create your resource landing page on the CONP portal and will help other users to find your dataset.  The table below summarises required, recommended and optional fields. 
 
 
 | | |
@@ -19,6 +17,7 @@ The information will be used to create your resource landing page on the CONP po
 |distributions - access - authorizations|Contains an array with a single entry for "value". This must be one of "public", "registered" or "private". When this field is absent the value will be treated as "public".|
 |extraProperties - files|**REQUIRED**. Total number of files in the dataset.|
 |extraProperties - subjects|**REQUIRED**. Total number of subjects constituting the dataset.|
+|extraProperties - derivedFrom|**IF** the dataset is a derived dataset, the URL of the dataset it is derived from is **REQUIRED**.  The original dataset must also be included as a submodule in the derived dataset.|
 |primaryPublications|**RECOMMENDED**. The primary publication(s) associated with the dataset, usually describing how the dataset was produced.|
 |dimensions|**RECOMMENDED**. The different dimensions (granular components) making up a dataset. Providing dimensions give more details about the data types.|
 |identifier|**RECOMMENDED**. Primary identifier for the dataset. Provide a *Document Object Identifier (DOI)* if you have one.|
@@ -36,10 +35,7 @@ The information will be used to create your resource landing page on the CONP po
 |aggregation|**OPTIONAL**. Qualifier indicating whether the entity represents an 'instance of a dataset' or a 'collection of datasets'.|
 |spatialCoverage|**OPTIONAL**. The geographical extension and span covered by the dataset and its measured dimensions/variables.|
 
-<!--- how to acknowledge
-RECOMMENDED.  Instructions how researchers using this dataset should acknowledge the original authors. This field can also be used to define a publication that should be cited in publications that use the dataset. --->
-<!--- availability
-OPTIONAL. A qualifier indicating the different types of availability for a dataset (available, unavailable, embargoed, available with restriction, information not available) --->
+The DATS dataset schema can be found [here](https://github.com/CONP-PCNO/schema/blob/master/dataset_schema.json), and the `DATS.json` file from the visual-working-memory dataset [here](https://github.com/emmetaobrien/ds001634/blob/4f9721a053a3c211b45c6b3f61e8b2cc69027c74/DATS.json) can be used as a template. A graphic interface allowing users to fill in fields online is under development [here](https://dats-creator.herokuapp.com/).
 
 
 
