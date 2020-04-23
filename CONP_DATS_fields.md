@@ -1,4 +1,4 @@
-We use the `DATS.json` file format to store metadata describing CONP datasets.  `DATS.json` is a flexible machine-readable structrue allowing for sophisticated representation of a wide range of different types of datasets, from neuroimaging to genomics. A `DATS.json` file must be prepared for each dataset.  The information will be used to create your resource landing page on the CONP portal and will help other users to find your dataset.  The table below summarises required, recommended and optional fields. 
+We use the `DATS.json` file format to store metadata describing CONP datasets.  `DATS.json` is a flexible machine-readable structure allowing for sophisticated representation of a wide range of different types of datasets, from neuroimaging to genomics. A `DATS.json` file must be prepared for each dataset.  The information will be used to create your resource landing page on the CONP portal and will help other users to find your dataset.  The table below summarises required, recommended and optional fields. 
 
 
 | | |
