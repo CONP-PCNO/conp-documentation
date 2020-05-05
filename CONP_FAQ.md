@@ -20,7 +20,7 @@ CONP contains a diverse range of 30 datasets (March 2020), primarily neuroimagin
 
 #### **How do I download data from CONP?**
 
-Results pages for the individual datasets contain instructions for downloading that dataset.  At the moment, access to datasets is made available through the [DataLad](www.datalad.org) data management system.  Data download at the push of a button is under development and will be available shortly.
+Results pages for the individual datasets contain instructions for downloading that dataset.  At the moment, access to datasets is made available through the [DataLad](https://www.datalad.org) data management system.  Data download at the push of a button is under development and will be available shortly.
 
 #### **What software do I need to download data from CONP?**
 
