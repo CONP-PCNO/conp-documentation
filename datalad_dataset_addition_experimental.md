@@ -28,15 +28,24 @@ d) Clone the following repository providing admin tools:
 git clone https://github.com/CONP-PCNO/globus_tools.git
 ```
 
-e) Then execute and launch the configuration script that will automatically initialize your globus with your dataset
+e) So let's go ahead and start the retrieving of the dataset information in Globus that git annex will store. First let's install some requirements.
 
-```
-./globus_config.sh -d <dataset_root> --endpoint <endpoint_name> --prefix <files_prefix>
-```
+```pip install configparser```
+```pip install git-annex-remote-globus```
 
-Note: ```dataset_root``` can be omitted if the command is launched from the dataset root directory. Default is the current directory ```.```
+f) Then we make sure we are in the dataset root ``conp-dataset/project/<new_dataset>``. The ``fileprefix`` and ``endpoint`` can 
+be found in Globus.org dataset page (metadata). The remote must be initialized
 
-f) Commit and push to the git-annex branch to publish 
+```cd conp-dataset/project/<new_dataset>```
+
+```git annex initremote globus type=external externaltype=globus encryption=none endpoint=dataset_name | dataset_ID fileprefix=source/data```
+
+g) We can the retrieve information about the dataset files 
+
+```.globus_tools/retrieve.py --path conp-dataset/project/<new_dataset> --endpoint dataset_name --fileprefix /source/data/ --encryption none```
+
+
+h) Commit and push to the git-annex branch to publish. Note, push to git annex branch is important or the data will be lost
 
 
 to be added: [googledrive](https://github.com/Lykos153/git-annex-remote-googledrive)
