@@ -1,16 +1,14 @@
-# CONP portal FAQ
-
-- [CONP](#conp)
-- [Data Access & Download](#data-download)
-- [Data Upload](#data-upload)
-- [Tools & Pipelines](#tools)
-- [DataLad](#datalad) 
+[CONP](#conp) | [Data Access & Download](#data-download) | [Data Upload](#data-upload) | [Tools & Pipelines](#tools) | [DataLad](#datalad) 
 
 ## <a name="conp"></a>I. CONP
 
 #### **What is CONP?**
 
 The Canadian Open Neuroscience Platform is an open science infrastructure for sharing neuroscience data.  More information can be found [here](https://conp.ca).
+
+#### **Portal tutorials**
+
+We created a [tutorial document](https://conp.ca/tutorial) on how to use the portal.
 
 ## <a name="data-download"></a>II. Data Access and Download
 
