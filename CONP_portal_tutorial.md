@@ -71,7 +71,9 @@ Some tools and pipelines can also be run on HPCs via the CBRAIN infrastructure o
 
 ![SCREENSHOT of the CBRAIN link](https://raw.githubusercontent.com/CONP-PCNO/conp-documentation/master/img/CBRAIN_link_highlighted.png)
 
-The 'Click here to begin' link under the CBRAIN container will open a tab on your CBRAIN account. The 'Click here for instructions' link under the 'Run on HPCs with Clowdr' will open a new tab with the instructions to follow to deploy the tool/pipeline on your Compute Canada account.
+The 'Click here to begin' link under the 'Run on the CBRAIN Plateform' container will open a tab to the login page of CBRAIN or to your CBRAIN account if you are already logged in. 
+
+The 'Click here for instructions' link under the 'Run on HPCs with Clowdr' will open a new tab with the instructions to follow to deploy a tool/pipeline on your Compute Canada account. 
 
 
 ## How can I upload my dataset?
