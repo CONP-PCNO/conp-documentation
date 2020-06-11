@@ -55,6 +55,8 @@ Clicking on a specific choice will bring the user to a more detailed page with l
 
 #### How to run the tool/pipeline?
 
+###### Run the tool locally
+
 Tools and pipelines can be run locally on any system using [Boutiques](https://boutiques.github.io) and a container engine ([Docker](http://www.docker.com) or [Singularity](https://sylabs.io/docs)) based on the Zenodo ID of the tool. The container image for the tool is listed in the detailed page of the tool/pipeline. 
 
 At the bottom of the pipeline page, detailed instructions on how to run the tool locally are available to the user. 
@@ -63,9 +65,14 @@ At the bottom of the pipeline page, detailed instructions on how to run the tool
 
 If you have never used [Boutiques](https://boutiques.github.io) in the past, we recommend the following [tutorial](https://nbviewer.jupyter.org/github/boutiques/tutorial/blob/master/notebooks/boutiques-tutorial.ipynb#reusing_tools).
 
-Some tools and pipelines can also be run on HPCs via the CBRAIN infrastructure. In that case, the ‘Run on CONP Cloud’ container at the top of the tool/pipeline detailed page will contain a link to CBRAIN where the tool/pipeline can be run.
+###### Run the tool on HPCs
+
+Some tools and pipelines can also be run on HPCs via the CBRAIN infrastructure or in your Compute Canada account with Clowdr. 
 
 ![SCREENSHOT of the CBRAIN link](https://raw.githubusercontent.com/CONP-PCNO/conp-documentation/master/img/CBRAIN_link_highlighted.png)
+
+The 'Click here to begin' link under the CBRAIN container will open a tab on your CBRAIN account. The 'Click here for instructions' link under the 'Run on HPCs with Clowdr' will open a new tab with the instructions to follow to deploy the tool/pipeline on your Compute Canada account.
+
 
 ## How can I upload my dataset?
 
