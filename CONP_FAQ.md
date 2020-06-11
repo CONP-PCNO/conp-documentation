@@ -8,7 +8,7 @@ The Canadian Open Neuroscience Platform is an open science infrastructure for sh
 
 #### **Portal tutorials**
 
-We created a [tutorial document](https://conp.ca/tutorial) on how to use the portal.
+We created a [tutorial document](https://portal.conp.ca/tutorial) on how to use the portal.
 
 ## <a name="data-download"></a>II. Data Access and Download
 
