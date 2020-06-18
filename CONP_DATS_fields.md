@@ -19,7 +19,7 @@ We use the `DATS.json` file format to store metadata describing CONP datasets.  
 |extraProperties - subjects|**REQUIRED**. Total number of subjects constituting the dataset.|
 |extraProperties - CONP_status|**REQUIRED**. Must contain one of the values "CONP", "Canadian" (for non-CONP datasets generated in Canada) or "external" (for all other datasets).| 
 |extraProperties - derivedFrom|**IF** the dataset is a derived dataset, the URL of the dataset it is derived from is **REQUIRED**.  The original dataset must also be included as a submodule in the derived dataset.|
-|extraProperties - parent_dataset_id|**IF** the dataset is a derived dataset, the parent dataset id (as specified in conp_dataset/.gitmodules) is **REQUIRED**.|
+|extraProperties - parent_dataset_id|**IF** the dataset is a derived dataset, the parent dataset id (as specified in _conp_dataset/.gitmodules_) is **REQUIRED**.|
 |primaryPublications|**RECOMMENDED**. The primary publication(s) associated with the dataset, usually describing how the dataset was produced.|
 |dimensions|**RECOMMENDED**. The different dimensions (granular components) making up a dataset. Providing dimensions give more details about the data types.|
 |identifier|**RECOMMENDED**. Primary identifier for the dataset. Provide a *Document Object Identifier (DOI)* if you have one.|
