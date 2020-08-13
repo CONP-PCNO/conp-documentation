@@ -13,6 +13,7 @@ This procedure will enable you to download the desired dataset to your local spa
 
 After the step is completed, the dataset should have been transferred in your local space using Globus Transfer
 
+
 ###### Populating a new dataset
 This step assumes the whole dataset was transferred to your local space in `project/<newprojectname>` via the Globus Transfer system functionality.
 If you chose a different download destination, you can manually populate `project/<newprojectname>` by moving the dataset content in there
@@ -33,7 +34,7 @@ b) Add small files such as ```README.md``` to your git repository and annex file
 c) Publish your dataset as explained in step 3 of the [standard procedure](https://github.com/CONP-PCNO/conp-documentation/blob/master/datalad_dataset_addition_procedure.md)
 
 
-## Initialising the Globus special remote  
+#### Initialising the Globus special remote  
 
 Once a dataset has been published successfully, you may notice that, once installed with datalad, you would not be able to retrieve its files.
 This is because files were annexed. 
