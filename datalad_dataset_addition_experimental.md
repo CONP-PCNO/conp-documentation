@@ -45,7 +45,7 @@ all the files contents with git annex as desired.
 
 To register a dataset you must follow the procedure 
 provided by the [globus tools for dataset addition](https://github.com/CONP-PCNO/globus-tools-for-dataset-addition) in 
-- Step 2: Load dataset to globus special remote for first time setup
+- Step 2: Register the dataset with the git-annex globus remote for first time setup
 
 The steps are shown below for ease:
 
