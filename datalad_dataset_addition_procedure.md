@@ -95,11 +95,13 @@ Previous entries in the ```.gitmodules``` file can be used as a guide.
 
 ###### Populating a new dataset
 
-Choice of how to populate a new dataset will vary based on the special remote providing access to the data. The following procedure covers working with the [web](https://git-annex.branchable.com/tips/using_the_web_as_a_special_remote/) special remote. Alternative, more experimental options using other special remotes are documented [here] (https://github.com/CONP-PCNO/conp-documentation/datalad_dataset_addition_experimental.md)/.
+Choice of how to populate a new dataset will vary based on the special remote providing access to the data. The following procedure covers working with the [web](https://git-annex.branchable.com/tips/using_the_web_as_a_special_remote/) special remote. 
+An alternative, more experimental option which consists in using the [globus special remote](https://github.com/gi114/git-annex-remote-globus)
+is documented in [dataset addition using the globus remote](https://github.com/CONP-PCNO/conp-documentation/blob/master/datalad_dataset_addition_experimental.md).
 
 All commands presented in the following sections should be run from ```projects/<newprojectname>``` unless specified otherwise.
 
-####### Requirements
+###### Requirements
 
 All datasets must include a `README.md` in the root directory.
 Adding metadata about your dataset is required. 
