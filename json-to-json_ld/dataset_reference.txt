@@ -1,0 +1,17 @@
+dates	Date	https://w3id.org/dats/schema/date_info_schema.json
+type	Annotation	https://w3id.org/dats/schema/annotation_schema.json
+licenses	Licence	https://w3id.org/dats/schema/license_schema.json
+distributions	DatasetDistribution	http://json-schema.org/draft-04/schema
+unit	Annotation	https://w3id.org/dats/schema/annotation_schema.json
+keywords	Annotation	https://w3id.org/dats/schema/annotation_schema.json
+primaryPublications	Publication	https://w3id.org/dats/schema/publication_schema.json
+authors	Person	https://w3id.org/dats/schema/person_schema.json
+affiliations	Organization	https://w3id.org/dats/schema/organization_schema.json
+creators	Organization	https://w3id.org/dats/schema/organization_schema.json
+isAbout	BiologicalEntity	https://w3id.org/dats/schema/biological_entity_schema.json
+spatialCoverage	Place	https://w3id.org/dats/schema/place_schema.json
+dimensions	Dimension	https://w3id.org/dats/schema/dimension_schema.json
+acknowledges	Grant	https://w3id.org/dats/schema/grant_schema.json
+funders	Organization	https://w3id.org/dats/schema/organization_schema.json
+citations	Publication	https://w3id.org/dats/schema/publication_schema.json
+
