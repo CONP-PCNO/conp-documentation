@@ -125,3 +125,25 @@ The list of all the datasets that have been tagged with the `canadian-open-neuro
 ### Zenodo crawler
 
 The list of all the datasets that have been tagged with the `canadian-open-neuroscience-platform` can be found using the ` keywords:"canadian-open-neuroscience-platform"` search on [Zenodo](https://zenodo.org) or via the following link: https://zenodo.org/search?page=1&size=20&q=keywords:%22canadian-open-neuroscience-platform%22&sort=mostrecent
+
+## Install the crawler locally
+
+The crawler requires Python 3 and the following packages to be installed via `pip`:
+
+```bash
+pip install git-python
+pip install datalad
+pip install html2markdown
+``` 
+
+In addition, a `.conp_crawler_config.json` file should be created in the `home` directory of the user running the crawler with the following information:
+
+```json
+{
+    "github_token": %GITHUB TOKEN%,
+    "zenodo_tokens": {
+        %ZENODO TOKEN%
+    },
+    "osf_token": %OSF TOKEN%
+}
+```
