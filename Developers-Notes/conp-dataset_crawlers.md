@@ -137,13 +137,31 @@ The list of all the datasets that have been tagged with the `canadian-open-neuro
 
 ## Install the crawler locally
 
+##### 1) Clone your fork of `conp-dataset` locally
+
+```bash
+git clone https://github.com/<github_username>/conp-dataset.git
+```
+
+##### 2) Ensure your `master` branch is up to date with the `master` branch of `CONP-PCNO/conp-dataset`
+
+##### 3) Install the datasets recursively
+
+```bash
+datalad install -r <path to local copy of conp-dataset>
+```
+
+##### 4) Install python 3 and the required `pip` packages listed in `scripts/requirements.txt`
+
 The crawler requires Python 3 and the packages listed in `scripts/requirements.txt` to be installed via `pip`. From the conp-dataset root folder, run the following command to install the dependencies:
 
 ```bash
 pip install -r scripts/requirements.txt
 ``` 
 
-In addition, a `.conp_crawler_config.json` file should be created in the `home` directory of the user running the crawler with the following information:
+##### 5) Create the `.conp_crawler_config.json` file with Github, OSF and Zenodo tokens
+
+A `.conp_crawler_config.json` file should be created in the `home` directory of the user running the crawler with the following information:
 
 ```json
 {
@@ -154,3 +172,11 @@ In addition, a `.conp_crawler_config.json` file should be created in the `home` 
     "osf_token": %OSF TOKEN%
 }
 ```
+
+##### 6) Run crawl.py
+
+```bash
+python scripts/crawl.py
+```
+
+Note: the path from the `conp-dataset` needs to be specified. Cannot run `crawl.py` directly from the `scripts` directory.
