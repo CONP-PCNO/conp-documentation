@@ -8,20 +8,21 @@ There are crawlers available for the following platforms:
 
 - Zenodo (https://zenodo.org)
 - OSF (https://osf.io/)
+- FRDR (https://www.frdr-dfdr.ca/repo/, Work In Progress in https://github.com/CONP-PCNO/conp-dataset/pull/401)
 
 ## Where are the crawlers run?
 
-The crawlers are being run every 15 minutes on the `zenodo-crawl.acelab.ca` VM under the username `jzhou`.
+The crawlers are being run every 15 minutes on the `zenodo-crawl.acelab.ca` VM under the username `conp-bot`.
 
 ```bash
-ssh -p 4706 jzhou@zenodo-crawl.acelab.ca
+ssh -p 4706 conp-bot@zenodo-crawl.acelab.ca
 ```
 
 To obtain the password, contact cecile.madjar@mcin.ca or tglatard@encs.concordia.ca.
 
 ## Verification of the crawler' logs
 
-In the `home` directory of `jzhou`, there is a `crawl.log` file which contains the list of log files produced by each run of the crawler (one log every 15 minutes).
+In the `home` directory of `conp-bot`, there is a `crawl.log` file which contains the list of log files produced by each run of the crawler (one log every 15 minutes).
 
 Run the following command to view the list of the latest logs:
 
@@ -32,7 +33,7 @@ tail -f crawl.log
 This will return something similar to:
 
 ```bash
-(base) jzhou@zenodo-crawl:~$ tail -f crawl.log 
+(base) conp-bot@zenodo-crawl:~$ tail -f crawl.log 
 **** STARTING CRAWL at Thu Sep 10 11:30:01 EDT 2020, LOGGING IN /data/crawler/conp-dataset/log/crawler-f6WS3.log ****
 **** STARTING CRAWL at Thu Sep 10 11:45:01 EDT 2020, LOGGING IN /data/crawler/conp-dataset/log/crawler-jdWv5.log ****
 **** STARTING CRAWL at Thu Sep 10 12:00:01 EDT 2020, LOGGING IN /data/crawler/conp-dataset/log/crawler-FIkC0.log ****
@@ -48,21 +49,21 @@ This will return something similar to:
 In the example above, the last log file created is `/data/crawler/conp-dataset/log/crawler-m2UfF.log` and it contains:
 
 ```bash
-(base) jzhou@zenodo-crawl:~$ cat /data/crawler/conp-dataset/log/crawler-m2UfF.log
+(base) conp-bot@zenodo-crawl:~$ cat /data/crawler/conp-dataset/log/crawler-m2UfF.log
 Another crawling process is still running (/data/crawler/conp-dataset/.crawling exists), exiting!
 ```
 
 This tells that another crawling process is running (meaning a dataset is either newly added or updated by a previous run of the crawler). If we look at the log file created just before this one (a.k.a. `/data/crawler/conp-dataset/log/crawler-OpTxo.log`), then it we could see the following when the crawler was still running:
 
 ```bash
-(base) jzhou@zenodo-crawl:~$ cat /data/crawler/conp-dataset/log/crawler-OpTxo.log
+(base) conp-bot@zenodo-crawl:~$ cat /data/crawler/conp-dataset/log/crawler-OpTxo.log
 [INFO] Creating a new annex repo at /data/crawler/conp-dataset/projects/Multimodal_data_with_wide_field_GCaMP_imaging 
 ```
 
 Otherwise, if the crawler finished updating or adding a new dataset, the result of that same log would look like:
 
 ```bash
-(base) jzhou@zenodo-crawl:~$ cat /data/crawler/conp-dataset/log/crawler-UZFP8.log
+(base) conp-bot@zenodo-crawl:~$ cat /data/crawler/conp-dataset/log/crawler-UZFP8.log
 ==================== Zenodo Crawler Running ====================
 
 Zenodo query: https://zenodo.org/api/records/?type=dataset&q=keywords:"canadian-open-neuroscience-platform"
@@ -109,9 +110,16 @@ projects/Test/.conp-osf-crawler.json does not exist in dataset, skipping
 
 This is what would look like a typical successful run of the crawler.
 
-If the crawler does not work on a dataset, then there should be an error message in the last log listed in `/home/users/jzhou/crawl.log`. 
+If the crawler does not work on a dataset, then there should be an error message in the last log listed in `/home/users/conp-bot/crawl.log`. 
 
 In the case we know a dataset should have been added but does not appear in the crawler results, then all the logs will need to be parsed to look for that dataset and figure out what the failure was. In that case, `grep` and `wc` can be very useful.
+
+
+## How to update the crawlers with the latest code
+
+Upgrading the crawlers in the `zenodo-crawl.acelab.ca` VM requires to run `git pull` on the `conp-dataset` located at `/data/crawler/conp-dataset`. Note: this is a manual operation that should remain manual.
+
+
 
 ## Manual verification that our crawlers picked up the datasets that needed to be crawled
 
@@ -126,14 +134,13 @@ The list of all the datasets that have been tagged with the `canadian-open-neuro
 
 The list of all the datasets that have been tagged with the `canadian-open-neuroscience-platform` can be found using the ` keywords:"canadian-open-neuroscience-platform"` search on [Zenodo](https://zenodo.org) or via the following link: https://zenodo.org/search?page=1&size=20&q=keywords:%22canadian-open-neuroscience-platform%22&sort=mostrecent
 
+
 ## Install the crawler locally
 
-The crawler requires Python 3 and the following packages to be installed via `pip`:
+The crawler requires Python 3 and the packages listed in `scripts/requirements.txt` to be installed via `pip`. From the conp-dataset root folder, run the following command to install the dependencies:
 
 ```bash
-pip install git-python
-pip install datalad
-pip install html2markdown
+pip install -r scripts/requirements.txt
 ``` 
 
 In addition, a `.conp_crawler_config.json` file should be created in the `home` directory of the user running the crawler with the following information:
