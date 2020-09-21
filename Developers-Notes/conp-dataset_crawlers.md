@@ -137,13 +137,13 @@ The list of all the datasets that have been tagged with the `canadian-open-neuro
 
 ## Install the crawler locally
 
-##### 1) Clone your fork of `conp-dataset` locally
+##### 1) Clone the `conp-bot` fork of `conp-dataset` locally
 
 ```bash
-git clone https://github.com/<github_username>/conp-dataset.git
+git clone https://github.com/conp-bot/conp-dataset.git
 ```
 
-##### 2) Ensure your `master` branch is up to date with the `master` branch of `CONP-PCNO/conp-dataset`
+##### 2) Run `git config remote.origin.annex-ignore true` in the cloned directory
 
 ##### 3) Install the datasets recursively
 
@@ -172,6 +172,8 @@ A `.conp_crawler_config.json` file should be created in the `home` directory of 
     "osf_token": %OSF TOKEN%
 }
 ```
+
+Note: The Github token should be the token used by `conp-bot` (available in the home directory of the conp-bot@zenodo-crawl.acelab.ca VM).
 
 ##### 6) Run crawl.py
 
