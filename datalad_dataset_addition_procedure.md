@@ -123,7 +123,7 @@ NB: Generating the link requires enough space on your local machine to store the
 - Add small files such as ```README.md``` directly to your git repository. These will not be annexed:
 
 ```
-datalad add --to-git ./README.md
+git add README.md
 ```
               
 ##### 3) Publishing a new dataset to GitHub
