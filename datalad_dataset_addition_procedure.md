@@ -125,6 +125,8 @@ NB: Generating the link requires enough space on your local machine to store the
 ```
 git add README.md
 ```
+
+Note: **all** files in the dataset must be added to the repository using one of the two commands above.  Copying content from another location into your local copy of the repository without using those commands will not work.
               
 ##### 3) Publishing a new dataset to GitHub
 
