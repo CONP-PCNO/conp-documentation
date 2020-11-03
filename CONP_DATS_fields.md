@@ -1,11 +1,11 @@
 We use the `DATS.json` file format to store metadata describing CONP datasets.  `DATS.json` is a flexible machine-readable structure allowing for sophisticated representation of a wide range of different types of datasets, from neuroimaging to genomics. A `DATS.json` file must be prepared for each dataset.  The information will be used to create your resource landing page on the CONP portal and will help other users to find your dataset.  The table below summarises required, recommended and optional fields. 
 
 
-| | |
-|-|-|
-|title|**REQUIRED**. The name of the dataset, usually one sentence or short description of the dataset. The title needs to be short and easily recognizable and searchable. If an acronym, please also provide the long name.|
-|creators|**REQUIRED**. The person(s) or organization(s) which contributed to the creation of the dataset. This can be the principal investigator, hospital, university, centre, clinic, etc. If no other contact is provided this will be the main contact for this dataset.|
-|description|**REQUIRED**. A short paragraph providing a rapid overview of the dataset and the context of data collection. Suggestion of items to include in the description (if applicable): main use of the dataset, population studied, study design, sample size, data collected, methods, techniques, apparatus used to generate the data.|
+|Portal field name|DATS schema field|Status|Description|Portal help text|
+|-|-|-|-|-|
+|title|title|**REQUIRED**| The name of the dataset. |The name of the dataset. The title needs to be short and easily recognizable and searchable. If an acronym, please also provide the long name.|
+|creators|creators|**REQUIRED**| The person(s) or organization(s) which contributed to the creation of the dataset. | The person(s) or organization(s) which contributed to the creation of the dataset. This can be the principal investigator, hospital, university, centre, clinic, etc. If no other contact is provided this will be the main contact for this dataset.|
+|description|description|**REQUIRED**| A textual narrative comprised of one or more statements describing the dataset.| A short paragraph providing a rapid overview of the dataset and the context of data collection. Suggestion of items to include in the description (if applicable): main use of the dataset, population studied, study design, sample size, data collected, methods, techniques, apparatus used to generate the data.|
 |types|**REQUIRED**. Terms to describe the nature of the data. Data type can be single or multiple. Add a term with the [interlex URI](https://neuinfo.org/interlex/dashboard) if possible.| 
 |version|**REQUIRED**. Provide the version number, or the release point of your dataset.|
 |licenses|**REQUIRED**. The use of license name abbreviations is suggested for specifying a license. Please visit [Creative Commons](https://creativecommons.org/share-your-work/) to choose the right licence for you.|
