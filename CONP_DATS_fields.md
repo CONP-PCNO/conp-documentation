@@ -3,7 +3,7 @@ We use the `DATS.json` file format to store metadata describing CONP datasets.  
 
 |Portal field name|DATS schema field|Status|Description|Portal help text|
 |-|-|-|-|-|
-|Title|title|**REQUIRED**| The name of the dataset. |The name of the dataset. The title needs to be short and easily recognizable and searchable. If an acronym, please also provide the long name.|
+|Title|title|**REQUIRED**| Name of the dataset. | Name of the dataset. The title needs to be short and easily recognizable and searchable. If there is an acronym, please also provide the long name.|
 |Creators|creators|**REQUIRED**| The person(s) or organization(s) which contributed to the creation of the dataset. | The person(s) or organization(s) which contributed to the creation of the dataset. This can be the principal investigator, hospital, university, centre, clinic, etc. The first contact provided will be associated as the main contact for this dataset.|
 |Description|description|**REQUIRED**| A textual narrative comprised of one or more statements describing the dataset.| A short paragraph providing a rapid overview of the dataset and the context of data collection. Suggestion of items to include in the description (if applicable): main use of the dataset, population studied, study design, sample size, data collected, methods, techniques, apparatus used to generate the data.|
 |Data types|types|**REQUIRED**| Terms to describe the nature of the data. | Terms to describe the nature of the data. Data type can be single or multiple. Add a term with the [interlex URI](https://neuinfo.org/interlex/dashboard) if possible.| 
@@ -50,7 +50,6 @@ Derived From| |The sources this dataset is derived from.|The sources this datase
 |Spatial Coverage|spatialCoverage|**OPTIONAL**| The geographical extension and span covered by the dataset.|The geographical extension and span covered by the dataset.|
 
 The DATS dataset schema can be found [here](https://github.com/CONP-PCNO/schema/blob/master/dataset_schema.json), and the `DATS.json` file from the visual-working-memory dataset [here](https://github.com/conpdatasets/ds001634/blob/master/DATS.json) can be used as a template. A graphic interface allowing users to fill in fields online is under development [here](https://dats-creator.herokuapp.com/).
-
 
 
 
