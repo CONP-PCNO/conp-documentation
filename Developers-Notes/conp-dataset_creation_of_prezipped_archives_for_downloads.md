@@ -35,7 +35,7 @@ Notes:
  
 - this step does not need to be done on the production server since the whole `conp-dataset`
 has been installed recursively
-- for derived dataset, need to install the `conp-dataset` temporarily elsewhere without the `-r` 
+- for derived dataset, we need to install the `conp-dataset` temporarily elsewhere without the `-r` 
 option to avoid installing the source subdataset as well
 
 ##### 3. Download all the files of the dataset
@@ -45,7 +45,7 @@ cd <dataset name>
 datalad get *
 ```
 
-##### 4. Create the archive of the dataset
+##### 4. Create the archive of the dataset and fetch the last commit of the dataset
 
 To create the archive, run `datalad export-archive` in the dataset directory with the following options:
 
@@ -54,6 +54,12 @@ datalad export-archive -t tar -c gz <path to the .cache/tmp directory>
 ```
 
 Note: the name of the archive created will be of format: `datalad_<datalad-ID>.tar.gz`
+
+Once the DataLad archive has been exported run the following command to export the git history:
+
+```
+git log --pretty=format:"%H %s" > datalad_<datalad-ID.git.log>
+```
 
 ##### 5. Run the script XXX that will do the following
 
@@ -64,5 +70,9 @@ Once the DataLad archive has been created, run the script `XXXXXXX` that will:
 ```
 <DataLad dataset name>_version-<dataset version>.tar.gz
 ```
-- add the git log file into the archive file so that we can see the git history of the archive
-- move the renamed archive into the `.cache` directory if all the steps above went well
+- rename the `.git.log` file according to the following convention (notice the . to hide the log file):
+```
+.<DataLad dataset name>_version-<dataset version>.git.log
+```
+- append the renamed log to the archived dataset
+- move the renamed archive and renamed .git.log files into the `.cache` directory if all the steps above went well
