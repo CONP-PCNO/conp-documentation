@@ -147,3 +147,7 @@ archives.
 ```
 mv <dataset name>.tar.gz <dataset_name>_version-<version-number>.tar.gz
 ```
+
+##### 9. Copy the data in the .cache directory of the portal
+
+Copy the prezipped archives and *.git.log files in the .cache directory of the portal VM.
