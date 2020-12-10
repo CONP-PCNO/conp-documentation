@@ -76,7 +76,7 @@ which return an array of identifier dictionaries (`"data": [{}, {}...]`)
 | distribution - size                     | addition of each file API information `file['attributes']['size']`             | 
 | distribution - unit                     | units always available in bytes in the `file` API information                  | 
 | distribution - access - landingPage     | `data['links']['html']`                                                        | 
-| distribution - access - authorization   | always public at the moment                                                    | 
+| distribution - access - authorization   | "public" if `attributes['public']` is true, else "private"                     | 
 | extraProperties - files                 | N/A - count of the number of files that were downloaded                        | 
 | extraProperties - subjects              | N/A                                                                            | 
 | extraProperties - CONP_status           | N/A                                                                            | 
