@@ -1,5 +1,13 @@
 # OSF Crawler metadata mapping
 
+## OSF query
+
+The query used by the OSF crawler is the following:
+
+- https://api.osf.io/v2/nodes/?filter[tags]=canadian-open-neuroscience-platform
+
+## OSF response
+
 For each dataset, there is an API response organized as follows.
 Notes: 
   - the JSON response below only displays endpoints of interest for the creation of the DATS.json file
@@ -43,7 +51,7 @@ Notes:
 
 To simplify the table below, the following follow convention will be used:
 
-- `data` corresponds to the data result from the API reponse above
+- `data` corresponds to the data result from the API response above
 - `contributor` corresponds to the API response of the endpoint `['data']['relationships']['contributors']['links']['related']['href']` 
 which returns an array of contributor dictionaries (`"data": [{}, {}, {}...]`)
 - `license` corresponds to the API response of the endpoint `['data']['relationships']['license']['links']['related']['href']`
@@ -62,7 +70,7 @@ which return an array of identifier dictionaries (`"data": [{}, {}...]`)
 | version                                 | `data['attributes']['date_modified']`                                          | 
 | licenses                                | `license['attributes']['name']`                                                | 
 | keywords                                | `data['attributes']['tags']`                                                   |
-| data types                              | N/A                                                                            | 
+| data types                              | guessed based on downloaded filenames in the base crawler                      |                                                     | 
 | dates                                   | `data['attributes']['date_created']` and `data['attributes']['date_modified']` |
 | producedBy                              | N/A                                                                            | 
 | isAbout                                 | N/A                                                                            | 
