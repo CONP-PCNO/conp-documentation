@@ -59,10 +59,19 @@ which return an array of identifier dictionaries (`"data": [{}, {}...]`)
 | title                                   | `data['attributes']['title']`                                                  | 
 | creators                                | array of `contributor['embeds']['users']['data']['attributes']['fullname']`    | 
 | description                             | `data['attributes']['description']`                                            | 
-| data types                              | N/A                                                                            | 
 | version                                 | `data['attributes']['date_modified']`                                          | 
 | licenses                                | `license['attributes']['name']`                                                | 
-| keywords                                | `data['attributes']['tags']`                                                   | 
+| keywords                                | `data['attributes']['tags']`                                                   |
+| data types                              | N/A                                                                            | 
+| dates                                   | `data['attributes']['date_created']` and `data['attributes']['date_modified']` |
+| producedBy                              | N/A                                                                            | 
+| isAbout                                 | N/A                                                                            | 
+| acknowledges                            | N/A                                                                            | 
+| spatialCoverage                         | N/A                                                                            | 
+| primaryPublications                     | N/A                                                                            | 
+| dimensions                              | N/A                                                                            | 
+| identifier - identifier                 | first entry of array of `identifier['attributes']['value']`                    |                                                           |
+| identifier - identifierSource           | if identifier contains string "OSF.IO", source = "OSF DOI", else source = "DOI"| 
 | distribution - format                   | N/A                                                                            | 
 | distribution - size                     | addition of each file API information `file['attributes']['size']`             | 
 | distribution - unit                     | units always available in bytes in the `file` API information                  | 
@@ -78,15 +87,6 @@ which return an array of identifier dictionaries (`"data": [{}, {}...]`)
 | extraProperties - origin - country      | N/A                                                                            | 
 | extraProperties - derivedFrom           | use the title of the dataset in `['data']['relationship']['parent']`           | 
 | extraProperties - parent_dataset_id     | use directory name of the dataset in `['data']['relationship']['parent']`      | 
-| primaryPublications                     | N/A                                                                            | 
-| dimensions                              | N/A                                                                            | 
-| identifier - identifier                 | first entry of array of `identifier['attributes']['value']`                    |                                                           |
-| identifier - identifierSource           | if identifier contains string "OSF.IO", source = "OSF DOI", else source = "DOI"|
 | extraProperties - contact               | N/A                                                                            |
 | extraProperties - logo                  | static OSF logo: https://osf.io/static/img/institutions/shields/cos-shield.png | 
-| dates                                   | `data['attributes']['date_created']` and `data['attributes']['date_modified']` |
-| producedBy                              | N/A                                                                            | 
-| isAbout                                 | N/A                                                                            | 
-| acknowledges                            | N/A                                                                            | 
-| spatialCoverage                         | N/A                                                                            | 
 
