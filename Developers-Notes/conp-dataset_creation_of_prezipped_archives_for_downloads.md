@@ -17,7 +17,14 @@ The datasets with the following criterias won't be made available for download:
 ## Preparation of the prezipped file
 
 Because of various DataLad issues encountered, this step cannot be automated for now and has to be
-performed manually. Ideally, this should be performed in another VM that production to not affect production. 
+performed manually. Ideally, this should be performed in another VM than production to not affect production. 
+
+Note: the final archived file will be named according to the following convention (where `dataset_name` corresponds to the name of the dataset 
+folder in the `projects` directory of the `conp-dataset` and `version-number` 
+corresponds to the version stored in the `DATS.json` file of the dataset archived.
+```
+<dataset_name>_version-<version-number>.tar.gz
+```
 
 The following sub-sections explain the steps to perform to create a prezipped dataset file:
 
