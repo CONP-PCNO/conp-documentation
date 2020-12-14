@@ -151,9 +151,8 @@ cat ../list_of_datasets.txt | while read f; do tar -rf $(basename $f).tar $(base
 This was done by hand but could be scripted in future creation of prezipped
 archives.
 
-```
-mv <dataset name>.tar.gz <dataset_name>_version-<version-number>.tar.gz
-```
+mv <dataset name>.tar.gz <dataset_name>_version-<version-string>.tar.gz
+Where <version-string> is the value of the version property in the DATS.json file.
 
 ##### 9. Copy the data in the .cache directory of the portal
 
