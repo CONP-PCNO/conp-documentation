@@ -1,12 +1,12 @@
-## Uploading data to CONP
+# Uploading data to CONP
 
-# 1. Obtain an account on the CONP sftp server
+## 1. Obtain an account on the CONP sftp server
 
-Contact CONP admins at <insert email address here>.  We will contact you with a username and initial password.
+Contact CONP admins via the [contact form](https://portal.conp.ca/contact_us) to request an account and specify details of your dataset(s).  We will contact you with a username and initial password.
 
 Note that the default maximum space available for users is 50 GB.  Hosting larger datasets is possible but requires special arrangement with CONP.
 
-# 2. Transfer your data to CONP
+## 2. Transfer your data to CONP
 
 Once you have obtained an account, you will be able to connect with the server from the command line:
 
