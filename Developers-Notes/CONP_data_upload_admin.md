@@ -25,7 +25,9 @@ This command will print some warnings, which are not known to be problematic, an
 chmod go= /data/proftpd/users/<USERNAME>
 ```
 
-## Add the user to the quota table (for user with default 50GB quota)
+## Add the user to the quota table
+
+NB: this step applies only for users with the standard 50 GB quota.
 
 ```
 ftpquota --add-record --type=limit --name=<USERNAME> --quota-type=user
@@ -40,4 +42,4 @@ Data on ```sftp.conp.ca``` can be ingested using the [standard data addition pro
 
 The addresses to use in the ```git annex addurl``` command are of the form ```https://sftp.conp.ca/users/<USERNAME>/..```
 
-TODO: Crawler for ingesting every file in a given user's directory, or a defined subdirectory
+TODO: Crawler for ingesting every file in a given user's directory or a defined subdirectory
