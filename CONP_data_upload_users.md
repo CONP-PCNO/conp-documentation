@@ -1,6 +1,6 @@
 # Uploading data to CONP
 
-## 1. Obtain an account on the CONP sftp server
+## 1. Obtain an account on the CONP SFTP server
 
 Contact CONP admins via the [contact form](https://portal.conp.ca/contact_us) to request an account and specify details of your dataset(s).  We will contact you with a username and initial password.
 
@@ -37,4 +37,3 @@ Note that datasets require README.md and DATS.json files as specified [here](htt
 Note also that transfer of large files may take significant amounts of time.  Please contact us to confirm when you have finished uploading your data.
 
 Once your dataset is completely uploaded, a CONP administrator will process it to build Datalad links and incorporate it into the CONP interface.
-
