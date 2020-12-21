@@ -20,7 +20,7 @@ You can then create directories to represent your data's structure with the ```m
 mkdir mydataset1
 ```
 
-transfer individual files from your location with the ```put``` command:
+To transfer individual files from your location, use the ```put``` command:
 
 ```
 put README.md
