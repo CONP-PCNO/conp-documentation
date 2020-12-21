@@ -26,7 +26,7 @@ To transfer individual files from your location, use the ```put``` command:
 put README.md
 ```
 
-or multiple files with the ```mput``` command:
+To transfer multiple files from your location, use the ```mput``` command:
 
 ```
 mput /home/myfiles/dataset1/*  mydataset1
