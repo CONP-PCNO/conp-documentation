@@ -1,5 +1,5 @@
 
-Log in to ```sftp.conp.ca``` as user ```proftpd```.  If you need the password for this account, contact @cmadjar or @emmetaobrien.
+Log in to ```sftp.conp.ca``` as user ```proftpd```.  If you need the password for this account, contact Cécile Madjar or Emmet O'Brien.
 
 # Setting up an account on the CONP sftp server
 
@@ -41,5 +41,4 @@ Data on ```sftp.conp.ca``` can be ingested using the [standard data addition pro
 The addresses to use in the ```git annex addurl``` command are of the form ```https://sftp.conp.ca/users/<USERNAME>/..```
 
 TODO: Crawler for ingesting every file in a given user's directory, or a defined subdirectory
-
 
