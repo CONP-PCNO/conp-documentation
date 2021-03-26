@@ -1,46 +1,49 @@
-**Every dataset must be described following these guidelines.**
-
-The information will be used to create your resource landing page on the CONP portal and will help other users to find your dataset. 
+We use the `DATS.json` file format to store metadata describing CONP datasets.  `DATS.json` is a flexible machine-readable structure allowing for sophisticated representation of a wide range of different types of datasets, from neuroimaging to genomics. A `DATS.json` file must be prepared for each dataset.  The information will be used to create your resource landing page on the CONP portal and will help other users to find your dataset.  The table below summarises required, recommended and optional fields. 
 
 
-| | |
-|-|-|
-|title|**REQUIRED**. The name of the dataset, usually one sentence or short description of the dataset. The title needs to be short and easily recognizable and searchable. If an acronym, please also provide the long name.|
-|creators|**REQUIRED**. The person(s) or organization(s) which contributed to the creation of the dataset. This can be the principal investigator, hospital, university, centre, clinic, etc. If no other contact is provided this will be the main contact for this dataset.|
-|description|**REQUIRED**. A short paragraph providing a rapid overview of the dataset and the context of data collection. Suggestion of items to include in the description (if applicable): main use of the dataset, population studied, study design, sample size, data collected, methods, techniques, apparatus used to generate the data.|
-|types|**REQUIRED**. Standardized terms to describe the nature of the data. Data type can be single or multiple. Please choose from the proposed controlled terminology. Add a term if needed with the [interlex URI](https://neuinfo.org/interlex/dashboard) if possible.| 
-|version|**REQUIRED**. Provide the version number, or the release point of your dataset.|
-|licenses|**REQUIRED**. The use of license name abbreviations is suggested for specifying a license. Please visit [Creative Commons](https://creativecommons.org/share-your-work/) to choose the right licence for you.|
-|keywords|**REQUIRED**. Tags associated with the dataset, which will help in its discovery. We suggest entering at least 5 keywords, different from the datatype.|
-|distributions - format|**REQUIRED**. Primary data files format (*example*: csv, nifti, txt, fasta).|
-|distributions - size|**REQUIRED**. Total size of the dataset.|
-|distributions - unit|**REQUIRED**. Unit in which the size is measured.(*example*: GB)|
-|distributions - access - landingPage|**REQUIRED**. Web address where the original dataset can be found.|
-|distributions - access - authorizations|Contains an array with a single entry for "value". This must be one of "public", "registered" or "private". When this field is absent the value will be treated as "public".|
-|extraProperties - files|**REQUIRED**. Total number of files in the dataset.|
-|extraProperties - subjects|**REQUIRED**. Total number of subjects constituting the dataset.|
-|primaryPublications|**RECOMMENDED**. The primary publication(s) associated with the dataset, usually describing how the dataset was produced.|
-|dimensions|**RECOMMENDED**. The different dimensions (granular components) making up a dataset. Providing dimensions give more details about the data types.|
-|identifier|**RECOMMENDED**. Primary identifier for the dataset. Provide a *Document Object Identifier (DOI)* if you have one.|
-|extraProperties - contact|**RECOMMENDED**. Provide contact information (name, email, telephone) of the person responsible for the dataset.|
-|extraProperties - logo|**RECOMMENDED**. Link to or provide a logo to display on your resource landing page.|
-|dates|**OPTIONAL**.  Relevant dates for the dataset. If you provide a date, it must come with a description of the date.|<!--will later choose from a pulldown list--> 
-|citations|**OPTIONAL**.  Publication(s) citing this dataset.|
-|citationCount|**OPTIONAL**. The number of publications that cite this dataset (enumerated in the citations property).|
-|producedBy|**OPTIONAL**. Process which generated a given dataset.|
-|isAbout|**OPTIONAL**. Entities (biological entity, taxonomic information, disease, molecular entity, anatomical part, treatment) associated with this dataset.|
-|hasPart|**OPTIONAL**. A dataset that is a subset of this dataset; datasets declaring the 'hasPart' relationship are considered a collection of datasets.  The aggregation criteria should be included in the 'description' field.|
-|acknowledges|**OPTIONAL**. Grant(s) which funded and supported the work reported by the dataset.|
-|refinement|**OPTIONAL**. Qualifier describing the level of data processing of the dataset and its distributions.|
-|aggregation|**OPTIONAL**. Qualifier indicating whether the entity represents an 'instance of a dataset' or a 'collection of datasets'.|
-|spatialCoverage|**OPTIONAL**. The geographical extension and span covered by the dataset and its measured dimensions/variables.|
+|Portal field name|DATS schema field|Status and Description|Portal help text|
+|-|-|-|-|
+|Title|title|**REQUIRED** Name of the dataset. | Name of the dataset. The title needs to be short and easily recognizable and searchable. If there is an acronym, please also provide the long name.|
+|Creators|creators|**REQUIRED** The person(s) or organization(s) which contributed to the creation of the dataset. | The person(s) or organization(s) that contributed to the creation of the dataset. This can be the principal investigator, hospital, university, centre, clinic, etc. The first contact provided will be associated as the main contact for this dataset.|
+|Description|description|**REQUIRED** A textual narrative comprised of one or more statements describing the dataset.| A short paragraph providing a rapid overview of the dataset and the context of data collection. Suggestion of items to include in the description (if applicable): main use of the dataset, population studied, study design, sample size, data collected, methods, techniques, apparatus used to generate the data. Ideally, the first sentence of the description should give a good overall description of the dataset.|
+|Data types|types|**REQUIRED** Terms to describe the nature of the data. | Terms to describe the nature of the data. Data type can be single or multiple. Add a term with the [interlex URI](https://neuinfo.org/interlex/dashboard) if possible.| 
+|Version|version|**REQUIRED** Provide the version number, or the release point of your dataset.|Provide the version number, or the release point of your dataset. If you do not have an existing versioning convention, we recommend the use of the following versoning convention: 1.0=original dataset; 1.1=minor revisions made to the dataset; 1.2=further minor revisions; 2.0=major/substantive changes to the dataset. For example: minor changes could include corrupted file or link fixes, more description/documentation of the dataset and so on; Major changes would include additional data released (more subjects, more modalities and so on) |
+|Licenses|licenses|**REQUIRED** The use of license name abbreviations is suggested for specifying a license. Please visit [Creative Commons](https://creativecommons.org/share-your-work/) to choose the right licence for you.| The licences under which this dataset is shared.|
+|Keywords|keywords|**REQUIRED** Tags associated with the dataset, which will help in its discovery. We suggest entering at least 5 keywords, different from the datatype.|Tags associated with the dataset, which will help in its discovery. These should be well known terms by the research community. |
+|Formats|distributions - format|**REQUIRED** The technical format of the dataset distribution. Use the file extension or MIME type when possible. (Definition adapted from DataCite)Primary data files format (*example*: csv, nifti, txt, fasta).| The technical format of the dataset distribution. Use the file extension or MIME type when possible. (Definition adapted from DataCite).|
+|Size|distributions - size|**REQUIRED** Total size of the dataset.| The quantity of space required on disk (or other medium) for this dataset.|
+|Units|distributions - unit|**REQUIRED** Unit in which the size is measured.(*example*: GB)|Unit in which the size is measured.(KB -> KiloByte, MB -> MegaByte, GB -> GigaByte, TB -> TeraByte and PB -> PetaByte). |
+|Landing Page|distributions - access - landingPage|**REQUIRED** Web address (URL) where the original dataset can be found. Default value points to the README.md for the dataset. |A URL (Web page) that contains information about the associated dataset (with a link to the dataset) or a direct link to the dataset itself. |
+|Authorizations|distributions - access - authorizations| **REQUIRED**Types of verification that accessing the resource is allowed. Authorization occurs before successful authentication and refers to the process of obtaining approval to use a data set. Ideally specified from a controlled vocabulary or ontology.|This must be one of "Public", "Registered" or "Private". When this field is absent the value will be treated as "Public". "Public" = available to anyone; "Registered" = available to user authorized by the creator; "Private" = available only to the creator.|
+|Number of Files|extraProperties - files|**REQUIRED** The number of files in the dataset.|Total number of files in the dataset. |
+|Number of Subjects|extraProperties - subjects|**REQUIRED** The number of subjects in the dataset.|Total number of subjects constituting the dataset.|
+|CONP Status|extraProperties - CONP_status|**REQUIRED** CONP Status.|The CONP status is used to add the CONP logo or Canadian flag on the left of the dataset and sorting in the data search. Valid values are "CONP" = created using funding from the CONP; "Canadian" = created in Canada without CONP funding; "external" = created outside of Canada.|
+|Origin|extraProperties - origin|**REQUIRED** Where the dataset was generated.  **EITHER** extraProperties-origin-institution **OR** extraProperties-origin-consortium **must** be specified.  Both **can** be specified, e.g. in the case of a named collaboration between different labs at the same institution.| Name of the institution or consortium that generated the dataset. Both an institution and a consortium can be specified, e.g. in the case of a named collaboration between different labs at the same institution. |
+|Institution|extraProperties - origin - institution|**REQUIRED IF** a dataset was generated at a single institution.| Name of the institution where this dataset was created (if applicable). |
+|Consortium|extraProperties - origin - consortium|**REQUIRED IF** a dataset was generated by a consortium; this is primarily, but not exclusively, for the case of datasets generated at multiple institutions.|Name of the consortium where this dataset was created (if applicable).|
+|City|extraProperties - origin - city|**REQUIRED IF** a dataset was generated by one institution **OR** by multiple institutions in the same city.|(Principal) city where this dataset was created.|
+|Province|extraProperties - origin - province|**REQUIRED IF** a dataset was generated by one institution **OR** by multiple instutions in the same province (Canada) or state (US).  Not required for datasets generated in countries where this scale of distinction does not apply (eg, UK).|(Principal) province where this dataset was created.|
+|Country|extraProperties - origin - country|**REQUIRED IF** a dataset was generated by one institution **OR** by multiple institutions in the same country.|(Principal) country where this dataset was created.|
+|Derived From| |The sources this dataset is derived from.|The sources this dataset is derived from.|
+|Derived From|extraProperties - derivedFrom|**REQUIRED IF** the dataset is a derived dataset, the URL of the dataset it is derived from.  The original dataset must also be included as a submodule in the derived dataset.| Name of the source dataset used to generate this dataset.|
+|Parent dataset id|extraProperties - parent_dataset_id|**REQUIRED IF** the dataset is a derived dataset, the parent dataset id (as specified in _conp_dataset/.gitmodules_).|Identifier (DOI) of the source dataset used to generate this dataset.|
+|Primary Publications|primaryPublications|**RECOMMENDED** The primary publication(s) associated with the dataset, usually describing how the dataset was produced.| The primary publication(s) associated with the dataset, usually describing how the dataset was produced.|
+|Title|primaryPublications - title| The name of the publication, usually one sentence or short description of the publication.|The name of the publication.|
+|Publication Venue|primaryPublications - publicationVenue|The name of the publication venue where the document is published (if applicable).|The name of the publication venue where the document is published (if applicable).|
+|Authors|primaryPublications - authors|Authors of the publication.|Authors of the publication.|
+|Affiliations|primaryPublications - authors - affiliations|Author affiliations.|Author affiliations.|
+|Date|primaryPublications - dates|Relevant dates for the publication. If you provide a date, it must come with a description of the date.|Relevant dates for the publication. If you provide a date, it must come with a description of the date (i.e.: first submission, final approval, date of publication, ...).|
+|Identifier|primaryPublications - identifier - identifier|**RECOMMENDED** A code uniquely identifying an entity locally to a system or globally.|A code uniquely identifying the publication locally to a system or globally. Provide a *Document Object Identifier (DOI)* if you have one.|
+|Identifier Source|primaryPublications - identifier - identifierSource|**RECOMMENDED** Information about the organisation/namespace responsible for minting the identifier.| Information about the organisation/namespace responsible for minting the identifier. It must be provided if the identifier is provided.|
+|Dimensions|dimensions|**RECOMMENDED** The different dimensions (granular components i.e.: handedness, weight, number of time event X happened per day,...) making up a dataset. Providing dimensions give more details about the data types.|The different dimensions (granular components) making up a dataset. Providing dimensions give more details about the data types.|
+|Identifier|identifier - identifier|**RECOMMENDED** A code uniquely identifying the dataset locally to a system or globally.|A code uniquely identifying the dataset locally to a system or globally.|
+|Identifier Source|identifier - identifierSource|**RECOMMENDED** Information about the organisation/namespace responsible for minting the identifier.| Information about the organisation/namespace responsible for minting the identifier. It must be provided if the identifier is provided.|
+|Contact|extraProperties - contact|**RECOMMENDED** Contact information for this dataset.|Provide contact information (name and email address) of the person responsible for the dataset.| 
+|Logo|logo|**RECOMMENDED** Link to or provide a logo to display on your resource landing page.|Link to a URL for the logo or local filename containing the logo.
+|Dates|dates|**OPTIONAL** Relevant dates for the dataset. If you provide a date, it must come with a description of the date.|Relevant dates for the dataset. If you provide a date, it must come with a description of the date (i.e.: first data collection, last data collection, date of first publication, ...). |<!--will later choose from a pulldown list--> 
+|Produced By|producedBy|**OPTIONAL** Process which generated a given dataset. For example: a pipeline, a software... Note: person's name should go in the Creators fields.|Process which generated a given dataset.|
+|Is About|isAbout|**OPTIONAL** Entities (biological entity, taxonomic information, disease, molecular entity, anatomical part, treatment) associated with this dataset.|Entities (biological entity, taxonomic information, disease, molecular entity, anatomical part, treatment) associated with this dataset. |
+|Acknowledges|acknowledges|**OPTIONAL** Grant(s) which funded and supported the work reported by the dataset.| Grant(s) which funded and supported the work reported by the dataset.|
+|Spatial Coverage|spatialCoverage|**OPTIONAL** The geographical extension or span covered by the dataset.|The geographical extension and span (i.e.: city, province, administrative region, ...) covered by the dataset.|
 
-<!--- how to acknowledge
-RECOMMENDED.  Instructions how researchers using this dataset should acknowledge the original authors. This field can also be used to define a publication that should be cited in publications that use the dataset. --->
-<!--- availability
-OPTIONAL. A qualifier indicating the different types of availability for a dataset (available, unavailable, embargoed, available with restriction, information not available) --->
-
-
-
-
-
+The DATS dataset schema can be found [here](https://github.com/CONP-PCNO/schema/blob/master/dataset_schema.json), and the `DATS.json` file from the visual-working-memory dataset [here](https://github.com/conpdatasets/ds001634/blob/master/DATS.json) can be used as a template. A graphic interface allowing users to fill in fields online is available [here](https://portal.conp.ca/share).
