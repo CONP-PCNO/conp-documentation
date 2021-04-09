@@ -1,6 +1,6 @@
 # OSF Private Dataset Guide
 
-The OSF crawler now fully supports crawling private datasets on OSF and this guide will show you how to get your private dataset crawled and added to CONP from OSF and how to retrieved crawled OSF private datasets using DataLad
+The OSF crawler fully supports crawling private datasets on OSF and this guide will show you how to get your private dataset crawled and added to CONP from OSF and how to retrieved crawled OSF private datasets using DataLad.
 
 ## How to get your private dataset crawled
 
