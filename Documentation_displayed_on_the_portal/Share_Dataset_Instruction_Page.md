@@ -1,5 +1,7 @@
 # Dataset Addition Procedures
 
+First of all, thank you for sharing your data with CONP and the scientific community!
+
 All datasets to upload to the CONP portal must include the following files in the root directory:
 
 - a required `README.md` file. The content of this file will be displayed in the portal page describing your dataset.
@@ -8,9 +10,10 @@ All datasets to upload to the CONP portal must include the following files in th
 
 It is possible to upload a dataset using one of the following options:
 
-- [Upload using Zenodo](#zenodo)
-- [Upload using OSF](#osf)
-- [Upload using DataLad](#datalad)
+- [I. Upload using Zenodo](#zenodo)
+- [II. Upload using OSF](#osf)
+- [III. Upload on the CONP FTP server](#conp-server)
+- [IV. Upload using DataLad](#datalad)
 
 If you need help at any stage, please [open an issue in
 the CONP-PCNO/conp-dataset repository](https://github.com/CONP-PCNO/conp-dataset/issues/new/choose) and we will do our best to help you.
@@ -41,7 +44,11 @@ the CONP-PCNO/conp-dataset repository](https://github.com/CONP-PCNO/conp-dataset
 3. Ensure the dataset/project is set to `Public`. `Private` datasets will be supported in the near future. ***(#TODO: DOCUMENT PROCEDURE FOR PRIVATE DATASETS HERE)***
 
 
-## <a name="datalad"></a> III. Upload using DataLad
+## <a name="conp-server"></a> III. Upload on the CONP FTP server
+
+To upload a new dataset to the CONP server, please use the [portal 'contact us' form](https://portal.conp.ca/contact_us) so we can help you upload your data onto the CONP FTP server. 
+
+## <a name="datalad"></a> IV. Upload using DataLad
 
 This upload procedure requires some technical knowledges (GitHub, git, git-annex) and to have an account on [GitHub](http://github.com/).
 
@@ -213,5 +220,3 @@ To add the newly created dataset to the list of CONP datasets present in the Dat
   		url = https://github.com/<username>/<new_dataset_name>.git
   	```
   - a link to the latest commit of the <new_dataset_name> GitHub repository
-
-
