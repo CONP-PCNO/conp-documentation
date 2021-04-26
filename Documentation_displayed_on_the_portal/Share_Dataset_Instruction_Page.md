@@ -35,13 +35,17 @@ the CONP-PCNO/conp-dataset repository](https://github.com/CONP-PCNO/conp-dataset
 
 1. Prepare your dataset for upload. **Please note the following requirements:**
 
-	- All datasets must include a `README.md` file in the root directory. That file will be displayed on the CONP portal page that will describe the dataset.
-	- All datasets must include a `DATS.json` file as described in [the main documentation page](https://	github.com/CONP-PCNO/conp-documentation/blob/master/CONP_DATS_fields.md). The content of this file will 	also be displayed on the CONP portal page that will describe the dataset. We provide a [DATS GUI 	editor]() ***(#TODO: ADD LINK TO EDITOR)*** for easy creation of this file. 
-	- A logo can be added at the root of the dataset. This is optional, however, if there is a logo at the 	root of the dataset, it will be used on the CONP portal page that will describe the dataset.
+  - All datasets must include a `README.md` file in the root directory. That file will be displayed on the CONP portal page that will describe the dataset.
+  - All datasets must include a `DATS.json` file as described in [the main documentation page](https://github.com/CONP-PCNO/conp-documentation/blob/master/CONP_DATS_fields.md). The content of this file will also be displayed on the CONP portal page that will describe the dataset. We provide a [DATS GUI editor]() ***(#TODO: ADD LINK TO EDITOR)*** for easy creation of this file. 
+  - A logo can be added at the root of the dataset. This is optional, however, if there is a logo at the root of the dataset, it will be used on the CONP portal page that will describe the dataset.
 
 2. Upload your dataset to [https://osf.io/](https://osf.io/) with the specific tag `canadian-open-neuroscience-platform`.
     
-3. Ensure the dataset/project is set to `Public`. `Private` datasets will be supported in the near future. ***(#TODO: DOCUMENT PROCEDURE FOR PRIVATE DATASETS HERE)***
+3. CONP supports both `private` and `public` OSF datasets. 
+  - For `Public` datasets, ensure that the dataset is set to `Public` on OSF. 
+  - For `Private` datasets, ensure that the dataset is set to `Private` on OSF and go to the `Contributors` tab of the dataset. In the `Contributors` tab, grant the user `CONP-BOT` the `READ` permission and do not add it as a Bibliographic Contributor. This will ensure that the CONP automatic crawler can grep the OSF dataset and add it to the CONP super dataset (https://github.com/CONP-PCNO/conp-dataset).
+
+![](img/Share_Dataset_Instruction_Page_OSF_private_grant_conp_bot_permission.png)
 
 
 ## <a name="conp-server"></a> III. Upload on the CONP FTP server
