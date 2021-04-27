@@ -79,7 +79,7 @@ The CONP datasets are managed using [DataLad](https://www.datalad.org/), a softw
 - [6) Obtaining a Digital Object Identifier (DOI) for your dataset](#doi_obtention)
 - [7) Adding the new dataset to the list of CONP datasets](#addition_to_conp-dataset) (a.k.a. https://github.com/CONP-PCNO/conp-dataset)
 
-#### <a name="datalad_install"></a> 1) Installaing DataLad
+#### <a name="datalad_install"></a> 1) Installing DataLad
 
 - **_on Linux_**
 
@@ -223,6 +223,6 @@ To add the newly created dataset to the list of CONP datasets present in the Dat
 			path = projects/<new_dataset_name>
 			url = https://github.com/<username>/<new_dataset_name>.git
   		```
-   		*note: ensure that there is no empty lines at the end of the `.gitmodules` file otherwise it will not pass the format-checking tests of your PR.
+   		*note: ensure that there is an empty line at the end of the `.gitmodules` file otherwise it will not pass the format-checking tests of your PR.
    
   - a link to the latest commit of the <new_dataset_name> GitHub repository
