@@ -23,8 +23,8 @@ the CONP-PCNO/conp-dataset repository](https://github.com/CONP-PCNO/conp-dataset
 1. Prepare your dataset for upload. **Please note the following requirements:**
 
 	- All datasets must include a `README.md` file in the root directory. That file will be displayed on the CONP portal page that will describe the dataset.
-	- All datasets must include a `DATS.json` file as described in [the main documentation page](https://	github.com/CONP-PCNO/conp-documentation/blob/master/CONP_DATS_fields.md). The content of this file will 	also be displayed on the CONP portal page that will describe the dataset. We provide a [DATS GUI 	editor]() ***(#TODO: ADD LINK TO EDITOR)*** for easy creation of this file. 
-	- A logo can be added at the root of the dataset. This is optional, however, if there is a logo at the 	root of the dataset, it will be used on the CONP portal page that will describe the dataset.
+	- All datasets must include a `DATS.json` file as described in [the main documentation page](https://github.com/CONP-PCNO/conp-documentation/blob/master/CONP_DATS_fields.md). The content of this file will also be displayed on the CONP portal page that will describe the dataset. We provide a [DATS GUI editor]() ***(#TODO: ADD LINK TO EDITOR)*** for easy creation of this file. 
+	- A logo can be added at the root of the dataset. This is optional, however, if there is a logo at the root of the dataset, it will be used on the CONP portal page that will describe the dataset.
 
 2. Upload your dataset to [https://zenodo.org](https://zenodo.org) with the specific keyword `canadian-open-neuroscience-platform`.  If your dataset is larger than 50GB you will need to contact [Zenodo](https://zenodo.org/support) with a request category of `File upload quota increase` in order to be able to upload it.
     
