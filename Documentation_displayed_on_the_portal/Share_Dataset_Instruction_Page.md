@@ -67,7 +67,7 @@ The CONP datasets are managed using [DataLad](https://www.datalad.org/), a tool 
 
 **Important notes:**
 
-- The CONP datasets currently requires git-annex version>=8.20200309, and we recommend DataLad version>=0.12.5
+- The CONP datasets currently require git-annex version>=8.20200309, and we recommend DataLad version>=0.12.5
 - We also recommend setting your `git` configuration to store your username and email:
 
 	```
