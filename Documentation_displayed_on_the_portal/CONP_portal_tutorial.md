@@ -84,13 +84,7 @@ The 'Click here for instructions' link under the 'Run on HPCs with Clowdr' will 
 
 ## How can I upload my dataset?
 
-A dataset can be uploaded to CONP via the following mechanisms:
-
-- Through [Zenodo](https://zenodo.org) by tagging your dataset with the keyword `canadian-open-neuroscience-platform`
-- Through the [Open Science Framework (OSF)](https://osf.io) by tagging your dataset with the keyword `canadian-open-neuroscience-platform` and setting the dataset to `Public`
-- Through [DataLad](http://www.datalad.org) within the context of CONP
-
-Detailed technical instructions are available for all these options on the [Share page](https://portal.conp.ca/share) of the portal.
+Detailed instructions are available for different upload mechanisms on the [Share page](https://portal.conp.ca/share) of the portal.
 
 
 ## How can I upload my tool/pipeline?
