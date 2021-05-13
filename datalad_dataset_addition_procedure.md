@@ -1,4 +1,4 @@
-[Upload a tool/pipeline](#pipeline) | [Upload a dataset](#dataset)
+[Upload a tool/pipeline](#pipeline) | [Upload a dataset](#dataset) | [DATS Editor](https://portal.conp.ca/dats-editor)
 
 # <a name="pipeline"></a> I. Tool/pipeline addition procedure
 
@@ -106,7 +106,7 @@ All commands presented in the following sections should be run from ```projects/
 All datasets must include a `README.md` in the root directory.
 Adding metadata about your dataset is required. 
 
-All datasets must include a `DATS.json` metadata file in the root directory as described in [the main documentation page](https://github.com/CONP-PCNO/conp-documentation/blob/master/CONP_main_data_documentation.htm).
+All datasets must include a `DATS.json` metadata file in the root directory as described in [the main documentation page](https://github.com/CONP-PCNO/conp-documentation/blob/master/CONP_DATS_fields.md). For convenience, a [DATS Editor](https://portal.conp.ca/dats-editor) has been created on the portal to facilitate the creation of the DATS.json file.
 
 (It is not necessary to manually create these files when using Zenodo as the CONP Zenodo crawler automatically generates them.)
 
