@@ -11,7 +11,7 @@ Below, we describe four different methods for adding your data to the CONP Porta
 
 - A `README.md` file: The content of this file will be displayed in the portal page describing your dataset. It is in Markdown format, to which there are many guides but [here is one quick cheatsheet]( https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
-- A `DATS.json` file: as described in [the main documentation page](https://github.com/CONP-PCNO/conp-documentation/blob/master/CONP_DATS_fields.md). We provide a [DATS GUI editor]() ***(#TODO: ADD LINK TO EDITOR)*** for easy creation of this file. Note: the content of the `DATS.json` file will used to populate various fields describing your dataset on its Portal page.
+- A `DATS.json` file: as described in [the main documentation page](https://github.com/CONP-PCNO/conp-documentation/blob/master/CONP_DATS_fields.md). We provide a [DATS GUI editor](https://portal.conp.ca/dats-editor) for easy creation of this file. Note: the content of the `DATS.json` file will used to populate various fields describing your dataset on its Portal page.
 
 #### <a name="optional"></a> *Optional files in the root directory*
 
