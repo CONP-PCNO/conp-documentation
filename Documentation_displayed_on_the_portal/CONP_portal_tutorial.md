@@ -4,11 +4,11 @@ The portal is a web interface for the [Canadian Open Neuroscience Platform (CONP
 
 The CONP portal is accessible via the Portal link of the [CONP main website](https://conp.ca) or directly at [portal.conp.ca](https://portal.conp.ca).
 
-![portal_access_from_conp.ca](img/CONP_portal_tutorial_Portal_access_from_conp.ca.png)
+![portal_access_from_conp.ca](https://raw.githubusercontent.com/CONP-PCNO/conp-documentation/master/Documentation_displayed_on_the_portal/img/CONP_portal_tutorial_Portal_access_from_conp.ca.png)
 
 No login is required to access the portal but you will be asked to agree to the "Terms of Use" of the portal on your first visit. These can always be re-consulted anytime by clicking on the "Terms of Use" link at the top right of the portal web page.
 
-![terms_of_use](img/CONP_portal_tutorial_Terms_of_use.png)
+![terms_of_use](https://raw.githubusercontent.com/CONP-PCNO/conp-documentation/master/Documentation_displayed_on_the_portal/img/CONP_portal_tutorial_Terms_of_use.png)
 
 Upon agreement to the "Terms of Use", you will be able to filter through the various datasets or pipelines available on the portal. 
 
@@ -18,12 +18,12 @@ Upon agreement to the "Terms of Use", you will be able to filter through the var
 
 Datasets are listed in the [Data search page](https://portal.conp.ca/search) of the portal. This search page lists all datasets available through the CONP with some basic information about the dataset. Results can be filtered or sorted easily. 
 
-![search_page](img/CONP_portal_tutorial_Data_search_page.png)
+![search_page](https://raw.githubusercontent.com/CONP-PCNO/conp-documentation/master/Documentation_displayed_on_the_portal/img/CONP_portal_tutorial_Data_search_page.png)
 
 
 Clicking on a dataset row in the [Data search page](https://portal.conp.ca/search) will bring the user to a more detailed dataset page that includes more description information pertinent to the dataset (including the display of the README.md file provided with the dataset) and download capabilities.
 
-![SCREENSHOT of the detailed page](img/CONP_portal_tutorial_Dataset_detailed_page.png)
+![SCREENSHOT of the detailed page](https://raw.githubusercontent.com/CONP-PCNO/conp-documentation/master/Documentation_displayed_on_the_portal/img/CONP_portal_tutorial_Dataset_detailed_page.png)
 
 Notes:
 - some datasets can be processed on the CBRAIN plateform. 
@@ -33,17 +33,17 @@ Below are two dataset examples:
 - one that requires a third-party account (PREVENT-AD open data) 
 - one that does not require any external account and that is available for processing on CBRAIN (BigBrain dataset).
 
-![dataset_accounts](img/CONP_portal_tutorial_Dataset_accounts.png)
+![dataset_accounts](https://raw.githubusercontent.com/CONP-PCNO/conp-documentation/master/Documentation_displayed_on_the_portal/img/CONP_portal_tutorial_Dataset_accounts.png)
 
 #### How to download the data?
 
 Small datasets (<15GB) that do not require a third-party account can be downloaded directly through the frontend via the Download button located in thed detailed dataset page.
 
-![download_button](img/CONP_portal_tutorial_Dataset_download_button.png)
+![download_button](https://raw.githubusercontent.com/CONP-PCNO/conp-documentation/master/Documentation_displayed_on_the_portal/img/CONP_portal_tutorial_Dataset_download_button.png)
 
 Large datasets (>15GB) or datasets that require a third-party account cannot be downloaded through the frontend of the Portal but we provide detailed instructions on how to download the dataset via [DataLad](http://www.datalad.org). Each dataset page contains a detailed ‘Dataset Download Instructions’ section that lay out the different steps to perform in order to download the dataset. 
 
-![dataset_download_instructions](img/CONP_portal_tutorial_Dataset_download_instructions.png)
+![dataset_download_instructions](https://raw.githubusercontent.com/CONP-PCNO/conp-documentation/master/Documentation_displayed_on_the_portal/img/CONP_portal_tutorial_Dataset_download_instructions.png)
 
 
 ## How can I find and run tools/pipelines?
@@ -52,11 +52,11 @@ Large datasets (>15GB) or datasets that require a third-party account cannot be 
 
 The [Tools & Pipelines page](https://portal.conp.ca/pipelines) lists all softwares registered in the portal. Each tool or pipeline present in that list page contains basic information about the tool/pipeline and its pipeline ID. 
 
-![pipeline_search_page](img/CONP_portal_tutorial_Pipeline_search_page.png)
+![pipeline_search_page](https://raw.githubusercontent.com/CONP-PCNO/conp-documentation/master/Documentation_displayed_on_the_portal/img/CONP_portal_tutorial_Pipeline_search_page.png)
 
 Clicking on a specific choice will bring the user to a more detailed page with links to instructions on how to run the tool locally, to HCPs or to external platforms.
 
-![pipeline_detailed_page](img/CONP_portal_tutorial_Pipeline_detailed_page.png)
+![pipeline_detailed_page](https://raw.githubusercontent.com/CONP-PCNO/conp-documentation/master/Documentation_displayed_on_the_portal/img/CONP_portal_tutorial_Pipeline_detailed_page.png)
 
 
 #### How to run the tool/pipeline?
@@ -67,7 +67,7 @@ Tools and pipelines can be run locally on any system using [Boutiques](https://b
 
 At the bottom of the pipeline page, detailed instructions on how to run the tool locally are available to the user. 
 
-![SCREENSHOT of the boutiques instructions](img/CONP_portal_tutorial_Boutiques_instructions.png)
+![SCREENSHOT of the boutiques instructions](https://raw.githubusercontent.com/CONP-PCNO/conp-documentation/master/Documentation_displayed_on_the_portal/img/CONP_portal_tutorial_Boutiques_instructions.png)
 
 If you have never used [Boutiques](https://boutiques.github.io) in the past, we recommend the following [tutorial](https://nbviewer.jupyter.org/github/boutiques/tutorial/blob/master/notebooks/boutiques-tutorial.ipynb#reusing_tools).
 
@@ -75,7 +75,7 @@ If you have never used [Boutiques](https://boutiques.github.io) in the past, we 
 
 Some tools and pipelines can also be run on HPCs via the CBRAIN infrastructure or in your Compute Canada account with Clowdr. 
 
-![SCREENSHOT of the CBRAIN link](img/CONP_portal_tutorial_CBRAIN_link_highlighted.png)
+![SCREENSHOT of the CBRAIN link](https://raw.githubusercontent.com/CONP-PCNO/conp-documentation/master/Documentation_displayed_on_the_portal/img/CONP_portal_tutorial_CBRAIN_link_highlighted.png)
 
 The 'Click here to begin' link under the 'Run on the CBRAIN Plateform' container will open a tab to the login page of CBRAIN or to the tool page on CBRAIN if you are already logged in. 
 
