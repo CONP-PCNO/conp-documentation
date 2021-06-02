@@ -19,12 +19,6 @@ ftpasswd --passwd --sha512 --file /opt/conp-proftpd/runtime/etc/sftpd.passwd --u
 
 This command will print some warnings, which are not known to be problematic, and then require you to specify an initial password for USERNAME.
 
-## Set permissions for user directory
-
-```
-chmod go= /data/proftpd/users/<USERNAME>
-```
-
 ## Add the user to the quota table
 
 NB: this step applies only for users with the standard 50 GB quota.
