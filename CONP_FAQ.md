@@ -30,6 +30,10 @@ Download through the browser will be available shortly.
 
 The download buttons on the list of files downloads metadata for each dataset, in a single `.json` file which contains a detailed description of the data in DATS format.  The data files themselves can be downloaded using DataLad as described on the results page for each individual dataset.
 
+#### **How do I access private datasets?**
+
+If the datasets were crawled from Zenodo or OSF, please follow the instructions on how to access the ones from [Zenodo](https://github.com/CONP-PCNO/conp-documentation/blob/master/Developers-Notes/conp-dataset_crawlers/ZENODO_access_private_dataset.md) and the ones from [OSF](https://github.com/CONP-PCNO/conp-documentation/blob/master/Developers-Notes/conp-dataset_crawlers/OSF_private_dataset_guide.md)
+
 ## <a name="data-upload"></a>III. Data Sharing/Upload
 
 #### **Why should I upload data to CONP?**
