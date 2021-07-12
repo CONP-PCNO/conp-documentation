@@ -34,6 +34,8 @@ Once these steps are complete, the user should be able to begin uploading data.
 
 Data on ```sftp.conp.ca``` can be ingested using the [standard data addition procedure](https://github.com/CONP-PCNO/conp-documentation/blob/master/datalad_dataset_addition_procedure.md).
 
+Note that if the user submits data in the form of a tarball or other archive, once uncompressed it is necessary to confirm that all files have appropriate permissions and if necessary modify them using ```chmod```; in order to generate datalad links, every file has to be readable.
+
 The addresses to use in the ```git annex addurl``` command are of the form ```https://sftp.conp.ca/users/<USERNAME>/..```
 
 TODO: Crawler for ingesting every file in a given user's directory or a defined subdirectory
