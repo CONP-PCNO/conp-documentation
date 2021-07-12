@@ -37,3 +37,14 @@ Note that datasets require README.md and DATS.json files as specified [here](htt
 Note also that transfer of large files may take significant amounts of time.  Please contact us to confirm when you have finished uploading your data.
 
 Once your dataset is completely uploaded, a CONP administrator will process it to build Datalad links and incorporate it into the CONP interface.
+
+## 3. Compressing files using tar and gzip
+
+On a UNIX system, complex directory structures can be compressed into single significantly smaller files using the ```tar``` and ```gzip``` commands, which can reduce the time taken for file transfer:
+
+```
+tar -cvf archivename.tar <relevant files and directories>
+gzip archivename.tar
+```
+
+If you are doing this, please run the ```tar``` command in the root directory of your dataset.
