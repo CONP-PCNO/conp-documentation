@@ -67,10 +67,15 @@ perl sftp-crawler.pl <NEW_PROJECT_NAME> <USERNAME> <PASSWORD> <LOCAL_DIRECTORY> 
 ```
 
 where
+
 ```<NEW_PROJECT_NAME>``` is the name of the directory on your local computer that will contain the new dataset
+
 ```<USERNAME>``` and ```<PASSWORD>``` are used to make the sftp connection to sftp.conp.ca
+
 ```<LOCAL_DIRECTORY>``` is the full path to ```<NEW_PROJECT_NAME>``` (not automatically generated to avoid making assumptions about where in your local system you have downloaded ```conp-dataset```)
+
 ```<REMOTE_DIRECTORY>``` is the path to the directory on ```sftp.conp.ca``` containing the new dataset,  *relative to the home directory of* <USERNAME>.  This allows the crawler to correct for users submitting inconsistent or unusual directory structures without requiring users to resubmit an entire dataset.
-```<INDEX_FILE_NAME>``` is your local copy of the index of files in the dataset.
+
+  ```<INDEX_FILE_NAME>``` is your local copy of the index of files in the dataset.
   
 This functionality replaces the *Populating a new dataset* step of the [standard data addition procedure](https://github.com/CONP-PCNO/conp-documentation/blob/master/datalad_dataset_addition_procedure.md), and should be followed by *3) Publishing a new dataset to GitHub* and subsequent steps as documented there.
