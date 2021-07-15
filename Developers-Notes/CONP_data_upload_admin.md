@@ -48,7 +48,7 @@ This script uses the perl module Net::SFTP::Foreign.  You may need to install th
 cpanm Net::SFTP::Foreign
 ```
 
-(Note that Net::SFTP::Foreign is, confusingly, an *alternative implementation* to Net::SFTP. It is used in this script as it is a more straightforward implementation with fewer dependencies.)
+(Note that Net::SFTP::Foreign is, confusingly, an alternative implementation to Net::SFTP rather than a subcomponent. It is used in this script as it is a more straightforward implementation with fewer dependencies.)
 
 1. Before running the script, it is necessary to generate an index of the files in the input dataset: run this command in the root directory of the dataset on sftp.conp.ca:
 
@@ -72,9 +72,9 @@ where:
 
 ```<USERNAME>``` and ```<PASSWORD>``` are used to make the sftp connection to sftp.conp.ca.
 
-```<LOCAL_DIRECTORY>``` is the full path to ```<NEW_PROJECT_NAME>``` (not automatically generated to avoid making assumptions about where in your local system you have downloaded ```conp-dataset```)
+```<LOCAL_DIRECTORY>``` is the full path to ```<NEW_PROJECT_NAME>``` (not automatically generated to avoid making assumptions about where in your local system you have downloaded ```conp-dataset```).
 
-```<REMOTE_DIRECTORY>``` is the path to the directory on ```sftp.conp.ca``` containing the new dataset,  *relative to the home directory of* ```<USERNAME>```.  This allows the crawler to correct for users submitting inconsistent or unusual directory structures without requiring them to resubmit the entire dataset.
+```<REMOTE_DIRECTORY>``` is the path to the directory on ```sftp.conp.ca``` containing the new dataset,  relative to the home directory of ```<USERNAME>```.  This allows the crawler to correct for users submitting inconsistent or unusual directory structures without requiring them to resubmit the entire dataset.
 
   ```<INDEX_FILE_NAME>``` is your local copy of the index of files in the dataset.
   
