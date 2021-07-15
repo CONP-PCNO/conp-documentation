@@ -48,7 +48,7 @@ This script uses the perl module Net::SFTP::Foreign.  You may need to install th
 cpanm Net::SFTP::Foreign
 ```
 
-(Note that Net::SFTP::Foreign is, confusingly, an alternative implementation to Net::SFTP rather than a subcomponent. It is used in this script as it is a more straightforward implementation with fewer dependencies.)
+(Note that ```Net::SFTP::Foreign``` is, confusingly, an alternative implementation to ```Net::SFTP``` rather than a subcomponent. It is used in this script as it is a more straightforward implementation with fewer dependencies.)
 
 1. Before running the script, it is necessary to generate an index of the files in the input dataset: run this command in the root directory of the dataset on sftp.conp.ca:
 
