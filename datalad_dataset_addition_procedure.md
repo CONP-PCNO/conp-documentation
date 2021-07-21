@@ -8,177 +8,226 @@ For more information on how to do that, please visit the ‘Publishing your own 
 
 # <a name="dataset"></a> II. Dataset addition procedures
 
-It is possible to upload a dataset using one of the following:
+## Introduction
 
-- [Upload using Zenodo](#zenodo)
-- [Upload using OSF](#osf)
-- [Upload using DataLad](#datalad)
+Thank you for sharing your data with the CONP and the scientific community! Making your data [Findable, Accessible, Interoperable, and Reusable](https://www.go-fair.org/fair-principles/) is key to making your research findings impactful, scientifically and strategically useful to both you and your peers, and more likely to contribute to scientific discovery.
 
-### <a name="zenodo"></a> - Upload using Zenodo
+Below, we describe four different methods for adding your data to the CONP Portal. **All methods have the following requirements in common**:
 
-1. Upload your dataset to [https://zenodo.org](https://zenodo.org) with the specific keyword `canadian-open-neuroscience-platform`.  If your dataset is larger than 50GB you will need to contact [Zenodo](https://zenodo.org/support) with a request category of `File upload quota increase` in order to be able to upload it.
+
+#### <a name="required"></a> *Required files in the root directory of the dataset (applies to all datasets and upload methods)*
+
+- A `README.md` file: The content of this file will be displayed in the portal page describing your dataset. It is in Markdown format, to which there are many guides but [here is one quick cheatsheet]( https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+
+- A `DATS.json` file: as described in [the main documentation page](https://github.com/CONP-PCNO/conp-documentation/blob/master/CONP_DATS_fields.md). We provide a [DATS GUI editor](https://portal.conp.ca/dats-editor) for easy creation of this file. Note: the content of the `DATS.json` file will used to populate various fields describing your dataset on its Portal page.
+
+#### <a name="optional"></a> *Optional files in the root directory*
+
+- A study/institutional logo can be added to the root directory of the dataset. If this is done, it will be used on your dataset’s Portal page along with the information in the README.md and DATA.json files that describe your dataset.
+
+
+## Upload methods
+
+It is possible to upload a dataset using one of the following options:
+
+- [I. Upload using Zenodo](#zenodo)
+- [II. Upload using OSF](#osf)
+- [III. Upload using DataLad](#datalad)
+
+If you need help at any stage, please [open an issue in
+the CONP-PCNO/conp-dataset repository](https://github.com/CONP-PCNO/conp-dataset/issues/new/choose) and we will do our best to help you.
+
+### <a name="zenodo"></a> I. Upload using *Zenodo*
+
+1. Add the [required](#required) files to the root directory of the dataset and consider the [optional logo](#optional), as described above.
+
+2. Upload your dataset to [Zenodo](https://zenodo.org) with the specific keyword `canadian-open-neuroscience-platform`.  If your dataset is larger than 50GB you will need to contact [Zenodo support](https://zenodo.org/support) using the request category of "File upload quota increase" before you will be able to upload it.
     
-2. If you set your dataset as **restricted**, create a personal token via *Applications > Personal access tokens > New Token > Check all scopes > Create* and send the token via email to CONP Technical Steering Committee member Tristan Glatard (tglatard@encs.concordia.ca).
+3. If you set your dataset as **restricted**, create a [Zenodo Personal Access Token](https://zenodo.org/account/settings/applications/tokens/new/) (via *Applications > Personal access tokens > New Token*). Check all scopes when creating the token and send the token via email to CONP Technical Steering Committee member Tristan Glatard (tglatard@encs.concordia.ca).
 
-### <a name="osf"></a> - Upload using OSF
 
-1. Upload your dataset to [https://osf.io/](https://osf.io/) with the specific tag `canadian-open-neuroscience-platform`.
+### <a name="osf"></a> II. Upload using *OSF*
+
+1. Add the [required](#required) files to the root directory of the dataset and consider the [optional logo](#optional), as described above.
+
+2. Upload your dataset to the [OSF](https://osf.io/) with the specific tag `canadian-open-neuroscience-platform`.
     
-2. Ensure the dataset/project is set to `Public`. `Private` datasets will be supported in the near future.
+3. CONP supports both `private` and `public` OSF datasets. 
+  - For `Public` datasets, ensure that the dataset is set to `Public` on OSF. 
+  - For `Private` datasets, do the following to ensure that the CONP automatic crawler can grep the OSF dataset and add it to the [CONP super dataset](https://github.com/CONP-PCNO/conp-dataset):
+       - Ensure that the dataset is set to `Private` on the OSF 
+		- In the `Contributors` tab for the dataset, create user `CONP-BOT` and grant it `READ` permission. 
+		- **Do not** add the `CONP-BOT` user as a Bibliographic Contributor. 
+
+![](img/Share_Dataset_Instruction_Page_OSF_private_grant_conp_bot_permission.png)
 
 
-### <a name="datalad"></a> - Upload using DataLad
+### <a name="datalad"></a> III. Upload using *DataLad*
 
-##### Notes:
+This upload procedure requires some technical knowledge (GitHub, git, git-annex) and an account on [GitHub](http://github.com/), but offers some useful options and flexibility in data-hosting location.
 
-DataLad is a software tool for managing digital objects such as datasets, built on git and git-annex.
+The CONP datasets are managed using [DataLad](https://www.datalad.org/), a tool built on git and git-annex for managing digital objects such as datasets. 
 
-To download CONP data currently (April 2020) requires git-annex version>=8.20200309, and we recommend DataLad version>=0.12.5.
+**Important notes:**
 
-We recommend setting your ```git``` configuration to store your username and email:
+- The CONP datasets currently require git-annex version>=8.20200309, and we recommend DataLad version>=0.12.5
+- We also recommend setting your `git` configuration to store your username and email:
 
-```
-git config --global user.name "yourusername" 
-git config --global user.email "your.name@your.institution.ca"
-git config credential.helper cache  (keeps login information in memory for 5 mins)
-```
+	```
+	git config --global user.name "your_user_name" 
+	git config --global user.email "your.name@your.institution.ca"
+	git config credential.helper cache  (keeps login information in memory for 5 mins)
+	```
 
-##### 1) Installation 
+**Summary of the DataLad upload process:**
 
-- **_on Linux_**
+- [1) Installing DataLad](#datalad_install)
+- [2) Creating a new DataLad dataset](#dataset_creation)
+- [3) Populating the new dataset](#dataset_population)
+- [4) Publishing the new dataset to GitHub](#dataset_publication)
+- [5) Testing the new dataset before adding it to the conp-dataset DataLad super dataset](#dataset_test)
+- [6) Obtaining a Digital Object Identifier (DOI) for your dataset](#doi_obtention)
+- [7) Adding the new dataset to the list of CONP datasets](#addition_to_conp-dataset) (a.k.a. https://github.com/CONP-PCNO/conp-dataset)
 
-We recommend the Miniconda installation procedure detailed in the [Install DataLad on linux-machines with no root access](http://handbook.datalad.org/en/latest/intro/installation.html#linux-machines-with-no-root-access-e-g-hpc-systems) entry on the [DataLad Handbook](http://handbook.datalad.org/en/latest/index.html), which installs the most up-to-date versions of DataLad, git-annex, and git if needed.
+##### <a name="datalad_install"></a> 1) Installing DataLad
 
-- **_on Mac OS X_**
+- **_on Linux_:** We recommend the Miniconda installation procedure detailed in the [Install DataLad on linux-machines with no root access](http://handbook.datalad.org/en/latest/intro/installation.html#linux-machines-with-no-root-access-e-g-hpc-systems) entry on the [DataLad Handbook](http://handbook.datalad.org/en/latest/index.html), which installs the most up-to-date versions of DataLad, git-annex, and git.
 
-Please visit the Install DataLad section of the [DataLad Handbook](http://handbook.datalad.org/en/latest/index.html) and follow the instruction for [Mac OS X install](http://handbook.datalad.org/en/latest/intro/installation.html#macos-osx).
+- **_on Mac OS_:** Please visit the Install DataLad section of the [DataLad Handbook](http://handbook.datalad.org/en/latest/index.html) and follow the instruction for [Mac OS install](http://handbook.datalad.org/en/latest/intro/installation.html#macos-osx).
 
-##### 2) Creating a new dataset with DataLad
 
-- On github, fork a new copy of ```https://github.com/CONP-PCNO/conp-dataset``` into your userspace.
+##### <a name="dataset_creation"></a> 2) Creating a new DataLad dataset
 
-- Install that copy locally:
+The first step in uploading a dataset to CONP via DataLad requires the creation of a new DataLad dataset that will be tracked on GitHub.
 
-```datalad install -r git@github.com:<yourusername>/conp-dataset```
+- Create a local DataLad directory:
 
-( use ```-r``` flag to install directory structure)
+  ```
+  datalad create <new_dataset_name>
+  ```
 
-- Create a local project:
+- Create a sibling for your dataset on GitHub. The command below will generate a sibling in your local space:
 
-```
-cd conp-dataset
-datalad create -d . projects/<newprojectname>
-```
+  ```
+  cd <new_dataset_name>
+  datalad create-sibling-github <new_dataset_name>
+  ```
+  To inspect existing siblings, run `datalad siblings`.
+	
+##### <a name="dataset_population"></a> 3) Populating the new dataset
 
-- Create a sibling for this project on github. The command below will generate a sibling in your local space
+Choice of how to populate a new dataset will vary based on the [special remote](https://git-annex.branchable.com/special_remotes/) providing access to the data. The following procedure covers working with the [web](https://git-annex.branchable.com/tips/using_the_web_as_a_special_remote/) special remote. 
 
-```datalad create-sibling-github -d projects/<newprojectname> <newprojectname>```
+**Dataset requirements:** 
 
-The first "newprojectname" is local, the second is the name of the github repository that will be created in your personal github space.  These do not need to be identical for the procedure to work, but it is recommended that they should be to avoid confusion.
+Add the [required](#required) files to the root directory of the dataset and consider the [optional logo](#optional), as described above.
 
-To inspect existing siblings: 
+**How to track the different files of the dataset:**
+
+All files in the dataset must be added to the repository using one of the two commands below. Copying content from another location into your local copy of the repository without using those commands **will not work**.
+
+- For data files on FTP or HTTP servers, use the `web` remote to populate the data:
+
+	```
+	git annex addurl <URL_of_resource> --file <linkname>
+	```
+	*The `--file` switch is optional but recommended, because without it the default name for a link is built from the full URL of the resource and tends to be unwieldy and/or uninformative.
+	
+	*NB: Generating the link requires enough space on your local machine to store the large data file, as `git-annex` needs to download the file to generate checksums.
+
+- For metadata files (*e.g.* `README.md`, `DATS.json`, logo files), use `git` so that they are not annexed, and therefore are readable by the CONP portal and users: 
   
- ```datalad siblings```
-
-
-- Manually edit the ```.gitmodules``` file in your local conp-dataset directory:
-
-The last three lines of this file will contain an entry for your new project, but the format datalad currently generates is not functional.  The lines should be edited to the following format:
-
-```
-[submodule "projects/<newprojectname>"]
-  path = projects/<newprojectname>
-  url = https://github.com/<yourusername>/<newprojectname>.git
-```
-
-Previous entries in the ```.gitmodules``` file can be used as a guide.
-
-###### Populating a new dataset
-
-Choice of how to populate a new dataset will vary based on the special remote providing access to the data. The following procedure covers working with the [web](https://git-annex.branchable.com/tips/using_the_web_as_a_special_remote/) special remote. 
-An alternative, more experimental option which consists in using the [globus special remote](https://github.com/gi114/git-annex-remote-globus)
-is documented in [dataset addition using the globus remote](https://github.com/CONP-PCNO/conp-documentation/blob/master/datalad_dataset_addition_experimental.md).
-
-All commands presented in the following sections should be run from ```projects/<newprojectname>``` unless specified otherwise.
-
-###### Requirements
-
-All datasets must include a `README.md` in the root directory.
-Adding metadata about your dataset is required. 
-
-All datasets must include a `DATS.json` metadata file in the root directory as described in [the main documentation page](https://github.com/CONP-PCNO/conp-documentation/blob/master/CONP_DATS_fields.md). For convenience, a [DATS Editor](https://portal.conp.ca/dats-editor) has been created on the portal to facilitate the creation of the DATS.json file.
-
-(It is not necessary to manually create these files when using Zenodo as the CONP Zenodo crawler automatically generates them.)
-
-- For large datafiles on ftp or http servers, use the web remote:
-        
-```
-git annex addurl <URL_of_resource> --file <linkname>
-```
-
-The ```--file``` switch is optional but recommended, because without it the default name for a link is built from the full URL of the resource and tends to be unwieldy and/or uninformative.
-
-NB: Generating the link requires enough space on your local machine to store the large data file, as git-annex needs to download the file to generate checksums.
-              
-- Add small files such as ```README.md``` directly to your git repository. These will not be annexed:
+  ```
+  git add README.md
+  git add DATS.json
+  git add <study_logo>
+  ```	
+  
+To save the changes made to the directory with DataLad, run:
 
 ```
-git add README.md
+datalad save -m "<a constructive message describing the state of the dataset>"
 ```
-
-Note: **all** files in the dataset must be added to the repository using one of the two commands above.  Copying content from another location into your local copy of the repository without using those commands will not work.
-              
-##### 3) Publishing a new dataset to GitHub
-
-From your new project directory:
-
-```
-  datalad save
-  datalad publish --to github
-  cd ../..		(this should put you in ~/conp-dataset/)
-  datalad save
-  datalad publish --to origin
-```
-
-Both of the save and publish steps are necessary, and must be done from the appropriate directories in the right order.
-
-When adding new data to an existing project, the ```publish --to github``` is replaced by another ```publish --to origin``` command.
-
-##### 4) Testing the new dataset
-
-- You should now have a git repository containing your new dataset correctly linked as a submodule of ```<yourusername>/conp-dataset```.  Test this by downloading.
-
-```
-datalad install -r http://github.com/<yourusername>/conp-dataset
-cd conp-dataset/projects/<newprojectname>
-```
-
-This -r is a recursive install, so all subdirectories and small files should be present, and links to annexed files.
-
-- Test that dataset files download correctly, either URLs (Web remote) or files (Globus remote):
-
-```datalad get [<url_name> | path/to/file]```
+*Message example: `initial population of <name_of_new_dataset>`
 
 
-##### 5) Obtaining a Digital Object Identifier for your dataset
+##### <a name="dataset_publication"></a> 4) Publishing the new dataset to GitHub
 
-Datasets in CONP are required to have a Digital Object Identifier (DOI). A DOI is a unique and permanent identifier associated with a research object to make it citeable and retrievable. To get a DOI for your dataset, follow the following steps:
+Ensure that all changes have been saved in DataLad (`datalad save -m "<message>"`). Then, from the DataLad directory, publish the DataLad dataset to GitHub:
+
+ ```
+ datalad publish --to github
+ ```
+  
+##### <a name="dataset_test"></a> 5) Testing the new dataset before adding it to the [CONP-PCNO/conp-dataset](https://github.com/CONP-PCNO/conp-dataset) DataLad super dataset
+
+Test that the dataset published on the new GitHub repository can be correctly downloaded:
+
+- Do a clean install of the new dataset GitHub repository on a different directory:
+
+  ```
+  datalad install -r http://github.com/<your_user_name>/<new_dataset_name>
+  cd <new_dataset_name>
+  ```
+  *This `-r` is a recursive install that will install all submodules of the new dataset (if there are any).
+
+- Test that **all** dataset files download correctly from the URLs:
+
+  ```
+  datalad get *
+  ```
+
+##### <a name="doi_obtention"></a> 6) Obtaining a Digital Object Identifier (DOI) for your dataset
+
+Datasets in CONP require a unique and permanent Digital Object Identifier (DOI) to make them citeable and retrievable. To get a DOI for your dataset, follow these steps:
 
 - Log in to [Zenodo](https://zenodo.org), preferably using your GitHub account.
 
-- [Select](https://zenodo.org/account/settings/github) your GitHub repository at Zenodo.
+- Select the new GitHub dataset repository in the [list of GitHub repositories](https://zenodo.org/account/settings/github) in Zenodo.
 
-- Release your dataset on GitHub (see instructions [here](https://help.github.com/en/articles/creating-releases)), which creates a DOI and archives your dataset on Zenodo. 
+- Release the new dataset on GitHub (see instructions [here](https://help.github.com/en/articles/creating-releases)). A DOI will automatically be created and it will create an archive of the new dataset on Zenodo. 
 
-- Get the DOI badge from [here](https://zenodo.org/account/settings/github/), add it to the `README.md` file of your dataset and add its value to the *identifier* field of your `DATS.json` file. This links to the DOI associated with the latest release of your dataset. 
+- Get the Concept DOI badge from the Zenodo list of GitHub repositories [here](https://zenodo.org/account/settings/github/). Add that DOI to your dataset's `README.md` file and add its value to the *identifier* field of your `DATS.json` file. This DOI will always link to the latest release of the dataset. 
 
--  Submit a pull request to merge your dataset with ```CONP-PCNO/conp-dataset```.  Travis-CI will automatically test your dataset to confirm whether files download correctly, validate the format of your DATS.json file etc.
+##### <a name="addition_to_conp-dataset"></a> 7) Adding the new dataset to the list of CONP datasets
 
-##### 6) Longer-term use and storage
+To add the newly created dataset to the list of CONP datasets present in the DataLad conp-dataset super dataset, you will need to submit a pull request to `https://github.com/CONP-PCNO/conp-dataset`. Circle CI will automatically test the newly added dataset to confirm whether files download correctly, validate the format of the `DATS.json` file, etc.
 
-We recommend that datasets be forked into https://github.com/conpdatasets to mitigate the risk of becoming inaccessible as the projects that generated the data conclude, depending on the circumstances of individual datasources.
+**Procedure to follow to add the new dataset to `https://github.com/CONP-PCNO/conp-dataset`:**
 
-If you need help at any stage, please [open an issue](https://github.com/CONP-PCNO/conp-dataset/issues/new/choose) in
-the CONP-PCNO/conp-dataset repository and we will do our best to help you.
+- On GitHub, fork a new copy of `https://github.com/CONP-PCNO/conp-dataset` into your userspace.
+
+- Install that copy locally:
+
+	```
+	datalad install https://github.com/<your_user_name>/conp-dataset.git
+	```
+
+- Install the new dataset into the `projects` directory
+
+	```
+	cd conp-dataset/projects
+	git submodule add <new_dataset_github_repository>
+	```
+	*`<new_dataset_github_repository>` will be of the form `https://github.com/<username>/<new_dataset_name>.git`
+	
+- Save the changes and push the branch to your fork
+
+	```
+	datalad save -m '<message>'
+	datalad publish --to origin
+	```
+
+- Send a pull request (PR) from your fork's `master` branch to the `master` branch of `https://github.com/CONP-PCNO/conp-dataset`. You should see 2 file changes in the PR:
+  - Modification to the `.gitmodules` file to add the information for the new dataset. The added information should be of the form:
+
+  		```
+		[submodule "projects/<new_dataset_name>"]
+			path = projects/<new_dataset_name>
+			url = https://github.com/<username>/<new_dataset_name>.git
+  		```
+   		*note: ensure that there is an empty line at the end of the `.gitmodules` file otherwise it will not pass the format-checking tests of your PR.
+   
+  - a link to the latest commit of the <new_dataset_name> GitHub repository
 
 
