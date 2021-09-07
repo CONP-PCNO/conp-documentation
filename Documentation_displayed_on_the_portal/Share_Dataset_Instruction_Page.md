@@ -123,7 +123,7 @@ Add the [required](#required) files to the root directory of the dataset and con
 
 All files in the dataset must be added to the repository using one of the two commands below. Copying content from another location into your local copy of the repository without using those commands **will not work**.
 
-- For data files on FTP or HTTP servers, use the `web` remote to populate the data: for each individual file:
+- For data files on FTP or HTTP servers, use the `web` remote to populate the data for each individual file:
 
 	```
 	git annex addurl <URL_of_file> --file <linkname>
