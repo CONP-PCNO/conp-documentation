@@ -37,35 +37,16 @@ Contact the user with the following template email, replacing `<USERNAME>` and `
 
 ##### *1. Descriptive email template*
 
-**Email subject:** *Access to the CONP SFTP Community Server*
+**Email subject:** *Data upload to the CONP Community Server*
 
 > ***
 > *Dear `<USERNAME>`,*
 >
-> *Thank you for reaching out and uploading your dataset to CONP!* 
+> *Thank you for reaching out and uploading your dataset to the CONP!* 
 >
-> *You have been given access to the SFTP CONP Community Server to upload your dataset. SFTP, or "Secure File Transfer Protocol" is a popular method for transferring files between two systems. The CONP SFTP Community Server is an intermediary storage space that users can use to upload datasets they wish to share on the CONP Portal.*
+> *You have been given access to the CONP Community Server to upload your dataset. For this, we will make use of SFTP, or "Secure File Transfer Protocol", a popular method for the encrypted transfer of files between two systems.* 
 > 
-> *To connect to the CONP SFTP Community Server where you'll be uploading your dataset, enter the following command in a terminal:*
-> 
-> ```
-> sftp -o port=7500 <USERNAME>@sftp.conp.ca
-> ```
-> 
-> *The user name you will be using is `<USERNAME>` (without the angle brackets). The system will then ask you for a password (which we will send in a separate email for security reasons). Enter it and you will gain access to the CONP SFTP Community Server. Once you are logged in, here are the most common commands that can be used:*
-> 
-> ```
-> exit                                     : log out of the remote system.
-ls                                       : get a listing of the files on the remote system in the current directory.
-cd <directory name>                      : change the current directory to the one passed as argument on the remote system.
-mkdir <directory name>                   : create a directory with a specific name on the remote system.
-put <path of a file on my system>        : transfer a file from the local to the remote system and store it in the current directory.
-get <name of a file on the remote system>: transfer a file from the remote system to the local system.
-rm <path of a file on the remote system> : deletes a file on the remote system.
-help                                     : get a listing of the available commands in sftp.
-> ```
-> 
-> *Detailed instructions on how to upload your dataset are provided in the following [documentation](https://github.com/CONP-PCNO/conp-documentation/blob/master/CONP_data_upload_users.md).*
+> *To connect to the SFTP server and upload your data with the account information you were sent in a separate email (for security reasons), please follow the instructions found [here](https://github.com/CONP-PCNO/conp-documentation/blob/master/CONP_data_upload_users.md).*
 > 
 > *We are here to help you should you have any questions.*
 > 
@@ -83,7 +64,8 @@ help                                     : get a listing of the available comman
 > 
 > *Here's the information we promised we would send you:*
 > 
-> `<PASSWORD>`
+> *username: `<USERNAME>`*
+> *password: `<PASSWORD>`*
 > 
 > *Best,*
 > 
