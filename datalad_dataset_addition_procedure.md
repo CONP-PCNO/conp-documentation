@@ -179,7 +179,7 @@ Test that the dataset published on the new GitHub repository can be correctly do
 
 ##### <a name="doi_obtention"></a> 6) Obtaining a Digital Object Identifier (DOI) for your dataset
 
-Datasets in CONP require a unique and permanent Digital Object Identifier (DOI) to make them citeable and retrievable. To get a DOI for your dataset, follow these steps:
+We recommend that datasets uploaded to CONP have a unique and permanent Digital Object Identifier (DOI) to make them citeable and retrievable. To get a DOI for your dataset, follow these steps:
 
 - Log in to [Zenodo](https://zenodo.org), preferably using your GitHub account.
 
