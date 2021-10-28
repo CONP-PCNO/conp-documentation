@@ -32,7 +32,7 @@ b) Add small files such as ```README.md``` to your git repository and annex file
   
  Make sure all the text files were added to github and not annex, such as config and .md files. To revert annexed files, run `git annex unannex path/to/file` and `git add path/to/file`
 
-c) Publish your dataset as explained in step 3 of the [standard procedure](https://github.com/CONP-PCNO/conp-documentation/blob/master/datalad_dataset_addition_procedure.md)
+c) Publish your dataset as explained in step 3 of the [standard procedure](https://github.com/CONP-PCNO/conp-documentation/blob/master/Documentation_displayed_on_the_portal/Share_Instruction_Page.md)
 
 
 ##### C) Initialising the Globus special remote  
