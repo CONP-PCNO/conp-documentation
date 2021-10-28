@@ -30,6 +30,10 @@ Download through the browser will be available shortly.
 
 The download buttons on the list of files downloads metadata for each dataset, in a single `.json` file which contains a detailed description of the data in DATS format.  The data files themselves can be downloaded using DataLad as described on the results page for each individual dataset.
 
+##### **How do I access private datasets?**
+
+If the datasets were crawled from Zenodo or OSF, please follow the instructions on how to access the ones from [Zenodo](https://github.com/CONP-PCNO/conp-documentation/blob/master/Developers-Notes/conp-dataset_crawlers/ZENODO_access_private_dataset.md) and the ones from [OSF](https://github.com/CONP-PCNO/conp-documentation/blob/master/Developers-Notes/conp-dataset_crawlers/OSF_private_dataset_guide.md)
+
 ## <a name="data-upload"></a>III. Data Sharing/Upload
 
 ##### **Why should I upload data to CONP?**
@@ -118,7 +122,7 @@ To do so, on the dataset page, click on the link shown under "Source" which will
 
 Once the account is approved, you will receive an email with the login credentials that you can use to either browse the LORIS repository or download data via DataLad using the `datalad get` command.
 
-#### **`datalad get` not working for preventad-open or multicenter-phantom datasets?**
+##### **`datalad get` not working for preventad-open or multicenter-phantom datasets?**
 
 In order to download files from those two datasets, DataLad version 0.12.2 is required. To upgrade or install the latest version of DataLad, please refer to the [installation and configuration section of the DataLad Handbook](http://handbook.datalad.org/en/latest/intro/installation.html#install). 
 
