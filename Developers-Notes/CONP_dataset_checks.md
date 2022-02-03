@@ -14,7 +14,7 @@ Messages specifying the "detached HEAD" state will be observed in the installati
 [ todo : insert example next time this comes up ]
 
 
-If this happens, confirm with other developers whether it is expected (eg, someone else is in the middle of a task involving a dataset and has not updted the link to the main repository.)  In the event of a genuine error, update the detached HEAD submodules as follows:
+If this happens, confirm with other developers whether it is expected (eg, someone else is in the middle of a task involving a dataset and has not updated the link to the main repository.)  In the event of a genuine error, update the detached HEAD submodules as follows:
 
 ```
 cd conp-dataset/projects/<submodule>
@@ -30,11 +30,11 @@ A notable recent example occurred when the parent BigBrain dataset was updated a
 
 The [standard data addition procedure](https://github.com/CONP-PCNO/conp-documentation/blob/master/Documentation_displayed_on_the_portal/Share_Instruction_Page.md) does not specify a preferred location for the new dataset.  This is intentional, as we wish to support connection to datasets across a range of locations.
 
-It is therefore suggested that, once a dataset has been ingested and confirmed to be satisfactory, CONP developers should fork the dataset into the conpdatasets github space and replace the submodule links in CONP-PCNO/conp-dataset with links to the CONP-PCNO fork..  This allows for updates of a technical nature (eg changes to ```DATS.json``` format) to be carried out quickly by CONP personnel and submitted as PRs to the original dataset, rather than requiring the data provider to take responsibility for updates at our end.
+It is therefore suggested that, once a dataset has been ingested and confirmed to be satisfactory, CONP developers should fork the dataset into the conpdatasets github space and replace the submodule links in CONP-PCNO/conp-dataset with links to the CONP-PCNO fork.  This allows for updates of a solely technical nature (e.g. changes to ```DATS.json``` format) to be carried out quickly by CONP personnel and submitted as PRs to the original dataset, rather than requiring the data provider to take responsibility for updates that do not change the scientific content of the dataset.
 
 To carry out this procedure:
 
-1) Fork CONP-PCNO/conp-dataset into your own github userspace (or if you have already done this, confirm that your fork is up-to-date.)
+1) Fork CONP-PCNO/conp-dataset into your own github userspace (or if you have done this previously, confirm that your fork is up-to-date.)
 
 2) Install this fork of conp-dataset locally.
 
