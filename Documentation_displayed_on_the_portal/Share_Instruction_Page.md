@@ -156,8 +156,10 @@ datalad save -m "<a constructive message describing the state of the dataset>"
 Ensure that all changes have been saved in DataLad (`datalad save -m "<message>"`). Then, from the DataLad directory, publish the DataLad dataset to GitHub:
 
  ```
- datalad publish --to github
+ datalad push --to github
  ```
+
+[ <b>NB</b>: In versions of datalad before 0.13, this functionality used ```datalad publish```.  There are some differences between these two commands but they are not relevant to this operation. ]
   
 ##### <a name="dataset_test"></a> 5) Testing the new dataset before adding it to the [CONP-PCNO/conp-dataset](https://github.com/CONP-PCNO/conp-dataset) DataLad super dataset
 
@@ -215,7 +217,7 @@ To add the newly created dataset to the list of CONP datasets present in the Dat
 
 	```
 	datalad save -m '<message>'
-	datalad publish --to origin
+	datalad push --to origin
 	```
 
 - Send a pull request (PR) from your fork's `master` branch to the `master` branch of `https://github.com/CONP-PCNO/conp-dataset`. You should see 2 file changes in the PR:
