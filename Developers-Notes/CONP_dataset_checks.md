@@ -42,14 +42,16 @@ To carry out this procedure:
 
 4) Remove the connection to the original fork of the submodule using the [git submodule deletion procedure](https://github.com/CONP-PCNO/conp-documentation/blob/master/Developers-Notes/Datalad/fix_git_submodule_problem.md).
 
-5) Save the current state of your fork of conp-dataset using ```datalad save``` and ```datalad publish --to origin``` as usual.
+5) Save the current state of your fork of conp-dataset using ```datalad save``` and ```datalad push --to origin``` as usual.
 
 6) Reinstall the conpdatasets fork of the submodule:
 
 ```
-git submodule add https://github.com/conpdatasets/<submodule>
+git submodule add https://github.com/conpdatasets/<submodule> projects/<submodule>
 ```
 
-7) Save reinstalled state of your fork of conp-dataset using ```datalad save``` and ```datalad publish --to origin```.
+7) Confirm correct formatting in the updated ```.gitmodules``` file, which may mean adding a trailing ```.git``` extension to the repository address.
 
-8) Submit a PR from your fork to CONP-PCNO/conp-dataset.
+8) Save reinstalled state of your fork of conp-dataset using ```datalad save``` and ```datalad push --to origin```.
+
+9) Submit a PR from your fork to CONP-PCNO/conp-dataset.
