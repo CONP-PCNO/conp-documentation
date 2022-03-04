@@ -50,6 +50,8 @@ To carry out this procedure:
 git submodule add https://github.com/conpdatasets/<submodule> projects/<submodule>
 ```
 
-7) Save reinstalled state of your fork of conp-dataset using ```datalad save``` and ```datalad push --to origin```.
+7) Confirm correct formatting in the updated ```.gitmodules``` file, which may mean adding a trailing ```.git``` extension to the repository address.
 
-8) Submit a PR from your fork to CONP-PCNO/conp-dataset.
+8) Save reinstalled state of your fork of conp-dataset using ```datalad save``` and ```datalad push --to origin```.
+
+9) Submit a PR from your fork to CONP-PCNO/conp-dataset.
