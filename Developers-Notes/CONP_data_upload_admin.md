@@ -119,4 +119,4 @@ This script replaces the *[3) Populating a new dataset](https://github.com/CONP-
 
   - ```<REMOTE_DIRECTORY>``` is the path to the directory on ```sftp.conp.ca``` containing the new dataset,  relative to the home directory of ```<DATASET_OWNER_USERNAME>```.  This allows the crawler to correct for users submitting inconsistent or unusual directory structures without requiring them to resubmit the entire dataset.
 
-  - ```<INDEX_FILE_NAME>``` is your local copy of the index of files in the dataset (list created in created in 1.).
+  - ```<INDEX_FILE_NAME>``` is your local copy of the index of files in the dataset (list created in 1).
