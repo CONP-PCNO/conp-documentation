@@ -1,7 +1,10 @@
 
-Log in to ```sftp.conp.ca``` as user ```proftpd```.  If you need the password for this account, contact Cécile Madjar or Emmet O'Brien.
-
 # I. Setting up an account on the CONP SFTP server
+
+for this step, log in to ```sftp.conp.ca``` as user ```proftpd```.
+
+```ssh -p4722 proftpd@sftp-conp.acelab.ca```
+
 
 ## Create user home directory
 
@@ -29,7 +32,7 @@ ftpquota --add-record --type=limit --name=<USERNAME> --quota-type=user --table-p
 
 (Everything in this command remains constant except for the `<USERNAME>`).
 
-More information about SFTP user quota are available in the following file: `/opt/conp-proftpd/SETQUOTA_A_CONP_SFTP_USER.txt`
+More information about SFTP user quotas is available in the following file: `/opt/conp-proftpd/SETQUOTA_A_CONP_SFTP_USER.txt`
 
 ## Send email to the user with login information and link to the community server upload documentation
 
@@ -93,15 +96,15 @@ This script replaces the *[3) Populating a new dataset](https://github.com/CONP-
 
 ##### *How to run the script?*
 
-1.  Before running the script, it is necessary to generate an index of the files in the input dataset: run this command in the root directory of the dataset on sftp.conp.ca:
+1.  Before running the script, it is necessary to generate an index of the files in the input dataset: log in to ```sftp.conp.ca``` as ```conp_data_admin``` and run the following command:
 
   ```
   find "$PWD" -type f > <INDEX_FILE_NAME>
   ```
 
-2. Manually transfer the files that need to be present on the server by opening an sftp connection from your local computer.  Currently these files are ```README.md```,  ```DATS.json```  and ```<INDEX_FILE_NAME>``` (TODO: Update this depending on resolution to https://github.com/CONP-PCNO/conp-dataset/issues/674)
+2. Manually transfer the files that need to be present on the server by opening an sftp connection from your local computer.  Currently these files are ```README.md```,  ```DATS.json```  and ```<INDEX_FILE_NAME>``` (TODO: Possibly update this list depending on resolution of https://github.com/CONP-PCNO/conp-dataset/issues/674)
 
-3. Edit the index file to remove entries for ```DATS.json```, ```README.md``` and ```<INDEX_FILE_NAME>```, as we do not want to generate git-annex links to these files.  
+3. Edit the index file to remove entries for ```DATS.json```, ```README.md``` and ```<INDEX_FILE_NAME>```, as we do not want to generate git-annex links to these files.
 
 4. In the new DataLad dataset directory, run the crawler script:
 
@@ -120,3 +123,10 @@ This script replaces the *[3) Populating a new dataset](https://github.com/CONP-
   - ```<REMOTE_DIRECTORY>``` is the path to the directory on ```sftp.conp.ca``` containing the new dataset,  relative to the home directory of ```<DATASET_OWNER_USERNAME>```.  This allows the crawler to correct for users submitting inconsistent or unusual directory structures without requiring them to resubmit the entire dataset.
 
   - ```<INDEX_FILE_NAME>``` is your local copy of the index of files in the dataset (list created in 1).
+
+Successful execution of the script will create a set of links and subdirectories in the local directory duplicating the structure of the dataset on ```sftp.conp.ca```.  The Apr 2022 update to ```sftp-crawler.pl``` displays the line of the input file it is currently processing, to facilitate estimation of the time a run will take to complete and give a clear location in the event of any failure.
+
+5. Delete the index file.
+
+Note:  if you need the passwords for ```proftpd``` or ```conp_data_admin```, contact Cecile Madjar or Emmet O'Brien.
+
