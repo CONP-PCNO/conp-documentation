@@ -10,7 +10,7 @@ No login is required to access the portal but you will be asked to agree to the 
 
 ![terms_of_use](https://raw.githubusercontent.com/CONP-PCNO/conp-documentation/master/Documentation_displayed_on_the_portal/img/CONP_portal_tutorial_Terms_of_use.png)
 
-Upon agreement to the "Terms of Use", you will be able to filter through the various datasets or pipelines available on the portal. 
+Upon agreement to the "Terms of Use", you will be able to filter through the various datasets and pipelines available on the portal. 
 
 ## How can I find and download datasets?
 
@@ -21,7 +21,7 @@ Datasets are listed in the [Data search page](https://portal.conp.ca/search) of 
 ![search_page](https://raw.githubusercontent.com/CONP-PCNO/conp-documentation/master/Documentation_displayed_on_the_portal/img/CONP_portal_tutorial_Data_search_page.png)
 
 
-Clicking on a dataset row in the [Data search page](https://portal.conp.ca/search) will bring the user to a more detailed dataset page that includes more description information pertinent to the dataset (including the display of the README.md file provided with the dataset) and download capabilities.
+Clicking on a dataset row in the [Data search page](https://portal.conp.ca/search) will bring the user to a more detailed dataset page that includes more description information pertinent to the dataset (including the display of the README.md file provided with the dataset).
 
 ![SCREENSHOT of the detailed page](https://raw.githubusercontent.com/CONP-PCNO/conp-documentation/master/Documentation_displayed_on_the_portal/img/CONP_portal_tutorial_Dataset_detailed_page.png)
 
@@ -37,11 +37,11 @@ Below are two dataset examples:
 
 #### How to download the data?
 
-Small datasets (<15GB) that do not require a third-party account can be downloaded directly through the frontend via the Download button located in thed detailed dataset page.
+Datasets that do not require a third-party account can be downloaded directly through the frontend via the "Direct Download" button.
 
 ![download_button](https://raw.githubusercontent.com/CONP-PCNO/conp-documentation/master/Documentation_displayed_on_the_portal/img/CONP_portal_tutorial_Dataset_download_button.png)
 
-Large datasets (>15GB) or datasets that require a third-party account cannot be downloaded through the frontend of the Portal but we provide detailed instructions on how to download the dataset via [DataLad](http://www.datalad.org). Each dataset page contains a detailed ‘Dataset Download Instructions’ section that lay out the different steps to perform in order to download the dataset. 
+Datasets that require a third-party account cannot be downloaded through the frontend of the Portal but we provide detailed instructions on how to download the dataset via [DataLad](http://www.datalad.org). Each dataset page contains a detailed ‘DataLad Dataset Download Instructions’ section that lay out the different steps to perform in order to download the dataset. 
 
 ![dataset_download_instructions](https://raw.githubusercontent.com/CONP-PCNO/conp-documentation/master/Documentation_displayed_on_the_portal/img/CONP_portal_tutorial_Dataset_download_instructions.png)
 

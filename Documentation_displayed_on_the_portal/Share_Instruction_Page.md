@@ -95,6 +95,8 @@ The CONP datasets are managed using [DataLad](https://www.datalad.org/), a tool 
 
 - **_on Mac OS_:** Please visit the Install DataLad section of the [DataLad Handbook](http://handbook.datalad.org/en/latest/index.html) and follow the instruction for [Mac OS install](http://handbook.datalad.org/en/latest/intro/installation.html#macos-osx).
 
+- **_on Windows_:** Please visit the Install DataLad section of the [DataLad Handbook](http://handbook.datalad.org/en/latest/index.html) and follow the instructions for [Windows 10](http://handbook.datalad.org/en/latest/intro/installation.html#windows-10). Also, the best way to achieve 'native' Bash compatibility with a modern Ubuntu-based system may be to install the "Windows Subsystem for Linux" and a bit of Googling will find you many guides on how to do this.
+
 
 ##### <a name="dataset_creation"></a> 2) Creating a new DataLad dataset
 
