@@ -14,31 +14,21 @@ We created a [tutorial document](https://portal.conp.ca/tutorial) on how to use 
 
 ##### **What data are contained in CONP?**
 
-CONP contains a diverse range of 30 datasets (March 2020), primarily neuroimaging but also transcriptomics, genomics, and other related data modalities.  Many of these datasets come from neuroscience research institutes, while others link to public resources that may be of interest to neuroscientists. A full list can be found [here](https://portal.conp.ca/search).
+CONP contains a diverse range of over 65 datasets (March 2022), primarily neuroimaging but also transcriptomics, genomics, and other related data modalities.  Many of these datasets come from neuroscience research institutes, while others link to public resources that may be of interest to neuroscientists. A full list can be found [here](https://portal.conp.ca/search).
 
 ##### **How do I download data from CONP?**
 
-Results pages for the individual datasets contain instructions for downloading that dataset.  At the moment, access to datasets is made available through the [DataLad](https://www.datalad.org) data management system.  Data download at the push of a button is under development and will be available shortly.
-
-##### **What software do I need to download data from CONP?**
-
-At the moment downloading CONP data requires DataLad and associated software running on a Linux or Mac machine ([installation details](http://handbook.datalad.org/en/latest/intro/installation.html#install)). Note that for some dataset you will need at least version 0.12.2 of DataLad installed. 
-
-Download through the browser will be available shortly.
-
-##### **I clicked on the download button on the file list, where is the data?**
-
-The download buttons on the list of files downloads metadata for each dataset, in a single `.json` file which contains a detailed description of the data in DATS format.  The data files themselves can be downloaded using DataLad as described on the results page for each individual dataset.
+Individual dataset pages accessible from the [search page](https://portal.conp.ca/search) contain instructions for downloading data.  At the moment, access to datasets is made available through either a one-click, browser-based download function or through the [DataLad](https://www.datalad.org) data management system, which should be version 0.12.2 or higher ([installation details](handbook.datalad.org/en/latest/intro/installation.html#install)).  
 
 ##### **How do I access private datasets?**
 
-If the datasets were crawled from Zenodo or OSF, please follow the instructions on how to access the ones from [Zenodo](https://github.com/CONP-PCNO/conp-documentation/blob/master/Developers-Notes/conp-dataset_crawlers/ZENODO_access_private_dataset.md) and the ones from [OSF](https://github.com/CONP-PCNO/conp-documentation/blob/master/Developers-Notes/conp-dataset_crawlers/OSF_private_dataset_guide.md)
+If a dataset requires a third-party account, please follow the URL indicated beside “Source” on the dataset page for further information.
 
 ## <a name="data-upload"></a>III. Data Sharing/Upload
 
 ##### **Why should I upload data to CONP?**
 
-Uploading to CONP will increase its visibility and accessibility to other neuroscience researchers in a collaboration-focused, open science environment. 
+The CONP Portal’s unique ability to federate data infrastructures through harmonized metadata provides unified search capabilities across normally siloed sources of datasets and analysis tools.  "zThis is key to facilitating discoverability, reuse, and deeper scientific exploration of data, allowing, for instance, a researcher to discover multiple sources of data responding to given search criteria (e.g., according to modality, participant population, etc.), retrieve those data either through the Portal’s web interface or through command-line access that can be automated and integrated into an analysis pipeline, and apply containerized tools to these conjunctions of data either locally or through Cloud computing of various types. These features increase your data’s visibility, accessibility, and utility to the neuroscience community.
 
 ##### **How do I upload data to CONP?**
 
@@ -48,7 +38,7 @@ Data can be uploaded to CONP either through [Zenodo](https://zenodo.org) by tagg
 
 ##### **What tools/pipelines are contained in CONP?**
 
-CONP contains a diverse range of 56 tools and pipelines (March 2020).  Many of these tools/pipelines come from neuroscience or genomics research institutes. A full list can be found [here](https://portal.conp.ca/pipelines).
+CONP contains a diverse range of 80 tools and pipelines (March 2022).  Many of these tools/pipelines come from neuroscience or genomics research institutes. A full list can be found [here](https://portal.conp.ca/pipelines).
 
 ##### **What are the requirements to install and run a tool?**
 
@@ -59,9 +49,9 @@ CONP pipelines can be easily installed and run on any computer with a container 
 
 ##### **How can I run a CONP tool/pipeline?**
 
-To run tools/pipelines locally, ensure your have [Boutiques](https://pypi.org/project/boutiques/) installed with [Docker](https://www.docker.com/) or [Singularity](https://singularity.lbl.gov/).
+To run tools/pipelines locally, make sure your have [Boutiques](https://pypi.org/project/boutiques/) installed alongside either [Docker](https://www.docker.com/) or [Singularity](https://singularity.lbl.gov/).
 
-If you have never used Boutiques in the past, we recommend the following [tutorial](https://nbviewer.jupyter.org/github/boutiques/tutorial/blob/master/notebooks/boutiques-tutorial.ipynb#reusing_tools).
+If you have never used Boutiques before, we recommend this [tutorial](https://nbviewer.jupyter.org/github/boutiques/tutorial/blob/master/notebooks/boutiques-tutorial.ipynb#reusing_tools).
 
 Tools/pipelines can be run on Boutiques based on their Zenodo ID as follows:
 
@@ -70,13 +60,14 @@ Tools/pipelines can be run on Boutiques based on their Zenodo ID as follows:
 2) You can now edit a JSON example invocation (`example_invocation.json`) to add your input values based on the example provided in 1)
 
 
-3) You are now all set to use the exec command to launch an analysis. Note, the option `-s` will show live stdout/stderr in the terminal.
+3) You are now all set to use the `exec` command to launch an analysis. Note, the option `-s` will show live `stdout`/`stderr` in the terminal.
 
 ```bash
 bosh exec launch -s <zenodo_id> <invocation>
 ```
 
-Note that in addition to the ability to run the tools/pipelines locally, it is possible to run some tools/pipelines via the CBRAIN platform (for example: the fmriprep BIDS App, Zenodo.3359640). Clicking on the blue icon "Run Pipeline on CBRAIN" will bring you to the CBRAIN page where you can run pipelines on compute canada super computers.
+Note that in addition to the ability to run the tools/pipelines locally, it is possible to run some tools/pipelines via the CBRAIN platform (for example: the fmriprep BIDS App, Zenodo.3359640).  Clicking on the blue icon "Use This Tool On CBRAIN" will bring you to the CBRAIN page where you can run pipelines on the super-computing network administered by the [Digital Research Alliance of Canada](https://alliancecan.ca/en).  For more information on CBRAIN, visit http://www.cbrain.ca/.
+
 
 ##### **I get the following error when running the tool on bosh**
 
@@ -118,13 +109,9 @@ You can add your own tool/pipeline by following the instructions described in th
 
 In order to have access to those datasets, you will need to request an account on their respective LORIS repositories. 
 
-To do so, on the dataset page, click on the link shown under "Source" which will redirect you to the LORIS login page. Below the login button there is a 'Request Account' link that will show a Request Account form that will need to be filled and sent. 
+To do so, on the dataset page, click on the link shown under "Source" which will redirect you to the LORIS login page. Below the login button there is a 'Request Account' link that will take you to a Request Account form that will need to be filled and submitted. 
 
 Once the account is approved, you will receive an email with the login credentials that you can use to either browse the LORIS repository or download data via DataLad using the `datalad get` command.
-
-##### **`datalad get` not working for preventad-open or multicenter-phantom datasets?**
-
-In order to download files from those two datasets, DataLad version 0.12.2 is required. To upgrade or install the latest version of DataLad, please refer to the [installation and configuration section of the DataLad Handbook](http://handbook.datalad.org/en/latest/intro/installation.html#install). 
 
 ##### **How to upgrade to DataLad version 0.12.2 or above?**
 
