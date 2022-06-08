@@ -165,7 +165,16 @@ Ensure that all changes have been saved in DataLad (`datalad save -m "<message>"
   
 ##### <a name="dataset_test"></a> 5) Testing the new dataset before adding it to the [CONP-PCNO/conp-dataset](https://github.com/CONP-PCNO/conp-dataset) DataLad super dataset
 
+
+
 Test that the dataset published on the new GitHub repository can be correctly downloaded:
+
+- Check that the default branch on the dataset is set to `master`:
+
+1) Open the repository on Github
+2) Click on the Settings tab (rightmost in the menu below the repository title)
+3) Click on Branches in the menu on the left of the page. The Default branch setting is at the top of the page this retrieves.
+4) If the default branch is set to `git-annex`, change it to `master`.
 
 - Do a clean install of the new dataset GitHub repository on a different directory:
 
