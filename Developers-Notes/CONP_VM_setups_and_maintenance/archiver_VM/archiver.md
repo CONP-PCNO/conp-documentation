@@ -14,6 +14,9 @@ CONP archiver VM information:
 - host: `archiver.conp.ca -p 4723`
 - password: please contact Emmet O'Brien or Cécile Madjar for the password
 
+VM downtime for backup: 
+- every Wednesdays at 4:45AM.
+
 
 # Archiver code
 
@@ -82,12 +85,15 @@ Note: this is the default behaviour run daily by the cronjob setup on the VM
 A daily cronjob has been set up to regenerate archives for datasets that have been modified or generate a new 
 archive for new datasets added to the [conp-dataset](https://github.com/CONP-PCNO/conp-dataset.git) repository.
 
-The daily cronjob is set up to run the `~/cronscript/archiver.sh` script that was developed for the crontab. A copy
-of the crontab is also available in the `~/cronscript/` directory. It is always a good idea to ensure a backup of the
-crontab is available in case of accidentally deleting the crontab (with the `r` option) instead of editing it 
-(with the `e` option).
+The daily cronjob is set up to run the `~/cronscript/archiver.sh` script that was developed for the crontab. When
+the archiver is run through this script a `.archiving` text file is created in `/data/conp-dataset/` so that
+another cronjob does not start another archiving process while the previous one is not finished yet.
 
-To generate a new back of the crontab, run `crontab -l` and pipe it into a new file (for example
+A copy of the crontab is also available in the `~/cronscript/` directory. It is always a good idea to ensure a 
+backup of the crontab is available in case of accidental deletion of the crontab (with the `r` option) instead 
+of editing it (with the `e` option).
+
+To generate a new back up of the crontab, run `crontab -l` and pipe it into a new file (for example
 `crontab -l > crontab_bkp_date`)
 
 Once the cronjob has finished running, an email will be sent to the list of emails present in the `MAILTO` variable 
@@ -95,6 +101,7 @@ of the crontab.
 
 **Note**: when datasets are very large, it can happen that the `datalad get` part takes more than a week to download
 the dataset. In those cases, it is advisable to submit a ticket to Redmine to temporarily remove the weekly restart
+of the VM backups.
 
 
 # Transfer of the new archives to the portal

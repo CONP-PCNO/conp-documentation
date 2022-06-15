@@ -10,6 +10,7 @@ to protect CONP users' privacy.
 We have an MCIN Matomo server (matomo.acelab.ca) that is currently tracking analytics on the 
 https://conp.ca (Matomo site ID = 1) and https://portal.conp.ca (Matomo site ID = 2) websites.
 
+The VM is accessible through the MCIN login VM only.
 
 
 # Matomo usage
