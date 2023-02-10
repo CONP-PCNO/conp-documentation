@@ -115,6 +115,8 @@ The first step in uploading a dataset to CONP via DataLad requires the creation 
   datalad create-sibling-github <new_dataset_name>
   ```
   To inspect existing siblings, run `datalad siblings`.
+
+  **NB**: Since github changed the name of the default branch from `master`  to `main`, it is now necessary to explicitly set the default branch of a newly created git-annex repository.  This can be done in the github interface under Settings->Branches for the repository.
 	
 ##### <a name="dataset_population"></a> 3) Populating the new dataset
 
