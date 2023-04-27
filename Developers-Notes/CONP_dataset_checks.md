@@ -40,6 +40,8 @@ To carry out this procedure:
 
 3) Fork the subdataset into the conpdatasets github userspace.
 
+(note added April 2023: Recent changes to github mean that forking a dataset no longer defaults to forking all branches.  It is essential to set the flag to copy all branches in the github forking interface, as Datalad requires both the `master` and `git-annex` branches of the repository to function.  It may also prove necessary to update the `master` and `git-annex` branches of newer dataset repositories with separate PRs; determining exactly which circumstances this applies in is still ongoing.)
+
 4) Remove the connection to the original fork of the submodule using the [git submodule deletion procedure](https://github.com/CONP-PCNO/conp-documentation/blob/master/Developers-Notes/Datalad/fix_git_submodule_problem.md).
 
 5) Save the current state of your fork of conp-dataset using ```datalad save``` and ```datalad push --to origin``` as usual.
