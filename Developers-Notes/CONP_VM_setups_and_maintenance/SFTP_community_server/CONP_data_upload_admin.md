@@ -84,7 +84,7 @@ Data on ```sftp.conp.ca``` can be ingested using the [standard data addition pro
 
 Instead of executing step [3) Populating the new dataset](https://github.com/CONP-PCNO/conp-documentation/blob/master/Documentation_displayed_on_the_portal/Share_Dataset_Instruction_Page.md#-3-populating-the-new-dataset) of the procedure, run the script `sftp-crawler.pl` to crawl the new dataset on the SFTP CONP Community Server.
 
-Note that if the user submits data in the form of a tarball or other archive, once uncompressed it is necessary to confirm that all files have appropriate permissions and if necessary modify them using ```chmod```; in order to generate datalad links, every file has to be readable.
+**Note** that if the user submits data in the form of a tarball or other archive, once uncompressed it is necessary to confirm that all files have appropriate permissions and if necessary modify them using ```chmod```; in order to generate datalad links, every file has to be readable.
 
 The addresses to use in the ```git annex addurl``` command are of the form ```https://sftp.conp.ca/users/<USERNAME>/..```
 
