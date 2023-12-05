@@ -3,7 +3,7 @@
 
 for this step, log in to ```sftp.conp.ca``` as user ```proftpd```.
 
-```ssh -p4722 proftpd@sftp-conp.acelab.ca```
+```ssh -p6806 proftpd@sftp.conp.ca```
 
 
 ## Create user home directory
