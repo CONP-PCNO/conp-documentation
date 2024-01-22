@@ -12,7 +12,7 @@ The VM is accessible through the MCIN login VM only.
 
 CONP crawler VM information:
 - user: `conp-bot`
-- host: `zenodo-crawl.acelab.ca -p 4706`
+- host: `zenodo-crawl.acelab.ca -p 6813`
 - password: please contact Tristan Glatard or Cécile Madjar for the password
 
 VM downtime for backup: 
