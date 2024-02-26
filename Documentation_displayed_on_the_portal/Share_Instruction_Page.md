@@ -24,7 +24,7 @@ There are presently 4 ways of sharing a dataset through the CONP Portal:
 
 - [I. Upload using Zenodo storage](#zenodo)
 - [II. Upload using OSF storage](#osf)
-- [III. Upload on the CONP Community Server](#conp-server)
+- [III. Upload to the CONP Community Server](#conp-server)
 - [IV. Upload using DataLad](#datalad)
 
 If you need help at any stage, please [open an issue in
@@ -200,6 +200,8 @@ We recommend that datasets uploaded to CONP have a unique and permanent Digital 
 - Release the new dataset on GitHub (see instructions [here](https://help.github.com/en/articles/creating-releases)). An archive of the new dataset will automatically be created on Zenodo, along with a DOI. 
 
 - Get the Concept DOI badge from the Zenodo list of GitHub repositories [here](https://zenodo.org/account/settings/github/). Add that DOI to your dataset's `README.md` file and to the *identifier* field of your `DATS.json` file. This DOI will always link to the latest release of the dataset.
+
+- Note: Whether or not you have a DOI for your dataset, the CONP will create and assign a similar persistent identifier for your dataset using [Archival Resource Keys](https://arks.org/) (ARKs).
 
 ##### <a name="addition_to_conp-dataset"></a> 7) Adding the new dataset to the list of CONP datasets
 
