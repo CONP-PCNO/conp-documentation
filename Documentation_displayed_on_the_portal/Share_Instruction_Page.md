@@ -237,17 +237,11 @@ To add the newly created dataset to the list of CONP datasets present in the Dat
 		[submodule "projects/<new_dataset_name>"]
 			path = projects/<new_dataset_name>
 			url = https://github.com/<username>/<new_dataset_name>.git
-  		```
-   		*note: ensure that there is an empty line at the end of the `.gitmodules` file otherwise it will not pass the format-checking tests of your PR.
- 		*note: it is now necessary to manually edit the `.gitmodules` file to add one additional line:
-  		```
-		[submodule "projects/<new_dataset_name>"]
-			path = projects/<new_dataset_name>
-			url = https://github.com/<username>/<new_dataset_name>.git
 			branch = main
   		```
-		This is required for compatibility with [github renaming the default branch] (https://github.com/github/renaming).
-
+   		*note: ensure that there is an empty line at the end of the `.gitmodules` file otherwise it will not pass the format-checking tests of your PR.
+ 		
+The last line may need to be added manually.  This is now required for compatibility with [github renaming the default branch] (https://github.com/github/renaming).
 
   - a link to the latest commit of the <new_dataset_name> GitHub repository
 
