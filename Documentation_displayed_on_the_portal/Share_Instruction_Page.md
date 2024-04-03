@@ -239,9 +239,11 @@ To add the newly created dataset to the list of CONP datasets present in the Dat
 			url = https://github.com/<username>/<new_dataset_name>.git
 			branch = main
   		```
-   		*note: ensure that there is an empty line at the end of the `.gitmodules` file otherwise it will not pass the format-checking tests of your PR.
  		
-The last line may need to be added manually.  This is now required for compatibility with [github renaming the default branch] (https://github.com/github/renaming).
+The last line will need to be added manually.  This is now required for compatibility with [github renaming the default branch](https://github.com/github/renaming).
+   		
+*note: ensure that there is an empty line at the end of the `.gitmodules` file otherwise it will not pass the format-checking tests of your PR.
+
 
   - a link to the latest commit of the <new_dataset_name> GitHub repository
 
