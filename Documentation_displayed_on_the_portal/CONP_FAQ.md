@@ -24,7 +24,7 @@ The CONP Portal aims to facilitate the [FAIR](https://www.go-fair.org/fair-princ
 - Data access via DataLad for either open or registered datasets
 - Access to high-performance computing through CBRAIN
 
-## <a name=”data-download”></a>II. Data Access and Download
+## <a name="data-download"></a>II. Data Access and Download
 
 ### **What data are contained in the CONP Portal?**
 
@@ -38,7 +38,7 @@ Individual dataset pages accessible from the [search page](https://portal.conp.c
 
 If a dataset requires a third-party account, please follow the link embedded in the “**Third-party account required**” text at the top-right of the dataset page for further information.
 
-## <a name=”data-upload”></a>III. Data Sharing/Upload
+## <a name="data-upload"></a>III. Data Sharing/Upload
 
 ### **Why should I upload data to the CONP Portal?**
 
@@ -50,7 +50,7 @@ This is key to facilitating discoverability, reuse, and deeper scientific explor
 
 Data can be uploaded to the CONP Portal either through [Zenodo](https://zenodo.org) by tagging your dataset with the keyword `canadian-open-neuroscience-platform`, through [OSF](https://osf.io) by tagging your dataset with `canadian-open-neuroscience-platform` and setting the dataset to `Public`, to the CONP Community Server, or manually through DataLad.  Please see detailed instructions for these options by clicking the “[Share]((https://portal.conp.ca/share))” button at the left of your screen.
 
-## <a name=”tools”></a>IV. Tools & Pipelines
+## <a name="tools"></a>IV. Tools & Pipelines
 
 ### **What tools/pipelines are contained in the CONP Portal?**
 
