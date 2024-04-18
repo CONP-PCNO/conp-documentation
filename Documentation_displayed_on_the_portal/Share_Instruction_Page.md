@@ -168,12 +168,12 @@ Ensure that all changes have been saved in DataLad (`datalad save -m "<message>"
 
 Test that the dataset published on the new GitHub repository can be correctly downloaded:
 
-- Check that the default branch on the dataset is set to `master`:
+- Check that the default branch on the dataset is set to `main`:
 
 1) Open the repository on GitHub
 2) Click on the Settings tab (rightmost in the menu below the repository title)
 3) Click on Branches in the menu on the left of the page. The Default branch setting is at the top of the page this retrieves.
-4) If the default branch is set to `git-annex`, change it to `master`.
+4) If the default branch is set to `git-annex`, change it to `main`.
 
 - Do a clean install of the new dataset GitHub repository on a different directory:
 
@@ -232,7 +232,7 @@ To add the newly created dataset to the list of CONP datasets present in the Dat
 	datalad push --to origin
 	```
 
-- Send a pull request (PR) from your fork's `master` branch to the `master` branch of `https://github.com/CONP-PCNO/conp-dataset`. You should see two file changes in the PR:
+- Send a pull request (PR) from your fork's `main` branch to the `main` branch of `https://github.com/CONP-PCNO/conp-dataset`. You should see two file changes in the PR:
   - Modification to the `.gitmodules` file to add the information for the new dataset. The added information should be of the form:
 
   		```
