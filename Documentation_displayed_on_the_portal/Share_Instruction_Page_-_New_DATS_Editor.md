@@ -1,4 +1,4 @@
-[Upload a dataset](#dataset) | [Upload a tool/pipeline](#pipeline) | [Upload an experiment](#experiments) | [DATS Editor](https://portal.conp.ca/dats-editor)
+[Upload a dataset](#dataset) | [Upload a tool/pipeline](#pipeline) | [Upload an experiment](#experiments) | [DATS Editor](https://portal-dev.conp.ca/dats-editor)
 
 
 # <a name="dataset"></a> Dataset Addition Procedures
@@ -9,7 +9,7 @@ Thank you for sharing your data with the CONP and the scientific community! Maki
 
 ## <a name="required"></a> Two files are required for all datasets and any upload method:
 
-- A `DATS.json` file: This file contains the essential metadata that describes your dataset and serve to populate various fields describing your dataset on its Portal page. This is crucial to making your dataset [FAIR](https://www.go-fair.org/fair-principles/) and, therefore, easier to discover and explore. The full description of the `DATS.json` file is found [here](https://github.com/CONP-PCNO/conp-documentation/blob/master/CONP_DATS_fields.md), including which fields are required, but we recommend using our [DATS GUI editor](https://portal.conp.ca/dats-editor) for easy creation of this file.
+- A `DATS.json` file: This file contains the essential metadata that describes your dataset and serve to populate various fields describing your dataset on its Portal page. This is crucial to making your dataset [FAIR](https://www.go-fair.org/fair-principles/) and, therefore, easier to discover and explore. The full description of the `DATS.json` file is found [here](https://github.com/CONP-PCNO/conp-documentation/blob/master/CONP_DATS_fields.md), including which fields are required, but we recommend using our [DATS GUI Editor](https://portal-dev.conp.ca/dats-editor) for easy creation of this file.
 
 - A `README.md` file: The content of this file will be displayed in your dataset’s page on the CONP Portal. Though it can recapitulate some basic information in the DATS file (see above), it should primarily complement that information with a generally accessible description of the dataset and relevant details, such as experimental conditions and motivation. The `README.md` is in Markdown format, for which there are many guides but [here is one quick cheatsheet]( https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). If you do not already have a favourite Markdown editor, you can use a browser-based editor with live preview (e.g., StackEdit).
 
@@ -296,7 +296,7 @@ welcome submissions.
   DATS.json file.</span>
 
 <span class="mark">**We strongly recommend you use our browser-based
-[<u>editor</u>](https://portal.conp.ca/dats-editor) to create the first
+[<u>editor</u>](https://portal-dev.conp.ca/dats-editor) to create the first
 two files.** It will walk you through each step and ensure the
 information is consistent between both files. You can then simply
 download the files, add them to your experiment directory, and share
