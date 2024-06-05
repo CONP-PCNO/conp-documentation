@@ -1,4 +1,4 @@
-[Upload a dataset](#dataset) | [Upload a tool/pipeline](#pipeline) | [DATS Editor](https://portal.conp.ca/dats-editor)
+[Upload a dataset](#dataset) | [Upload a tool/pipeline](#pipeline) | [Upload an experiment](#experiments) | [DATS Editor](https://portal.conp.ca/dats-editor)
 
 
 # <a name="dataset"></a> Dataset Addition Procedures
@@ -9,7 +9,7 @@ Thank you for sharing your data with the CONP and the scientific community! Maki
 
 ## <a name="required"></a> Two files are required for all datasets and any upload method:
 
-- A `DATS.json` file: This file contains the essential metadata that describes your dataset and serve to populate various fields describing your dataset on its Portal page. This is crucial to making your dataset [FAIR](https://www.go-fair.org/fair-principles/) and, therefore, easier to discover and explore. The full description of the `DATS.json` file is found [here](https://github.com/CONP-PCNO/conp-documentation/blob/master/CONP_DATS_fields.md), including which fields are required, but we recommend using our [DATS GUI editor](https://portal.conp.ca/dats-editor) for easy creation of this file.
+- A `DATS.json` file: This file contains the essential metadata that describes your dataset and serve to populate various fields describing your dataset on its Portal page. This is crucial to making your dataset [FAIR](https://www.go-fair.org/fair-principles/) and, therefore, easier to discover and explore. The full description of the `DATS.json` file is found [here](https://github.com/CONP-PCNO/conp-documentation/blob/master/CONP_DATS_fields.md), including which fields are required, but we recommend using our [DATS GUI Editor](https://portal.conp.ca/dats-editor) for easy creation of this file.
 
 - A `README.md` file: The content of this file will be displayed in your dataset’s page on the CONP Portal. Though it can recapitulate some basic information in the DATS file (see above), it should primarily complement that information with a generally accessible description of the dataset and relevant details, such as experimental conditions and motivation. The `README.md` is in Markdown format, for which there are many guides but [here is one quick cheatsheet]( https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). If you do not already have a favourite Markdown editor, you can use a browser-based editor with live preview (e.g., StackEdit).
 
@@ -253,3 +253,65 @@ The last line will need to be added manually.  This is now required for compatib
 # <a name="pipeline"></a>Pipeline Addition Procedure
 
 The CONP Portal uses the [Boutiques](https://boutiques.github.io/) framework to describe, package, validate and deploy its tools and pipelines.  For more information on how to publish tools with Boutiques, please visit the 'Publishing your own tool' section of the [Boutiques tutorial Python notebook](https://github.com/boutiques/tutorial/blob/master/notebooks/boutiques-tutorial.ipynb).  If you follow these instructions, your tool will subsequently appear in the [Tools & Pipelines](https://portal.conp.ca/pipelines?sortKey=conpStatus&sortComparitor=asc&page=1&max_per_page=All&cursor=0&limit=All) section fo the CONP Portal.
+
+
+---
+# <a name="experiments"></a>Experiment Addition Procedure
+
+## Introduction
+
+Along with the possibility of sharing datasets and analysis tools, the CONP Portal can share all the elements of an experimental protocol, including scripts for behavioural testing (e.g., a working memory task) and communication with hardware (e.g., task synchronization with an fMRI scanner), stimuli and scripts required to generate them, etc. This feature is now entering a public beta phase and the CONP is ready to welcome submissions.
+
+## Required files for all experiments:
+
+- **A DATS.json file**: <span class="mark">This machine-readable file contains the essential metadata of your experiment and serves to populate various fields on your experiment’s CONP Portal page. It is crucial to making your experiment [<u>FAIR</u>](https://www.go-fair.org/fair-principles/) and, therefore, easier to discover and explore. The full description of the</span> DATS.json <span class="mark">file is found</span> <span class="mark">[<u>here</u>](https://github.com/CONP-PCNO/conp-documentation/blob/master/CONP_DATS_fields.md), including which fields are required.</span>
+
+- **A README.md file:** <span class="mark">This human-readable file will be displayed in your experiment’s page on the CONP Portal. It will   give others important information about the experiment, including its features, development, and administration. The</span> README.md <span class="mark">is in Markdown format, for which there are many guides, but [<u>here is one quick cheatsheet</u>](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).</span>
+
+- <span class="mark">**An image, gif, or logo file:** This file will be displayed in your experiment card on the CONP portal experiment search page. We recommend an animated gif showing one trial of the experiment to give others a sense of what the experiment involves, but an image or logo is also acceptable. The filename is to be added in the DATS.json file.</span>
+
+<span class="mark">**We strongly recommend you use our browser-based [<u>editor</u>](https://portal.conp.ca/dats-editor) to create the first two files.** It will walk you through each step and ensure the information is consistent between both files. You can then simply download the files, add them to your experiment directory, and share your experiment using one of the options below.</span>
+
+## Upload methods
+
+## There are presently two ways of sharing an experiment through the CONP Portal:
+
+1.  Upload to OSF storage
+
+2.  Upload to the CONP Community Server
+
+If you need help at any stage, please use the [<u>CONP Portal Contact Form</u>](https://portal.conp.ca/contact_us) and we will do our best to assist you.
+
+1.  Upload using OSF storage (recommended)
+
+<!-- -->
+
+1.  Add the [<u>required files</u>](#required-files-for-all-experiments) to the root directory of your experiment, as described above. 
+
+2.  Create an OSF project
+
+- If this is your first time using the OSF, follow [<u>these guidelines</u>](https://help.osf.io/article/338-starting-pathway-on-the-osf) for creating an account and starting a project.
+
+3.  Upload your experiment to the OSF with the tag canadian-open-neuroscience-platform
+
+- Make sure your experiment contains no confidential data files!
+
+- If your experiment is already hosted online (e.g., on GitHub), you can simply link your OSF project to that application using [<u>Storage Add-ons</u>](https://help.osf.io/article/395-storage-add-ons).
+
+- If your experiment involves multiple phases with separate linked repositories (e.g., immediate and delayed memory hosted on GitHub), you can use [<u>OSF components</u>](https://help.osf.io/article/253-create-components) to include them under the same project and tag the larger project (see [<u>example</u>](https://doi.org/10.17605/OSF.IO/ZEJ5W)).
+
+4.  Ensure that the project is set to Public on OSF.
+
+- The CONP supports both private and public OSF datasets, though we strongly recommend experiments be made public due to the non-sensitive nature of experimental files.
+
+- It is your responsibility to ensure your experimental stimuli are open-source.
+
+The CONP will find your experiment automatically using the tag and add it to the portal within a few days.
+
+2.  Upload to the CONP Community Server
+
+If you are unable to use the OSF, you may be eligible for a space allocation on the CONP Community Server. Please use the [<u>CONP Portal Contact Form</u>](https://portal.conp.ca/contact_us) so we can evaluate your needs and help you upload your experiment.
+
+## How to download Experiments from the CONP Portal
+
+Clicking on the "Experiments" button in the left-hand menu of this site will take you to a list of available experiments as well as a search function that includes all metadata associated with experiments. You can also constrain the search with drop-down menus to filter by modality (e.g., fMRI), function assessed (e.g., cognition), software (e.g., PsychoPy). You can download the experiment directly from the search page or open its source page (e.g., on the OSF).
