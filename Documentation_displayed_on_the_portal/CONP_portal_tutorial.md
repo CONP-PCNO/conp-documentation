@@ -23,7 +23,7 @@ Search results display summary information for matching datasets and each can be
 
 
 ### Downloading data
-CONP Portal datasets exist under different access tiers.
+CONP Portal datasets exist under different access tiers:
 - Some datasets are completely **open** and require no credentials. These are normally available through direct, browser-based download, through DataLad download, and are also directly available for processing on the [CBRAIN](https://cbrain.ca) platform, which provides browser-based access to High-Performance Computing infrastructure across Canada and internationally.
 - Some datasets in the CONP Portal are under '**registered**' access and require a third-party account. In such cases, instructions on how to obtain an account for those datasets will be displayed on the dataset's page.
 
