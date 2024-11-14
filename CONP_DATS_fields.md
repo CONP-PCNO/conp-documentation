@@ -2,7 +2,7 @@ The Data Tags Suite model (Sansone et al 2017) is a flexible machine-readable st
 
 A `DATS.json` file must be prepared for each dataset.  The information will be used to create your resource landing page on the CONP Portal and will help users find your dataset.  The table below summarises required, recommended and optional fields. 
 
-This file is intended as the definitive reference for the contents of CONP DATS.json files.  Discussion of proposals and suggestions should take place [at the appropriate Github issue] (https://github.com/CONP-PCNO/conp-documentation/issues/113) and updates can be moved from there to here when agreed upon.
+This file is intended as the definitive reference for the contents of CONP DATS.json files.  Discussion of proposals and suggestions should take place [at the appropriate Github issue](https://github.com/CONP-PCNO/conp-documentation/issues/113) and updates can be moved from there to here when agreed upon.
 
 |DATS GUI field name|DATS schema field|Status and Short Description|DATS GUI help text|
 |-|-|-|-|
