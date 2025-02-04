@@ -145,7 +145,7 @@ It is strongly recommended that you configure your `git` credentials to avoid ha
 
 ```git config --global user.name "Jane Doe"```
 
-Replace “John Doe” with your name.
+Replace "Jane Doe” with your name.
 
 ```git config --global user.email “janedoe@example.com”```
 
