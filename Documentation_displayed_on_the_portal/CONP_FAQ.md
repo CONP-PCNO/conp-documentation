@@ -1,6 +1,6 @@
 [CONP](#conp) | [Data Access & Download](#data-download) | [Data Upload](#data-upload) | [Tools & Pipelines](#tools) | [DataLad](#datalad) 
 
-## <a name="conp"></a>I. The Canadian Open Neuroscience Platform (CONP)
+## <a name="conp">I. The Canadian Open Neuroscience Platform (CONP)</a>
 
 ### **What is the CONP?**
 
@@ -24,7 +24,7 @@ The CONP Portal aims to facilitate the [FAIR](https://www.go-fair.org/fair-princ
 - Data access via DataLad for either open or registered datasets
 - Access to high-performance computing through CBRAIN
 
-## <a name="data-download"></a>II. Data Access and Download
+## <a name="data-download">II. Data Access and Download</a>
 
 ### **What data are contained in the CONP Portal?**
 
@@ -38,7 +38,7 @@ Individual dataset pages accessible from the [search page](https://portal.conp.c
 
 If a dataset requires a third-party account, please follow the link embedded in the “**Third-party account required**” text at the top-right of the dataset page for further information.
 
-## <a name="data-upload"></a>III. Data Sharing/Upload
+## <a name="data-upload">III. Data Sharing/Upload</a>
 
 ### **Why should I upload data to the CONP Portal?**
 
@@ -50,7 +50,7 @@ This is key to facilitating discoverability, reuse, and deeper scientific explor
 
 Data can be uploaded to the CONP Portal either through [Zenodo](https://zenodo.org) by tagging your dataset with the keyword `canadian-open-neuroscience-platform`, through [OSF](https://osf.io) by tagging your dataset with `canadian-open-neuroscience-platform` and setting the dataset to `Public`, to the CONP Community Server, or manually through DataLad.  Please see detailed instructions for these options by clicking the “[Share]((https://portal.conp.ca/share))” button at the left of your screen.
 
-## <a name="tools"></a>IV. Tools & Pipelines
+## <a name="tools">IV. Tools & Pipelines</a>
 
 ### **What tools/pipelines are contained in the CONP Portal?**
 
@@ -118,7 +118,65 @@ Exit code
 
 You can add your own tool/pipeline by following the instructions described in [this document](https://nbviewer.jupyter.org/github/boutiques/tutorial/blob/master/notebooks/boutiques-tutorial.ipynb#publishing_tools).
 
-## <a name="datalad"></a>V. DataLad
+## <a name="datalad">V. DataLad</a>
+
+### **Installing required software - Method 1: NeuroDebian**
+
+The following instructions assume a relatively recent Ubuntu- or Debian-based Linux system, though equivalent steps can be taken with other operating systems.
+
+One of the most convenient ways of installing a host of neuro-related software is through the [Neurodebian](https://neuro.debian.net/) repository.  For the following installation procedure, we will assume the use of NeuroDebian, which is installed with:
+
+```
+sudo apt-get update
+sudo apt-get install neurodebian
+```
+
+### Python
+
+The CONP recommends you use Python version 3.12 and up. You can check your Python version with:
+
+```python --version```or ```python3 --version```
+
+### git
+
+```sudo apt-get install git```
+
+It is strongly recommended that you configure your `git` credentials to avoid having to enter them repeatedly or other complications when using DataLad:
+
+```git config --global user.name "Jane Doe"```
+
+Replace "Jane Doe” with your name.
+
+```git config --global user.email “janedoe@example.com”```
+
+Replace “janedoe@example.com” with your email address.
+
+### git-annex
+
+```
+sudo apt-get install git-annex-standalone
+```
+
+As of late 2024, this installs git-annex version 10.20241202 or above, which works with CONP datasets. Earlier versions are also compatible but the CONP recommends a relatively recent version for maximum ease. The version of git-annex installed can be verified with:
+
+```git-annex version```
+
+### DataLad
+
+```sudo apt-get install datalad```
+
+### **Installing required software - Method 2: `pip`**
+
+The same requirements for `Python` and `git` apply from the previous section.
+
+Recent versions of Ubuntu-based distributions (e.g., based on 24.04 LTS) require virtual environments for external Python packages.  You can use `venv` or `pipx` to do this. The easiest for most users is probably to use `pipx`, in which case `git-annex` and `datalad` are installed with the following commands:
+
+```
+pipx install datalad-installer
+datalad-installer git-annex -m datalad/git-annex:release
+git config --global filter.annex.process "git-annex filter-process"
+pipx install datalad
+```
 
 ### **To which username/password is DataLad referring to when trying to download via `datalad get` preventad-open or multicenter-phantom datasets?**
 
@@ -127,10 +185,6 @@ In order to have access to those datasets, you will need to request an account o
 To do so, on the dataset page, click on the link shown under "Source" which will redirect you to the LORIS login page. Below the login button there is a 'Request Account' link that will take you to a Request Account form that will need to be filled and submitted. 
 
 Once the account is approved, you will receive an email with the login credentials that you can use to either browse the LORIS repository or download data via DataLad using the `datalad get` command.
-
-### **How do I  upgrade to DataLad version 0.12.2 or above?**
-
-In some environments, it is easier to install the latest version of DataLad via Miniconda by following the steps in the "Linux-machines with no root access (e.g. HPC systems)" sub-section of [DataLad's Handbook Installation and Configuration page](http://handbook.datalad.org/en/latest/intro/installation.html#install).
 
 ### **How can I update a dataset to benefit from the latest version?**
 
