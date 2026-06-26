@@ -32,7 +32,7 @@ The CONP Portal contains a diverse range of datasets, primarily neuroimaging, bu
 
 ### **How do I download data from the CONP Portal?**
 
-Individual dataset pages accessible from the [search page](https://portal.conp.ca/search) contain instructions for downloading data.  At the moment, access to datasets is made available through either a one-click, browser-based download function, or through the [DataLad](https://www.datalad.org) data management system, which should be version 0.12.2 or higher ([installation details](handbook.datalad.org/en/latest/intro/installation.html#install)). Please refer to [this tutorial]( https://portal.conp.ca/tutorial) for a step-by-step guide to downloading datasets from the CONP Portal.
+Individual dataset pages accessible from the [search page](https://portal.conp.ca/search) contain instructions for downloading data.  At the moment, access to datasets is made available through either a one-click, browser-based download function, or through the [DataLad](https://www.datalad.org) data management system, which should be version 0.12.2 or higher ([installation details](https://handbook.datalad.org/en/latest/intro/installation.html#install)). Please refer to [this tutorial]( https://portal.conp.ca/tutorial) for a step-by-step guide to downloading datasets from the CONP Portal.
 
 ### **How do I access restricted/private datasets?**
 
@@ -48,7 +48,7 @@ This is key to facilitating discoverability, reuse, and deeper scientific explor
 
 ### **How do I upload data to the CONP Portal?**
 
-Data can be uploaded to the CONP Portal either through [Zenodo](https://zenodo.org) by tagging your dataset with the keyword `canadian-open-neuroscience-platform`, through [OSF](https://osf.io) by tagging your dataset with `canadian-open-neuroscience-platform` and setting the dataset to `Public`, to the CONP Community Server, or manually through DataLad.  Please see detailed instructions for these options by clicking the “[Share]((https://portal.conp.ca/share))” button at the left of your screen.
+Data can be uploaded to the CONP Portal either through [Zenodo](https://zenodo.org) by tagging your dataset with the keyword `canadian-open-neuroscience-platform`, through [OSF](https://osf.io) by tagging your dataset with `canadian-open-neuroscience-platform` and setting the dataset to `Public`, to the CONP Community Server, or manually through DataLad.  Please see detailed instructions for these options by clicking the “[Share](https://portal.conp.ca/share)” button at the left of your screen.
 
 ## <a name="tools">IV. Tools & Pipelines</a>
 
