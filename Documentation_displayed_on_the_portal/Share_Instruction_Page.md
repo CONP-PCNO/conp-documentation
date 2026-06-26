@@ -67,7 +67,7 @@ CONP datasets are managed using [DataLad](https://www.datalad.org/), a tool buil
 
 **Important notes:**
 
-- The CONP datasets currently require git-annex version>=8.20200309, and we recommend DataLad version>=0.12.5
+- The CONP datasets require a recent version of git-annex (the 10.x series, shipped from late 2024, is recommended) and a recent stable release of DataLad
 - We also recommend setting your `git` configuration to store your username and email:
 
 	```
@@ -243,8 +243,7 @@ To add the newly created dataset to the list of CONP datasets present in the Dat
   		```
  		
 The last line will need to be added manually.  This is now required for compatibility with [github renaming the default branch](https://github.com/github/renaming).
-   		
-*note: ensure that there is an empty line at the end of the `.gitmodules` file otherwise it will not pass the format-checking tests of your PR.
+   			*note: ensure that there is an empty line at the end of the `.gitmodules` file otherwise it will not pass the format-checking tests of your PR.
 
 
   - a link to the latest commit of the <new_dataset_name> GitHub repository
@@ -264,13 +263,13 @@ Along with the possibility of sharing datasets and analysis tools, the CONP Port
 
 ## Required files for all experiments:
 
-- **A DATS.json file**: <span class="mark">This machine-readable file contains the essential metadata of your experiment and serves to populate various fields on your experiment’s CONP Portal page. It is crucial to making your experiment [<u>FAIR</u>](https://www.go-fair.org/fair-principles/) and, therefore, easier to discover and explore. The full description of the</span> DATS.json <span class="mark">file is found</span> <span class="mark">[<u>here</u>](https://github.com/CONP-PCNO/conp-documentation/blob/master/CONP_DATS_fields.md), including which fields are required.</span>
+- **A DATS.json file**: This machine-readable file contains the essential metadata of your experiment and serves to populate various fields on your experiment’s CONP Portal page. It is crucial to making your experiment [FAIR](https://www.go-fair.org/fair-principles/) and, therefore, easier to discover and explore. The full description of the DATS.json file is found [here](https://github.com/CONP-PCNO/conp-documentation/blob/master/CONP_DATS_fields.md), including which fields are required.
 
-- **A README.md file:** <span class="mark">This human-readable file will be displayed in your experiment’s page on the CONP Portal. It will   give others important information about the experiment, including its features, development, and administration. The</span> README.md <span class="mark">is in Markdown format, for which there are many guides, but [<u>here is one quick cheatsheet</u>](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).</span>
+- **A README.md file:** This human-readable file will be displayed in your experiment’s page on the CONP Portal. It will   give others important information about the experiment, including its features, development, and administration. The README.md is in Markdown format, for which there are many guides, but [here is one quick cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
-- <span class="mark">**An image, gif, or logo file:** This file will be displayed in your experiment card on the CONP portal experiment search page. We recommend an animated gif showing one trial of the experiment to give others a sense of what the experiment involves, but an image or logo is also acceptable. The filename is to be added in the DATS.json file.</span>
+- **An image, gif, or logo file:** This file will be displayed in your experiment card on the CONP portal experiment search page. We recommend an animated gif showing one trial of the experiment to give others a sense of what the experiment involves, but an image or logo is also acceptable. The filename is to be added in the DATS.json file.
 
-<span class="mark">**We strongly recommend you use our browser-based [<u>editor</u>](https://portal.conp.ca/dats-editor) to create the first two files.** It will walk you through each step and ensure the information is consistent between both files. You can then simply download the files, add them to your experiment directory, and share your experiment using one of the options below.</span>
+**We strongly recommend you use our browser-based [editor](https://portal.conp.ca/dats-editor) to create the first two files.** It will walk you through each step and ensure the information is consistent between both files. You can then simply download the files, add them to your experiment directory, and share your experiment using one of the options below.
 
 ## Upload methods
 
@@ -280,25 +279,25 @@ Along with the possibility of sharing datasets and analysis tools, the CONP Port
 
 2.  Upload to the CONP Community Server
 
-If you need help at any stage, please use the [<u>CONP Portal Contact Form</u>](https://portal.conp.ca/contact_us) and we will do our best to assist you.
+If you need help at any stage, please use the [CONP Portal Contact Form](https://portal.conp.ca/contact_us) and we will do our best to assist you.
 
 1.  Upload using OSF storage (recommended)
 
 <!-- -->
 
-1.  Add the [<u>required files</u>](#required-files-for-all-experiments) to the root directory of your experiment, as described above. 
+1.  Add the [required files](#required-files-for-all-experiments) to the root directory of your experiment, as described above. 
 
 2.  Create an OSF project
 
-- If this is your first time using the OSF, follow [<u>these guidelines</u>](https://help.osf.io/article/338-starting-pathway-on-the-osf) for creating an account and starting a project.
+- If this is your first time using the OSF, follow [these guidelines](https://help.osf.io/article/338-starting-pathway-on-the-osf) for creating an account and starting a project.
 
 3.  Upload your experiment to the OSF with the tag canadian-open-neuroscience-platform
 
 - Make sure your experiment contains no confidential data files!
 
-- If your experiment is already hosted online (e.g., on GitHub), you can simply link your OSF project to that application using [<u>Storage Add-ons</u>](https://help.osf.io/article/395-storage-add-ons).
+- If your experiment is already hosted online (e.g., on GitHub), you can simply link your OSF project to that application using [Storage Add-ons](https://help.osf.io/article/395-storage-add-ons).
 
-- If your experiment involves multiple phases with separate linked repositories (e.g., immediate and delayed memory hosted on GitHub), you can use [<u>OSF components</u>](https://help.osf.io/article/253-create-components) to include them under the same project and tag the larger project (see [<u>example</u>](https://doi.org/10.17605/OSF.IO/ZEJ5W)).
+- If your experiment involves multiple phases with separate linked repositories (e.g., immediate and delayed memory hosted on GitHub), you can use [OSF components](https://help.osf.io/article/253-create-components) to include them under the same project and tag the larger project (see [example](https://doi.org/10.17605/OSF.IO/ZEJ5W)).
 
 4.  Ensure that the project is set to Public on OSF.
 
@@ -310,7 +309,7 @@ The CONP will find your experiment automatically using the tag and add it to the
 
 2.  Upload to the CONP Community Server
 
-If you are unable to use the OSF, you may be eligible for a space allocation on the CONP Community Server. Please use the [<u>CONP Portal Contact Form</u>](https://portal.conp.ca/contact_us) so we can evaluate your needs and help you upload your experiment.
+If you are unable to use the OSF, you may be eligible for a space allocation on the CONP Community Server. Please use the [CONP Portal Contact Form](https://portal.conp.ca/contact_us) so we can evaluate your needs and help you upload your experiment.
 
 ## How to download Experiments from the CONP Portal
 
