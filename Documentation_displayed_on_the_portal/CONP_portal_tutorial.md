@@ -5,7 +5,7 @@ The CONP Portal is accessible via the Portal link at the top-right of the [CONP'
 
 ![portal_access_from_conp.ca](https://raw.githubusercontent.com/CONP-PCNO/conp-documentation/master/Documentation_displayed_on_the_portal/img/CONP_portal_tutorial_Portal_access_from_conp.ca.png)
 
-No login is required to access the CONP Portal but you will be asked to agree to its "Terms of Use" upon your first visit and these terms can always be accessed by clicking on "[Terms of Use](https://portal.conp.ca/faq#)" at the top-right of the Portal page.
+No login is required to access the CONP Portal but you will be asked to agree to its "Terms of Use" upon your first visit and these terms can always be accessed by clicking on the "Terms of Use" link at the top-right of the Portal page.
 
 ![terms_of_use](https://raw.githubusercontent.com/CONP-PCNO/conp-documentation/master/Documentation_displayed_on_the_portal/img/CONP_portal_tutorial_Terms_of_use.png)
 
@@ -65,19 +65,19 @@ If you have never used [Boutiques](https://boutiques.github.io), we recommend th
 
 #### Run the tool on HPCs
 
-Some tools and pipelines can also be run on HPCs via the CBRAIN infrastructure or in your Compute Canada/[Digital Research Alliance](https://alliancecan.ca/en) account with [Clowdr](https://clowdr.github.io/). 
+Some tools and pipelines can also be run on HPCs via the CBRAIN infrastructure or in your [Digital Research Alliance of Canada](https://alliancecan.ca/en) account with [Clowdr](https://clowdr.github.io/). 
 
 ![SCREENSHOT of the CBRAIN link](https://raw.githubusercontent.com/CONP-PCNO/conp-documentation/master/Documentation_displayed_on_the_portal/img/CONP_portal_tutorial_CBRAIN_link_highlighted.png)
 
 The "Click here to begin" link under the "Run on the CBRAIN Platform" container will open a tab to the login page of CBRAIN or to the tool page on CBRAIN if you are already logged in.
 
-The "Click here for instructions" link under the "Run on HPCs with Clowdr" will open a new tab with the instructions on how to deploy a tool/pipeline on your Compute Canada/[Digital Research Alliance](https://alliancecan.ca/en) account.
+The "Click here for instructions" link under the "Run on HPCs with Clowdr" will open a new tab with the instructions on how to deploy a tool/pipeline on your [Digital Research Alliance of Canada](https://alliancecan.ca/en) account.
 
 ## Finding and downloading experiments (currently in a beta release)
 
 ### Finding experiments
 
-All experiments are listed in the [Experiments search page](https://portal.conp.ca/experiments/)) of the CONP Portal, accessible by clicking on the "Experiments" button in the left-hand menu. This will take you to a search function that includes all metadata associated with experiments. You can also constrain the search with drop-down menus to filter by modality (e.g., fMRI), function assessed (e.g., cognition), software (e.g., PsychoPy).
+All experiments are listed in the [Experiments search page](https://portal.conp.ca/experiments/) of the CONP Portal, accessible by clicking on the "Experiments" button in the left-hand menu. This will take you to a search function that includes all metadata associated with experiments. You can also constrain the search with drop-down menus to filter by modality (e.g., fMRI), function assessed (e.g., cognition), software (e.g., PsychoPy).
 
 ![experiment_search_page](https://raw.githubusercontent.com/CONP-PCNO/conp-documentation/master/Documentation_displayed_on_the_portal/img/CONP_portal_tutorial_Experiments_search_page.png)
 
