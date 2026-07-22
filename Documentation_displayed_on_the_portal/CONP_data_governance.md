@@ -1,6 +1,8 @@
+# Sharing Data on the CONP Portal — Information for Data Contributors
+
 *This serves as a practical guide, answering questions that researchers and research-ethics committees most often ask before depositing data on the [Canadian Open Neuroscience Platform (CONP) Portal](https://portal.conp.ca/index).*
 
-> Last reviewed: 2026-07-15. Policies evolve; always confirm current requirements on the [Share page](https://portal.conp.ca/share), the [FAQ](https://portal.conp.ca/faq), and the [Terms of Use](https://portal.conp.ca/index) before depositing. For case-specific guidance, use the CONP [“Contact Us” page](https://portal.conp.ca/contact_us).
+> Last reviewed: 2026-07-21. Policies evolve; always confirm current requirements on the [Share page](https://portal.conp.ca/share), the [FAQ](https://portal.conp.ca/faq), and the [Terms of Use](https://portal.conp.ca/index) before depositing. For case-specific guidance, use the CONP [“Contact Us” page](https://portal.conp.ca/contact_us).
 
 On this page: [At a glance](#glance) · [1. Access tiers](#s1) · [2. Authorization & sanctions](#s2) · [3. Deposit agreement & responsibilities](#s3) · [4. Upload conditions](#s4) · [5. Ethics Toolkit](#s5) · [6. How to upload](#s6) · [7. Quick answers](#s7) · [Sources](#sources)
 
@@ -25,25 +27,25 @@ The CONP Portal displays datasets held under more than one access model, but the
 ## <a name="s2">2. Authorization process and sanctions for misuse</a>
 
 **Authorization to download open CONP data.** None beyond accepting the Portal’s [Terms of Use](https://portal.conp.ca/index), which every user must accept before browsing. By accepting, the user agrees, among other things, to:
-- obtain any required ethics or other approvals before using shared resources,
-- respect use restrictions and conditions tied to consents or ethics approvals,
+- hold any required ethics or other approvals prior to and throughout their use of the data,
+- respect use restrictions and use conditions applicable to the data, including those that arise from ethics approvals and local legal requirements,
 - not attempt to re-identify or re-contact individual participants,
 - not assert intellectual-property rights that would impede others’ access,
 - cite the resource and respect its licence, and
-- contact the dataset creator immediately if it becomes apparent that data were not sufficiently de-identified.
+- contact the dataset creator immediately if it becomes apparent that data contain direct identifiers (e.g., research participant name, home address, SSN, etc.).
 
-**Sanctions / consequences for misuse.** The CONP governance model relies primarily on (a) reducing risk *before* publication and (b) the binding Terms of Use rather than on an enforcement committee. Specifically:
-- Misuse is a breach of the Terms of Use, which the CONP may change or enforce at any time.
-- The CONP’s Privacy Policy provides that personal information may be disclosed to appropriate external parties, such as law-enforcement agencies, to investigate and respond to suspected violations of law or institutional policy, and to enforce compliance with the policies governing the Portal.
-- Because data are de-identified before release and cannot generally be withdrawn once shared, the practical safeguard against participant harm is risk minimization at the source (de-identification + consent), complemented by the contractual prohibitions above.
+**Sanctions / consequences for misuse.** The CONP governance model relies primarily on (a) communicating and mitigating risk *before* publication and (b) the binding Terms of Use rather than enforcement through a data access committee. Specifically:
+- Breaches of the Terms of Use can lead to restrictions on further access to CONP data or infrastructure.
+- Because data are de-identified before release and cannot generally be withdrawn once shared, the practical safeguard against participant harm is risk communication and minimization at the source (i.e., de-identification and consent).
+- Prohibited acts performed through the CONP infrastructure may lead to (i) civil proceedings to obtain damages, compel specific performance of obligations, or obtain an injunction; and/or (ii) the communication of observed conduct to data contributors and/or to relevant regulatory authorities.
 
-If your committee requires a formal sanctions schedule, the honest and accurate description is: The CONP enforces through its Terms of Use and applicable law (including referral to authorities), not through a graduated penalty matrix administered by an access committee. Where stronger downstream enforcement is needed for a sensitive dataset, the appropriate route is controlled access on an external repository (section 1).
+The CONP enforces through its Terms of Use and applicable law, not through a graduated penalty matrix administered by a data access committee. Where stronger downstream enforcement is needed for a sensitive dataset, the appropriate route is controlled or registered access on an external repository (section 1).
 
 ## <a name="s3">3. Is there a data deposition / data-transfer agreement? Who is responsible for what?</a>
 
-There is no separately negotiated, signed bilateral data-transfer agreement (DTA) for depositing open data on CONP-hosted infrastructure. This is a deliberate design choice of the governance model: instead of a contract reviewed and signed by institutional signatories, the CONP Portal uses a “click-wrap” upload attestation combined with the Terms of Use and ethics provenance metadata. The relevant instruments are:
+There is no separately negotiated, inter-institutional data contribution agreement (DCA) for depositing open data on CONP-hosted infrastructure. Instead of a bilateral contract negotiated and signed by institutional signatories, the CONP Portal uses a “click-wrap” upload attestation combined with user-facing Terms of Use and ethics provenance metadata. The relevant instruments are:
 
-1. The data-upload attestation (completed during submission), in which the contributor attests that one of four acceptable conditions for upload is satisfied (see section 4), specifies the open licence applied, declares the access tier, and (where an REB oversaw the data) records the REB approval number.
+1. The data-upload attestation (completed during data submission), in which the contributor attests that one of four acceptable conditions for upload is satisfied (see section 4), specifies the open licence applied, states the tier of data release, and (where an REB approved the collection and deposit of the original data) records the REB approval number.
 2. The Portal Terms of Use (binding on every user/downloader).
 3. The DATS.json ethics/ethico-legal metadata that accompanies the dataset and travels with it on download.
 
@@ -51,28 +53,29 @@ There is no separately negotiated, signed bilateral data-transfer agreement (DTA
 
 | Party                                                                 | Responsibility                                                                                                                                                                                                                                                                                                                                                                                            |
 | --------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Principal Investigator / data contributor** (and their institution) | Warrants that valid legal authority exists to deposit (consent, REB/IRB waiver, law, or non-human data), ensures de-identification to a low residual re-identification risk per the CONP Privacy & De-Identification Guide, applies an appropriate open licence, provides accurate DATS metadata and (if applicable) the REB approval number, holds responsibility for the lawfulness of the deposit. |
+| **Principal Investigator / data contributor** (and their institution) | Warrants that valid legal authority exists to deposit (consent, REB/IRB waiver, enabling local law, or non-human data), ensures de-identification to a low residual risk of re-identification per the CONP Privacy & De-Identification Guide, applies an appropriate open licence, provides accurate DATS metadata and (if applicable) the REB approval number, holds responsibility for the lawfulness of the deposit. |
 | **The originating institution / hospital and any commercial partner** | Their respective rights, IP, and obligations are governed by the agreements among those parties and with the PI (institutional research agreements, sponsored-research or service contracts). The CONP is not a party to those upstream agreements and does not arbitrate them; the PI must ensure they permit open deposit before uploading.                                                     |
-| **CONP / McGill Centre for Integrative Neuroscience (MCIN)**          | Hosts and makes the data discoverable and downloadable, maintains harmonized metadata and provenance, operates the Portal under its Terms of Use and Privacy Policy, provides the Ethics Toolkit and *ad hoc* guidance via the Ethics & Data Governance Committee. The CONP acts as data steward/host, not as the owner of the data or a party to the upstream research contracts.                    |
+| **CONP / McGill Centre for Integrative Neuroscience (MCIN)**          | Makes the data discoverable and downloadable, maintains harmonized metadata and provenance information, operates the Portal according to its Terms of Use and Privacy Policy, supplies the Ethics Toolkit and *ad hoc* guidance via the Ethics & Data Governance Committee.                    |
 | **Downstream users**                                                  | Bound by the *Terms of Use* (no re-identification, cite, respect licence, obtain own approvals, etc.).                                                                                                                                                                                                                                                                                                    |
 
 > If your ethics committee specifically requires a signed deposition/transfer agreement naming the institution or commercial partner, the PI, and the CONP, at the moment, that document does not exist as a standard CONP instrument because the CONP’s open-hosting model intentionally replaces it with the attestation + Terms of Use described above.
 >
-> Two practical paths:
+> Three practical paths:
 >
-> 1. present the Terms of Use, the upload attestation, and the Ethics Toolkit as the governing instruments, or
-> 2. if a formal bilateral agreement is a hard requirement, [contact the CONP](https://portal.conp.ca/contact_us) to discuss options or host the dataset in controlled/registered access on an external repository whose DTA framework meets your committee’s needs while still being discoverable through the CONP Portal.
+> 1. present the Terms of Use, the upload attestation, and the Ethics Toolkit as relevant contextualizing information,
+> 2. if a formal bilateral agreement is necessary, [contact the CONP](https://portal.conp.ca/contact_us) to discuss the potential to establish one,
+> 3. host the dataset in controlled/registered access on an external repository whose data contribution framework meets your committee’s needs while still being discoverable through the CONP Portal.
 
 ## <a name="s4">4. The four acceptable conditions for uploading data</a>
 
 At upload you must attest that at least one of the following is true:
 
 1. Participants gave valid informed consent to the de-identification and deposit of their data in an open-access portal.
-2. A waiver or other authorization to deposit the de-identified data in an open-access portal was obtained from a research ethics body (REB / IRB / REC).
+2. A waiver of the informed consent requirement or equivalent authorization to deposit the de-identified data in an open-access portal was obtained from a research ethics body (REB / IRB / REC).
 3. Local law or a relevant institutional authorization otherwise permits depositing the data in an open-access portal.
-4. The data are not derived from human participants.
+4. The data are not derived from human participants (e.g., animal model data).
 
-You must also (i) specify the open intellectual-property licence applied to the data, (ii) declare the access tier (for native hosting, open access), and (iii) where an REB performed oversight, provide the REB approval number as evidence of ethics review.
+You must also (i) specify the open intellectual-property licence applied to the data, (ii) declare the access tier (for native hosting, open access), and (iii) where an REB granted an ethics approval, provide the REB approval number as evidence of ethics review.
 
 ## <a name="s5">5. The CONP Ethics Toolkit — what you need to prepare</a>
 
@@ -104,11 +107,11 @@ Each dataset must include a valid `DATS.json` metadata descriptor (derived from 
 
 **“Which access level applies and what is the authorization/sanctions process?”**
 
-For data hosted on CONP, the access level is open access (the only native tier). There is no per-download authorization and users simply accept the Terms of Use. Misuse is governed by those Terms of Use and applicable law, including possible disclosure to authorities and the CONP does not run a graduated sanctions committee for open data. If you need controlled access and formal sanctions, host in controlled access on an external repository and let CONP index it.
+For data hosted natively on CONP infrastructure, the access level is open access (the only native tier). There is no per-download authorization and users simply accept the Terms of Use. Data use is governed by those Terms of Use and applicable law, and prohibitions on continued access and civil proceedings may result from breaches thereof. If you need controlled access and formal sanctions, host in registered access or controlled access on an external repository and index the data through the CONP.
 
 **“Provide the data deposition/transfer agreement and the responsibilities of each party.”**
 
-For open CONP-hosted deposits, there is no separate signed DTA. The governing instruments are the upload attestation, the Terms of Use, and the DATS ethics metadata. The PI/institution warrants lawful, consented, de-identified deposit. Upstream agreements among the hospital, any commercial partner, and the PI govern ownership/IP and must permit open deposit (CONP is not a party to them). The CONP/MCIN acts as host and steward. If your committee requires a signed bilateral agreement, use the [Contact Us page](https://portal.conp.ca/contact_us) or use an external controlled-access repository.
+For open CONP-hosted deposits, there is no separate signed DCA. The governing instruments are the upload attestation, the Terms of Use, and the DATS ethics metadata. The PI/institution warrants lawful, consented, de-identified deposit. Upstream agreements among the hospital, any commercial partner, and the PI govern ownership/IP and must permit open deposit (CONP is not a party to them). If your committee requires a signed bilateral agreement, use the [Contact Us page](https://portal.conp.ca/contact_us) or use an external controlled-access repository.
 
 ## <a name="sources">Sources</a>
 - CONP Portal — Home & Terms of Use & Privacy Policy: <https://portal.conp.ca/index>
