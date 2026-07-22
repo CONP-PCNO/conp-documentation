@@ -4,11 +4,15 @@
 
 > Last reviewed: 2026-07-21. Policies evolve; always confirm current requirements on the [Share page](https://portal.conp.ca/share), the [FAQ](https://portal.conp.ca/faq), and the [Terms of Use](https://portal.conp.ca/index) before depositing. For case-specific guidance, use the CONP [“Contact Us” page](https://portal.conp.ca/contact_us).
 
-On this page: [At a glance](#glance) · [1. Access tiers](#s1) · [2. Authorization & sanctions](#s2) · [3. Deposit agreement & responsibilities](#s3) · [4. Upload conditions](#s4) · [5. Ethics Toolkit](#s5) · [6. How to upload](#s6) · [7. Quick answers](#s7) · [Sources](#sources)
+---
+
+**On this page:** [At a glance](#glance) · [1. Access tiers](#s1) · [2. Authorization & sanctions](#s2) · [3. Deposit agreement & responsibilities](#s3) · [4. Upload conditions](#s4) · [5. Ethics Toolkit](#s5) · [6. How to upload](#s6) · [7. Quick answers](#s7) · [Sources](#sources)
+
+---
 
 ## <a name="glance">At a glance — the CONP governance model in one paragraph</a>
 
-Some of the CONP’s neuroscience data are shared in full open access and it replaces the traditional combination of an access committee plus a signed data-transfer agreement with a *pre-ingestion* model that emphasizes rigorous informed consent, robust de-identification, an ethics attestation at upload, and machine-readable ethics metadata that travels with the dataset. In other words, the safeguards are applied *before* data are published, rather than through case-by-case approval of each download afterward. This approach is documented in the platform’s governance paper, Bernier et al., *“Open Data Governance at the Canadian Open Neuroscience Platform (CONP): From the Walled Garden to the Arboretum,”* *GigaScience* 13 (2024), giad114, <https://doi.org/10.1093/gigascience/giad114>.
+Some of the CONP’s neuroscience data are shared in full open access and it replaces the traditional combination of an access committee plus a signed Data Contribution Agreement with a *pre-ingestion* model that emphasizes rigorous informed consent, robust de-identification, an ethics attestation at upload, and machine-readable ethics metadata that travels with the dataset. In other words, the safeguards are applied *before* data are published, rather than through case-by-case approval of each download afterward. This approach is documented in the platform’s governance paper, Bernier et al., *“Open Data Governance at the Canadian Open Neuroscience Platform (CONP): From the Walled Garden to the Arboretum,”* *GigaScience* 13 (2024), giad114, <https://doi.org/10.1093/gigascience/giad114>.
 
 ## <a name="s1">1. Access levels: what tiers exist and which applies to your data</a>
 
@@ -37,13 +41,13 @@ The CONP Portal displays datasets held under more than one access model, but the
 **Sanctions / consequences for misuse.** The CONP governance model relies primarily on (a) communicating and mitigating risk *before* publication and (b) the binding Terms of Use rather than enforcement through a data access committee. Specifically:
 - Breaches of the Terms of Use can lead to restrictions on further access to CONP data or infrastructure.
 - Because data are de-identified before release and cannot generally be withdrawn once shared, the practical safeguard against participant harm is risk communication and minimization at the source (i.e., de-identification and consent).
-- Prohibited acts performed through the CONP infrastructure may lead to (i) civil proceedings to obtain damages, compel specific performance of obligations, or obtain an injunction; and/or (ii) the communication of observed conduct to data contributors and/or to relevant regulatory authorities.
+- Prohibited acts performed through the CONP infrastructure may lead to (i) civil proceedings to obtain damages or directly remediate harms caused, and/or (ii) the communication of observed conduct to data contributors and/or to relevant regulatory authorities.
 
 The CONP enforces through its Terms of Use and applicable law, not through a graduated penalty matrix administered by a data access committee. Where stronger downstream enforcement is needed for a sensitive dataset, the appropriate route is controlled or registered access on an external repository (section 1).
 
-## <a name="s3">3. Is there a data deposition / data-transfer agreement? Who is responsible for what?</a>
+## <a name="s3">3. Is there a Data Contribution Agreement? Who is responsible for what?</a>
 
-There is no separately negotiated, inter-institutional data contribution agreement (DCA) for depositing open data on CONP-hosted infrastructure. Instead of a bilateral contract negotiated and signed by institutional signatories, the CONP Portal uses a “click-wrap” upload attestation combined with user-facing Terms of Use and ethics provenance metadata. The relevant instruments are:
+There is no separately negotiated, inter-institutional Data Contribution Agreement (DCA) for depositing open data on CONP-hosted infrastructure. Instead of a bilateral contract negotiated and signed by institutional signatories, the CONP Portal uses a “click-wrap” upload attestation combined with user-facing Terms of Use and ethics provenance metadata. The relevant instruments are:
 
 1. The data-upload attestation (completed during data submission), in which the contributor attests that one of four acceptable conditions for upload is satisfied (see section 4), specifies the open licence applied, states the tier of data release, and (where an REB approved the collection and deposit of the original data) records the REB approval number.
 2. The Portal Terms of Use (binding on every user/downloader).
@@ -58,13 +62,13 @@ There is no separately negotiated, inter-institutional data contribution agreeme
 | **CONP / McGill Centre for Integrative Neuroscience (MCIN)**          | Makes the data discoverable and downloadable, maintains harmonized metadata and provenance information, operates the Portal according to its Terms of Use and Privacy Policy, supplies the Ethics Toolkit and *ad hoc* guidance via the Ethics & Data Governance Committee.                    |
 | **Downstream users**                                                  | Bound by the *Terms of Use* (no re-identification, cite, respect licence, obtain own approvals, etc.).                                                                                                                                                                                                                                                                                                    |
 
-> If your ethics committee specifically requires a signed deposition/transfer agreement naming the institution or commercial partner, the PI, and the CONP, at the moment, that document does not exist as a standard CONP instrument because the CONP’s open-hosting model intentionally replaces it with the attestation + Terms of Use described above.
+> If your ethics committee specifically requires a signed Data Contribution Agreement naming the institution or commercial partner, the PI, and the CONP, at the moment, that document does not exist as a standard CONP instrument because the CONP’s open-hosting model intentionally replaces it with the attestation + Terms of Use described above.
 >
 > Three practical paths:
 >
 > 1. present the Terms of Use, the upload attestation, and the Ethics Toolkit as relevant contextualizing information,
 > 2. if a formal bilateral agreement is necessary, [contact the CONP](https://portal.conp.ca/contact_us) to discuss the potential to establish one,
-> 3. host the dataset in controlled/registered access on an external repository whose data contribution framework meets your committee’s needs while still being discoverable through the CONP Portal.
+> 3. host the dataset in controlled/registered access on an external repository whose Data Contribution Agreement framework meets your committee’s needs while still being discoverable through the CONP Portal.
 
 ## <a name="s4">4. The four acceptable conditions for uploading data</a>
 
@@ -109,7 +113,7 @@ Each dataset must include a valid `DATS.json` metadata descriptor (derived from 
 
 For data hosted natively on CONP infrastructure, the access level is open access (the only native tier). There is no per-download authorization and users simply accept the Terms of Use. Data use is governed by those Terms of Use and applicable law, and prohibitions on continued access and civil proceedings may result from breaches thereof. If you need controlled access and formal sanctions, host in registered access or controlled access on an external repository and index the data through the CONP.
 
-**“Provide the data deposition/transfer agreement and the responsibilities of each party.”**
+**“Provide the Data Contribution Agreement and the responsibilities of each party.”**
 
 For open CONP-hosted deposits, there is no separate signed DCA. The governing instruments are the upload attestation, the Terms of Use, and the DATS ethics metadata. The PI/institution warrants lawful, consented, de-identified deposit. Upstream agreements among the hospital, any commercial partner, and the PI govern ownership/IP and must permit open deposit (CONP is not a party to them). If your committee requires a signed bilateral agreement, use the [Contact Us page](https://portal.conp.ca/contact_us) or use an external controlled-access repository.
 
