@@ -19,10 +19,10 @@ Updates to the DATS.json and README.md files are usually performed in a two step
 #### A. Install your fork of the sub-dataset GitHub repository
 
 - From frontend [CONP-PCNO/conp-dataset](https://github.com/CONP-PCNO/conp-dataset) GitHub repository, click on the sub-dataset that needs its DATS.json or README.md file updated. In this example, we will be using clicking on the `projects/1000GenomesProject` which redirects to the [conpdatasets/1000GenomesProject](https://github.com/conpdatasets/1000GenomesProject/) GitHub repository.
-![](/Users/cmadjar/GitHub/CONP-PCNO/conp-documentation/Developers-Notes/img/how_to_modify_DATS_and_README_files_of_datasets__click_on_sub-dataset.png)
+![](./img/how_to_modify_DATS_and_README_files_of_datasets__click_on_sub-dataset.png)
 
 - If you have not done it yet, fork the sub-dataset GitHub repository onto your username and install this fork using the `datalad install` command.
-![](/Users/cmadjar/GitHub/CONP-PCNO/conp-documentation/Developers-Notes/img/how_to_modify_DATS_and_README_files_of_datasets__fork_sub-dataset.png)
+![](./img/how_to_modify_DATS_and_README_files_of_datasets__fork_sub-dataset.png)
 
 	```
 	datalad install https://github.com/<your_github_handle>/1000GenomesProject.git
@@ -68,7 +68,7 @@ git checkout -b update_DATS_and_README_files
 	*in the example in 1.B. `<your_branch_name>` was `update_DATS_and_README_files`
 
 - Create a pull request from the branch you just pushed on your fork to the `master` branch of the CONP sub-dataset [conpdatasets/1000GenomesProject](https://github.com/conpdatasets/1000GenomesProject/)
-![](/Users/cmadjar/GitHub/CONP-PCNO/conp-documentation/Developers-Notes/img/how_to_modify_DATS_and_README_files_of_datasets__create_subdataset_PR.png)
+![](./img/how_to_modify_DATS_and_README_files_of_datasets__create_subdataset_PR.png)
 
 #### E. Review process
 
@@ -81,7 +81,7 @@ Once the sub-dataset has been updated with the changes needed to be performed on
 #### A. Install your fork of the super-dataset
 
 - If you have not done it yet, fork the super-dataset GitHub repository onto your username and install this fork using the `datalad install` command. 
-![](/Users/cmadjar/GitHub/CONP-PCNO/conp-documentation/Developers-Notes/img/how_to_modify_DATS_and_README_files_of_datasets__fork_super-dataset.png)
+![](./img/how_to_modify_DATS_and_README_files_of_datasets__fork_super-dataset.png)
 
 	```
 	datalad install https://github.com/<your_github_handle>/conp-dataset.git
