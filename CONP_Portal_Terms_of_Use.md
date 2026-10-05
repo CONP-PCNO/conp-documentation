@@ -36,8 +36,6 @@
 - to contact the dataset creator immediately if it becomes apparent that
   data have not been sufficiently de-identified.
 
-## 
-
 ## The user agrees not to:
 
 - use shared resources to re-identify or re-contact individual
