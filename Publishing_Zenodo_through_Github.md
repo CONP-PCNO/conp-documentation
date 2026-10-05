@@ -1,9 +1,6 @@
-﻿# Publishing to Zenodo through Github
+# Publishing to Zenodo through Github
 
-
-1. Log in to Zenodo with your Github account.
-
-The first time you do this, Zenodo will request permission to share your email address and configure webhooks.  Grant these permissions.
+1. Log in to Zenodo with your Github account. The first time you do this, Zenodo will request permission to share your email address and configure webhooks.  Grant these permissions.
 
 2. Confirm that access to the Github repository you wish to archive is set to “public”.
 
