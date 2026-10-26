@@ -28,15 +28,15 @@ The CONP Portal aims to facilitate the [FAIR](https://www.go-fair.org/fair-princ
 
 ### **What data are contained in the CONP Portal?**
 
-The CONP Portal contains a diverse range of datasets, primarily neuroimaging, but also transcriptomics, genomics, and other related data modalities.  Many of these datasets come from neuroscience research institutes, while others link to public resources that may be of interest to neuroscientists. A full list can be found [here](https://portal.conp.ca/search?sortKey=conpStatus&sortComparitor=asc&page=1&max_per_page=All&cursor=0&limit=All).
+The CONP Portal contains a diverse range of neuroscience datasets, primarily neuroimaging, but also transcriptomics, genomics, and other related data modalities.  Many of these come from neuroscience research institutes, while others link to public resources that may be of interest to neuroscientists. A full list can be found on the [Data page](https://portal.conp.ca/search), where filters narrow the selection by origin, access, how to get the data, modality and format.
 
 ### **How do I download data from the CONP Portal?**
 
-Individual dataset pages accessible from the [search page](https://portal.conp.ca/search) contain instructions for downloading data.  At the moment, access to datasets is made available through either a one-click, browser-based download function, or through the [DataLad](https://www.datalad.org) data management system, which should be version 0.12.2 or higher ([installation details](https://handbook.datalad.org/en/latest/intro/installation.html#install)). Please refer to [this tutorial]( https://portal.conp.ca/tutorial) for a step-by-step guide to downloading datasets from the CONP Portal.
+Datasets can be search from the Home page or the [Data page](https://portal.conp.ca/search). The **Get the data** menu on each dataset's page shows the ways in which its data are accessible: a download in your browser, the [DataLad](https://www.datalad.org) data management system (with the exact commands and a copy button), processing on [CBRAIN](https://cbrain.ca), or the repository that holds the data. For DataLad, the CONP recommends Python 3.12+, git-annex 10.20241202+ and DataLad 1.1.4+ ([installation details](https://handbook.datalad.org/en/latest/intro/installation.html#install)). See the [Tutorial](https://portal.conp.ca/tutorial) for a step-by-step guide and the [Download page](https://portal.conp.ca/download) for a summary.
 
 ### **How do I access restricted/private datasets?**
 
-If a dataset requires a third-party account, please follow the link embedded in the “**Third-party account required**” text at the top-right of the dataset page for further information.
+When a dataset needs an account with the repository that holds it, its card on the Data page says **Account needed**, and the dataset page's **Get the data** tab starts with a **Request access** step that links to that repository's registration or application page. Some repositories give accounts on request (for example PREVENT-AD); others review applications (for example Brain-CODE for Ontario Brain Institute data). Once you have access, the next step on the page says how to access the files: with DataLad, using your account, or at the repository itself.
 
 ## <a name="data-upload">III. Data Sharing/Upload</a>
 
@@ -54,18 +54,18 @@ Data can be uploaded to the CONP Portal either through [Zenodo](https://zenodo.o
 
 ### **What tools/pipelines are contained in the CONP Portal?**
 
-The Portal contains a diverse range of analytical tools and pipelines.  Many of these come from neuroscience or genomics research institutes. A full list can be found [here]( https://portal.conp.ca/pipelines?sortKey=conpStatus&sortComparitor=asc&page=1&max_per_page=All&cursor=0&limit=All).
+The Portal contains a diverse range of analytical tools and pipelines.  Many of these come from neuroscience or genomics research institutes. A full list can be found on the [Tools & Pipelines page](https://portal.conp.ca/pipelines), where filters narrow the selection by where a tool runs (CBRAIN, your computer, an Alliance cluster), software, domain and container.
 
 ### **What are the requirements to install and run a tool?**
 
 CONP pipelines can be easily installed and run on any computer with a container engine. You will need to install:
 
-- [Docker](https://www.docker.com/) or [Singularity](https://singularity.lbl.gov/) 
+- [Docker](https://www.docker.com/) or [Apptainer](https://apptainer.org/) (formerly Singularity)
 - [Boutiques](https://pypi.org/project/boutiques/) python package (`pip install boutiques`)
 
 ### **How can I run a CONP tool/pipeline?**
 
-To run tools/pipelines locally, make sure your have [Boutiques](https://pypi.org/project/boutiques/) installed alongside either [Docker](https://www.docker.com/) or [Singularity](https://singularity.lbl.gov/).
+To run tools/pipelines locally, make sure you have [Boutiques](https://pypi.org/project/boutiques/) installed alongside either [Docker](https://www.docker.com/) or [Apptainer](https://apptainer.org/). Each tool's page gives the exact commands, under **Ways to run it**.
 
 If you have never used Boutiques before, we recommend [this tutorial](https://nbviewer.jupyter.org/github/boutiques/tutorial/blob/master/notebooks/boutiques-tutorial.ipynb#reusing_tools).
 
@@ -81,7 +81,10 @@ Tools/pipelines can be run on Boutiques based on their Zenodo ID as follows:
 bosh exec launch -s <zenodo_id> <invocation>
 ```
 
-Note that in addition to the ability to run the tools/pipelines locally, it is possible to run some tools/pipelines via the CBRAIN platform (for example: the fmriprep BIDS App, Zenodo.3359640).  Clicking on the blue icon "Use This Tool On CBRAIN" will bring you to the CBRAIN page where you can run pipelines on the super-computing network administered by the [Digital Research Alliance of Canada](https://alliancecan.ca/en).  For more information on CBRAIN, visit http://www.cbrain.ca/.
+Besides running tools on your own computer, you can run many of them:
+
+- **on CBRAIN**, through the web, without installing anything: the tool page's **Use on CBRAIN** button opens the tool in CBRAIN (you need a CBRAIN account). For more information on CBRAIN, visit https://cbrain.ca/.
+- **on a [Digital Research Alliance of Canada](https://alliancecan.ca/en) cluster**, with Apptainer: the tool page's **On an Alliance (DRAC) cluster** section gives the commands step by step, with a complete job script.
 
 
 ### **I get the following error when running the tool on bosh**
@@ -178,18 +181,20 @@ git config --global filter.annex.process "git-annex filter-process"
 pipx install datalad
 ```
 
-### **To which username/password is DataLad referring to when trying to download via `datalad get` preventad-open or multicenter-phantom datasets?**
+### **To which username/password is DataLad referring when I download a registered dataset (e.g. preventad-open) with `datalad get`?**
 
-In order to have access to those datasets, you will need to request an account on their respective LORIS repositories. 
+DataLad is asking for your account on the repository that holds the dataset (for PREVENT-AD, its LORIS repository).
 
-To do so, on the dataset page, click on the link shown under "Source" which will redirect you to the LORIS login page. Below the login button there is a 'Request Account' link that will take you to a Request Account form that will need to be filled and submitted. 
+To get one, use the **Request access** step at the top of the dataset page's **Get the data** tab: it opens the repository's account request form.
 
 Once the account is approved, you will receive an email with the login credentials that you can use to either browse the LORIS repository or download data via DataLad using the `datalad get` command.
 
 ### **How can I update a dataset to benefit from the latest version?**
 
-From the `conp-dataset` root directory, run the following command to update all the datasets:
+From the `conp-dataset` root directory, run the following command to update it and every dataset you have installed in it:
 
 ```bash
-datalad update --merge 
+datalad update -r --how merge
 ```
+
+Without `-r`, only `conp-dataset` itself is updated, not the datasets inside it.
