@@ -36,7 +36,7 @@ the CONP-PCNO/conp-dataset repository](https://github.com/CONP-PCNO/conp-dataset
 
 2. Upload your dataset to [Zenodo](https://zenodo.org) with the keyword `canadian-open-neuroscience-platform`.  If your dataset is larger than 50GB, you will need to contact [Zenodo support](https://zenodo.org/support) using the request category of "File upload quota increase" before you will be able to upload it. Alternatively, you can consider upload options III and IV below.
     
-3. If you set your dataset as **restricted**, create a [Zenodo Personal Access Token](https://zenodo.org/account/settings/applications/tokens/new/) (via *Applications > Personal access tokens > New Token*). Check all scopes when creating the token and send the token via email to CONP Technical Steering Committee member Tristan Glatard (tglatard@encs.concordia.ca).
+3. If you set your dataset as **restricted**, tell us through the [Contact form](https://portal.conp.ca/contact_us): we will reply with the CONP's Zenodo account so that you can share the record with it (on the Zenodo record, *Share* > *People*, view access). Never send a password or an access token by email.
 
 
 ### <a name="osf"></a> II. Upload using *OSF* storage
@@ -52,7 +52,7 @@ the CONP-PCNO/conp-dataset repository](https://github.com/CONP-PCNO/conp-dataset
 		- In the `Contributors` tab for the dataset, create user `CONP-BOT` and grant it `READ` permission. 
 		- **Do not** add the `CONP-BOT` user as a Bibliographic Contributor. 
 
-![](img/Share_Dataset_Instruction_Page_OSF_private_grant_conp_bot_permission.png)
+![OSF: granting the conp-bot user read access to a private project](https://raw.githubusercontent.com/CONP-PCNO/conp-documentation/master/Documentation_displayed_on_the_portal/img/Share_Dataset_Instruction_Page_OSF_private_grant_conp_bot_permission.png)
 
 
 ### <a name="conp-server"></a> III. Upload data to the *CONP Community Server*
