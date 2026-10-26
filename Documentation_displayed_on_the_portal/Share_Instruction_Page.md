@@ -314,4 +314,4 @@ If you are unable to use the OSF, you may be eligible for a space allocation on 
 
 ## How to download Experiments from the CONP Portal
 
-Clicking on the "Experiments" button in the left-hand menu of this site will take you to a list of available experiments as well as a search function that includes all metadata associated with experiments. You can also constrain the search with drop-down menus to filter by modality (e.g., fMRI), function assessed (e.g., cognition), software (e.g., PsychoPy). You can download the experiment directly from the search page or open its source page (e.g., on the OSF).
+Clicking on "Experiments - Beta" in the left-hand menu of this site will take you to the list of available experiments, with a search box and filters by function assessed (e.g., cognition), modality (e.g., fMRI), software (e.g., PsychoPy) and language. Each experiment's page lists what you need to run it and the ways to obtain it: in your browser, with DataLad, or at its source (e.g., on the OSF). See the [Tutorial](https://portal.conp.ca/tutorial) for details.
