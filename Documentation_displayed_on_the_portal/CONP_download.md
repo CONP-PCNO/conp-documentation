@@ -2,19 +2,19 @@
 
 # Downloading Data from the CONP Portal
 
-CONP Portal datasets are offered under different **access tiers**, and the download method depends on the tier. Every dataset's page (reachable from the [Data search page](https://portal.conp.ca/search)) shows the specific instructions for that dataset; this page summarizes the options. For a full walkthrough of the Portal, see the [Tutorial](https://portal.conp.ca/tutorial).
+CONP Portal datasets are offered under different **access tiers**, and the download method depends on the tier. Every dataset's page (reachable from the [Data page](https://portal.conp.ca/search)) shows, under "Get the data", only the ways that work for that dataset, with the exact commands; this page summarizes the options. For a full walkthrough of the Portal, see the [Tutorial](https://portal.conp.ca/tutorial).
 
 ## <a name="access"></a> Access tiers
 
-- **Open** — no credentials required. Available through one-click browser download, through [DataLad](https://www.datalad.org), and directly for processing on the [CBRAIN](https://cbrain.ca) high-performance computing platform.
-- **Registered** — requires a free third-party account (for example, on a LORIS repository). Once you have the account, the data is retrieved through DataLad.
+- **Open** — no credentials required. Usually available through browser download and through [DataLad](https://www.datalad.org), and many can be processed directly on the [CBRAIN](https://cbrain.ca) high-performance computing platform.
+- **Registered** — requires a free third-party account (for example, on a LORIS repository). Once you have the account, the data are retrieved through DataLad.
 - **Controlled** — access is granted by application to the data provider, off-site. The dataset page links to the application process.
 
-A dataset's tier and any account requirement are indicated on its page (look for a "**Third-party account required**" note at the top-right when applicable).
+A dataset's tier is shown as a tag ("Open" or "Account needed") on its card on the Data page, and the Data page's "Access" and "How to get it" filters narrow the list by tier and by way of getting the data.
 
 ## <a name="browser"></a> One-click browser download (open datasets)
 
-For completely open datasets, the dataset page provides a direct download button that retrieves the data through your browser, with no additional software required. This is the simplest option when you want a dataset (or a selected subset) on your own machine.
+For open datasets, the dataset page's "In your browser" option downloads all the files at once through your browser, with no additional software required. Where the data are held on Zenodo or OSF, the download comes from there. This is the simplest option when you want the whole dataset on your own machine; to choose individual files, use DataLad.
 
 ## <a name="datalad"></a> Download with DataLad
 
@@ -25,11 +25,13 @@ For completely open datasets, the dataset page provides a direct download button
 2. **Install the dataset.** This fetches the dataset's file *structure* (not yet the file contents):
 
    ```
-   datalad install https://github.com/<dataset-repository>
+   datalad install https://github.com/CONP-PCNO/conp-dataset.git
+   cd conp-dataset/projects
+   datalad install <dataset>
    cd <dataset>
    ```
 
-   The exact repository URL is shown on each dataset's page.
+   The exact commands for each dataset are shown on its page, with a button to copy them.
 
 3. **Get the file contents you want** with `datalad get`:
 
@@ -41,8 +43,8 @@ For completely open datasets, the dataset page provides a direct download button
 
 ## <a name="restricted"></a> Registered & controlled-access datasets
 
-- **Registered datasets** (for example, the open PREVENT-AD or multicenter-phantom datasets): on the dataset page, follow the link shown under "Source" to the provider's login page and use the "Request Account" link. Once your account is approved, the credentials you receive will be requested by `datalad get` when you download the data.
+- **Registered datasets** (for example, the PREVENT-AD open data): the dataset page starts with a "Request access" step that links to the provider's registration page. Once your account is approved, the credentials you receive will be requested by `datalad get` when you download the data.
 
-- **Controlled-access datasets** (for example, the Ontario Brain Institute's ONDRI dataset): the dataset page links to the provider's application process. The data is obtained off-site once access has been granted.
+- **Controlled-access datasets** (for example, the Ontario Brain Institute's ONDRI dataset): the dataset page links to the provider's application process ("Request access") and to the provider's site ("Download at the source"). The data are obtained off-site once access has been granted.
 
 If you run into any trouble, see the [FAQ](https://portal.conp.ca/faq) or reach us through the [Contact form](https://portal.conp.ca/contact_us).
