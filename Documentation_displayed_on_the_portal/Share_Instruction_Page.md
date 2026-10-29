@@ -1,4 +1,6 @@
-[Upload a dataset](#dataset) | [Upload a tool/pipeline](#pipeline) | [Upload an experiment](#experiments) | [DATS Editor](https://portal.conp.ca/dats-editor)
+[Upload a dataset](#dataset) | [Upload a tool/pipeline](#pipeline) | [Upload an experiment](#experiments) | [Metadata Editor](https://portal.conp.ca/dats-editor)
+
+> **The OSF is closing to new projects on 16 November 2026.** Please share new datasets and experiments through **Zenodo** instead. [What this means](#upload-methods)
 
 
 # <a name="dataset"></a> Dataset Addition Procedures
@@ -9,7 +11,7 @@ Thank you for sharing your data with the CONP and the scientific community! Maki
 
 ## <a name="required"></a> Two files are required for all datasets and any upload method:
 
-- A `DATS.json` file: This file contains the essential metadata that describes your dataset and serve to populate various fields describing your dataset on its Portal page. This is crucial to making your dataset [FAIR](https://www.go-fair.org/fair-principles/) and, therefore, easier to discover and explore. The full description of the `DATS.json` file is found [here](https://github.com/CONP-PCNO/conp-documentation/blob/master/CONP_DATS_fields.md), including which fields are required, but we recommend using our [DATS GUI Editor](https://portal.conp.ca/dats-editor) for easy creation of this file.
+- A `DATS.json` file: This file contains the essential metadata that describes your dataset and serve to populate various fields describing your dataset on its Portal page. This is crucial to making your dataset [FAIR](https://www.go-fair.org/fair-principles/) and, therefore, easier to discover and explore. The full description of the `DATS.json` file is found [here](https://github.com/CONP-PCNO/conp-documentation/blob/master/CONP_DATS_fields.md), including which fields are required, but we recommend using our [Metadata Editor](https://portal.conp.ca/dats-editor) for easy creation of this file.
 
 - A `README.md` file: The content of this file will be displayed in your dataset’s page on the CONP Portal. Though it can recapitulate some basic information in the DATS file (see above), it should primarily complement that information with a generally accessible description of the dataset and relevant details, such as experimental conditions and motivation. The `README.md` is in Markdown format, for which there are many guides but [here is one quick cheatsheet]( https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). If you do not already have a favourite Markdown editor, you can use a browser-based editor with live preview (e.g., StackEdit).
 
@@ -18,12 +20,16 @@ Thank you for sharing your data with the CONP and the scientific community! Maki
 - A study, lab, or institutional logo can be added to the root directory of the dataset, in which case it will appear on your dataset’s Portal page along with the information from the `README.md` and `DATS.json` files described above.
 
 
-## Upload methods
+## <a name="upload-methods"></a> Upload methods
+
+> **OSF is closing to new projects.** The Center for Open Science will stop accepting new OSF projects on **16 November 2026**, and all OSF projects become read-only on **19 February 2027** ([announcement](https://www.cos.io/osf-changes)). Datasets already shared through the OSF stay on the CONP Portal and can still be downloaded. **For a new dataset, please use [Zenodo](#zenodo) (I) now**, or the CONP Community Server (III) or DataLad (IV). If your dataset is a *private* OSF project shared with the CONP, please make it public or [contact us](https://portal.conp.ca/contact_us): the Center for Open Science may remove private projects in the future, with 12 months' notice.
+
+> **Coming: Borealis.** We are developing support for [Borealis](https://borealisdata.ca), the Canadian Dataverse Repository that many Canadian universities provide to their researchers, as a second storage option alongside Zenodo. This page will explain how to share a Borealis dataset with the CONP once it is ready.
 
 There are presently 4 ways of sharing a dataset through the CONP Portal:
 
 - [I. Upload using Zenodo storage](#zenodo)
-- [II. Upload using OSF storage](#osf)
+- [II. Upload using OSF storage](#osf) (closing: no new OSF projects after 16 November 2026; use Zenodo instead)
 - [III. Upload to the CONP Community Server](#conp-server)
 - [IV. Upload using DataLad](#datalad)
 
@@ -34,12 +40,14 @@ the CONP-PCNO/conp-dataset repository](https://github.com/CONP-PCNO/conp-dataset
 
 1. Add the [required](#required) files to the root directory of the dataset and consider the [optional logo](#optional), as described above.
 
-2. Upload your dataset to [Zenodo](https://zenodo.org) with the keyword `canadian-open-neuroscience-platform`.  If your dataset is larger than 50GB, you will need to contact [Zenodo support](https://zenodo.org/support) using the request category of "File upload quota increase" before you will be able to upload it. Alternatively, you can consider upload options III and IV below.
+2. Upload your dataset to [Zenodo](https://zenodo.org) with the keyword `canadian-open-neuroscience-platform`, and choose **Dataset** as the resource type: our crawler only picks up records of that type.  If your dataset is larger than 50GB, you will need to contact [Zenodo support](https://zenodo.org/support) using the request category of "File upload quota increase" before you will be able to upload it. Alternatively, you can consider upload options III and IV below.
     
 3. If you set your dataset as **restricted**, tell us through the [Contact form](https://portal.conp.ca/contact_us): we will reply with the CONP's Zenodo account so that you can share the record with it (on the Zenodo record, *Share* > *People*, view access). Never send a password or an access token by email.
 
 
 ### <a name="osf"></a> II. Upload using *OSF* storage
+
+> From 16 November 2026, the OSF no longer accepts new projects, and from 19 February 2027 all OSF projects are read-only (see the note under [Upload methods](#upload-methods)). These steps remain for datasets already on the OSF. **For a new dataset, use [Zenodo](#zenodo) (I).**
 
 1. Add the [required](#required) files to the root directory of the dataset and consider the [optional logo](#optional), as described above.
 
@@ -276,41 +284,33 @@ Along with the possibility of sharing datasets and analysis tools, the CONP Port
 
 ## There are presently two ways of sharing an experiment through the CONP Portal:
 
-1.  Upload to OSF storage
+1.  Upload to Zenodo
 
 2.  Upload to the CONP Community Server
+
+Experiments already shared on the OSF stay on the CONP Portal. The OSF stops accepting new projects on 16 November 2026 and becomes read-only on 19 February 2027 ([announcement](https://www.cos.io/osf-changes)), so new experiments should use one of the two options above. Support for [Borealis](https://borealisdata.ca) is in development (see [Upload methods](#upload-methods) for datasets).
 
 If you need help at any stage, please use the [CONP Portal Contact Form](https://portal.conp.ca/contact_us) and we will do our best to assist you.
 
-1.  Upload using OSF storage (recommended)
+1.  Upload to Zenodo (recommended)
 
 <!-- -->
 
-1.  Add the [required files](#required-files-for-all-experiments) to the root directory of your experiment, as described above. 
+1.  Add the [required files](#required-files-for-all-experiments) to the root directory of your experiment, as described above.
 
-2.  Create an OSF project
-
-- If this is your first time using the OSF, follow [these guidelines](https://help.osf.io/article/338-starting-pathway-on-the-osf) for creating an account and starting a project.
-
-3.  Upload your experiment to the OSF with the tag canadian-open-neuroscience-platform
+2.  Upload your experiment to [Zenodo](https://zenodo.org) as a public record with the keyword `canadian-open-neuroscience-platform-experiment`. Use this keyword, not the dataset keyword `canadian-open-neuroscience-platform`, so that the record is listed with the Experiments and not on the Data page.
 
 - Make sure your experiment contains no confidential data files!
 
-- If your experiment is already hosted online (e.g., on GitHub), you can simply link your OSF project to that application using [Storage Add-ons](https://help.osf.io/article/395-storage-add-ons).
-
-- If your experiment involves multiple phases with separate linked repositories (e.g., immediate and delayed memory hosted on GitHub), you can use [OSF components](https://help.osf.io/article/253-create-components) to include them under the same project and tag the larger project (see [example](https://doi.org/10.17605/OSF.IO/ZEJ5W)).
-
-4.  Ensure that the project is set to Public on OSF.
-
-- The CONP supports both private and public OSF datasets, though we strongly recommend experiments be made public due to the non-sensitive nature of experimental files.
+- If your experiment is developed on GitHub, you can use the [GitHub–Zenodo integration](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content) so that each release gets its own DOI.
 
 - It is your responsibility to ensure your experimental stimuli are open-source.
 
-The CONP will find your experiment automatically using the tag and add it to the portal within a few days.
+3.  Tell us through the [CONP Portal Contact Form](https://portal.conp.ca/contact_us), with the link to the record: experiments are reviewed and added to the Portal by the CONP team, usually within a few days.
 
 2.  Upload to the CONP Community Server
 
-If you are unable to use the OSF, you may be eligible for a space allocation on the CONP Community Server. Please use the [CONP Portal Contact Form](https://portal.conp.ca/contact_us) so we can evaluate your needs and help you upload your experiment.
+If you are unable to use Zenodo, you may be eligible for a space allocation on the CONP Community Server. Please use the [CONP Portal Contact Form](https://portal.conp.ca/contact_us) so we can evaluate your needs and help you upload your experiment.
 
 ## How to download Experiments from the CONP Portal
 
